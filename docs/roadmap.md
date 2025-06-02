@@ -2,7 +2,7 @@
 
 ## Phase 1 (Weeks 1–2)
 ### Planning & Foundation
-- [ ] Finalize tech stack decision (React vs. Vue vs. static HTML/JS)
+- [x] Finalize tech stack decision (React vs. Vue vs. static HTML/JS)
 - [ ] Create wireframe sketches (docs/wireframes/)
 - [ ] Write first draft of content_plan.md (list of video topics and quiz questions)
 - [ ] Open GitHub issues for each major piece in "Must-Have (v1)"
