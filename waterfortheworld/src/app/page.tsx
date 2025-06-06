@@ -90,7 +90,7 @@ export default function HomePage() {
                 </Card>
 
                 {/* Arrow */}
-                <div className="hidden md:flex justify-center">
+                <div className="hidden md:hidden justify-center">
                   <ArrowRight className="h-8 w-8 text-blue-400" />
                 </div>
 
@@ -108,12 +108,12 @@ export default function HomePage() {
                 </Card>
 
                 {/* Arrow */}
-                <div className="hidden md:flex justify-center md:col-span-1">
+                <div className="hidden md:hidden justify-center md:col-span-1">
                   <ArrowRight className="h-8 w-8 text-blue-400" />
                 </div>
 
                 {/* Step 3 */}
-                <Card className="text-center p-6 border-2 border-purple-100 hover:border-purple-200 transition-colors md:col-start-2">
+                <Card className="text-center p-6 border-2 border-purple-100 hover:border-purple-200 transition-colors">
                   <CardContent className="pt-6">
                     <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Heart className="h-8 w-8 text-purple-600" />
