@@ -1,9 +1,12 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Label } from "@/components/ui/label"
-import { ArrowRight, Droplets, Brain } from "lucide-react"
-import Link from "next/link"
+'use client';
+
+import { useState } from 'react';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { ArrowRight, Droplets, CheckCircle, XCircle } from "lucide-react"; // Removed Brain, Added CheckCircle, XCircle
+import Link from "next/link";
 
 const quizQuestions = [
   {
@@ -53,6 +56,39 @@ const quizQuestions = [
 ];
 
 export default function QuizzesPage() {
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
+  const [showFeedback, setShowFeedback] = useState(false);
+  const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
+
+  const currentQuestion = quizQuestions[currentQuestionIndex];
+
+  const handleOptionChange = (value: string) => {
+    setSelectedOptionId(value);
+    if (showFeedback) { // If feedback is already shown, selecting a new option should prepare for next check
+        setShowFeedback(false);
+        setIsCorrect(null);
+    }
+  };
+
+  const handleSubmitAndNext = () => {
+    if (!selectedOptionId) {
+      // Consider a more user-friendly notification if needed
+      return;
+    }
+
+    const correctAnswer = currentQuestion.answer === selectedOptionId;
+    setIsCorrect(correctAnswer);
+    setShowFeedback(true);
+
+    setTimeout(() => {
+      setShowFeedback(false);
+      setSelectedOptionId(null);
+      setIsCorrect(null);
+      setCurrentQuestionIndex((prevIndex) => (prevIndex + 1) % quizQuestions.length);
+    }, 2000); // 2-second delay to show feedback
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Header */}
@@ -95,44 +131,64 @@ export default function QuizzesPage() {
                 Test Your Knowledge
               </h1>
               <p className="mt-3 text-gray-700 md:text-lg">
-                Complete quizzes to learn more and contribute to our cause.
+                Answer the questions to learn more and contribute to our cause.
               </p>
             </div>
 
-            <div className="space-y-8">
-              {quizQuestions.map((quiz, index) => (
-                <Card key={quiz.id} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-blue-700">Question {index + 1}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-lg text-gray-800 mb-6">{quiz.question}</p>
-                    <RadioGroup defaultValue="option-one">
-                      {quiz.options.map((option) => (
-                        <div key={option.id} className="flex items-center space-x-3 mb-3 p-3 border rounded-md hover:bg-blue-50 transition-colors">
-                          <RadioGroupItem value={option.id} id={option.id} />
-                          <Label htmlFor={option.id} className="text-md text-gray-700 cursor-pointer flex-1">
-                            {option.label}
-                          </Label>
-                        </div>
-                      ))}
-                    </RadioGroup>
-                    <div className="mt-6 text-right">
-                        <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-                            Submit Answer <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl text-blue-700">
+                  Question {currentQuestionIndex + 1} of {quizQuestions.length}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-lg text-gray-800 mb-6">{currentQuestion.question}</p>
+                <RadioGroup
+                  value={selectedOptionId || ""}
+                  onValueChange={handleOptionChange}
+                  disabled={showFeedback}
+                >
+                  {currentQuestion.options.map((option) => (
+                    <div
+                      key={option.id}
+                      className={`flex items-center space-x-3 mb-3 p-3 border rounded-md transition-colors cursor-pointer ${showFeedback ? 'cursor-not-allowed' : 'hover:bg-blue-50'}
+                        ${showFeedback && option.id === currentQuestion.answer ? 'bg-green-100 border-green-400 ring-2 ring-green-300' : ''}
+                        ${showFeedback && option.id === selectedOptionId && !isCorrect ? 'bg-red-100 border-red-400 ring-2 ring-red-300' : ''}
+                        ${showFeedback && option.id !== selectedOptionId && option.id !== currentQuestion.answer ? 'opacity-70' : ''}
+                      `}
+                    >
+                      <RadioGroupItem value={option.id} id={option.id} disabled={showFeedback} />
+                      <Label htmlFor={option.id} className={`text-md text-gray-700 flex-1 ${showFeedback ? 'cursor-not-allowed' : 'cursor-pointer'}`}>
+                        {option.label}
+                      </Label>
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                  ))}
+                </RadioGroup>
 
-            <div className="mt-12 text-center">
-                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-10 py-4">
-                    <Brain className="mr-2 h-5 w-5" />
-                    Finish Quiz & See Score
-                </Button>
-            </div>
+                {showFeedback && (
+                  <div className={`mt-4 p-3 rounded-md flex items-center text-sm font-medium
+                    ${isCorrect ? 'bg-green-100 text-green-700 border border-green-300' : 'bg-red-100 text-red-700 border border-red-300'}`}
+                  >
+                    {isCorrect ? <CheckCircle className="mr-2 h-5 w-5 flex-shrink-0" /> : <XCircle className="mr-2 h-5 w-5 flex-shrink-0" />}
+                    <span>
+                      {isCorrect ? "Correct!" : 
+                        `Incorrect. The correct answer was: ${currentQuestion.options.find(opt => opt.id === currentQuestion.answer)?.label}`}
+                    </span>
+                  </div>
+                )}
+
+                <div className="mt-6 text-right">
+                  <Button
+                    onClick={handleSubmitAndNext}
+                    disabled={showFeedback || !selectedOptionId}
+                    className="bg-blue-600 hover:bg-blue-700 text-white min-w-[150px]"
+                  >
+                    {showFeedback ? "Please wait..." : "Check Answer"}
+                    {!showFeedback && <ArrowRight className="ml-2 h-4 w-4" />}
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
 
           </div>
 
@@ -176,5 +232,5 @@ export default function QuizzesPage() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
