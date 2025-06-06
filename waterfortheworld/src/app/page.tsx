@@ -10,7 +10,7 @@ export default function HomePage() {
       <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <Link href="/" className="flex items-center space-x-2">
           <Droplets className="h-8 w-8 text-blue-600" />
-          <span className="text-xl font-bold text-gray-900">WaterForTheWorld</span>
+          <span className="hidden md:inline text-xl font-bold text-gray-900">WaterForTheWorld</span>
         </Link>
         <nav className="ml-auto flex gap-6">
           <Link href="#videos" className="text-sm font-medium hover:text-blue-600 transition-colors">
@@ -47,14 +47,14 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 relative z-10">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 cursor-pointer">
                   <Play className="mr-2 h-5 w-5" />
                   Watch Videos
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3"
+                  className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 cursor-pointer"
                 >
                   <Brain className="mr-2 h-5 w-5" />
                   Take Quizzes
