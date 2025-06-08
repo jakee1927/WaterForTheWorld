@@ -5,8 +5,49 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
-import { ArrowRight, Droplets, CheckCircle, XCircle } from "lucide-react"; // Removed Brain, Added CheckCircle, XCircle
+import { ArrowRight, Droplets, CheckCircle, XCircle, Brain, Award, Globe, Zap } from "lucide-react";
 import Link from "next/link";
+
+type QuizTopic = 'water' | 'sat' | 'pop' | 'general';
+
+const TOPICS = [
+  {
+    id: 'water',
+    name: 'Water Scarcity',
+    description: 'Test your knowledge about global water issues and conservation',
+    icon: Droplets,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    hoverColor: 'hover:bg-blue-100'
+  },
+  {
+    id: 'sat',
+    name: 'SAT Prep',
+    description: 'Practice questions to help with your SAT preparation',
+    icon: Award,
+    color: 'text-purple-500',
+    bgColor: 'bg-purple-50',
+    hoverColor: 'hover:bg-purple-100'
+  },
+  {
+    id: 'pop',
+    name: 'Pop Culture',
+    description: 'Questions about movies, music, and celebrity news',
+    icon: Zap,
+    color: 'text-pink-500',
+    bgColor: 'bg-pink-50',
+    hoverColor: 'hover:bg-pink-100'
+  },
+  {
+    id: 'general',
+    name: 'General Trivia',
+    description: 'A mix of questions from various categories',
+    icon: Globe,
+    color: 'text-green-500',
+    bgColor: 'bg-green-50',
+    hoverColor: 'hover:bg-green-100'
+  }
+];
 
 const quizQuestions = [
   {
@@ -56,6 +97,7 @@ const quizQuestions = [
 ];
 
 export default function QuizzesPage() {
+  const [selectedTopic, setSelectedTopic] = useState<QuizTopic | null>(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
@@ -89,14 +131,60 @@ export default function QuizzesPage() {
     }, 2000); // 2-second delay to show feedback
   };
 
+  // Topic selection screen
+  if (!selectedTopic) {
+    return (
+      <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-white p-4 md:p-8">
+        <header className="mb-8">
+          <Link href="/" className="flex items-center space-x-2">
+            <Droplets className="h-8 w-8 text-blue-600" />
+            <span className="text-xl font-bold text-gray-900">WaterForTheWorld</span>
+          </Link>
+        </header>
+        
+        <main className="flex-1 flex flex-col items-center justify-center">
+          <div className="w-full max-w-4xl mx-auto text-center mb-12">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Select a Quiz Topic</h1>
+            <p className="text-lg text-gray-600 mb-8">Choose a category to start your quiz journey</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+              {TOPICS.map((topic) => {
+                const Icon = topic.icon;
+                return (
+                  <button
+                    key={topic.id}
+                    onClick={() => setSelectedTopic(topic.id as QuizTopic)}
+                    className={`${topic.bgColor} ${topic.hoverColor} p-6 rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-md flex flex-col items-center text-center border border-transparent hover:border-${topic.color.split('-')[1]}-200`}
+                  >
+                    <div className={`${topic.color} mb-4 p-3 rounded-full bg-white`}>
+                      <Icon className="h-8 w-8" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{topic.name}</h3>
+                    <p className="text-gray-600 text-sm">{topic.description}</p>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
+  // Quiz screen
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Header */}
-      <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+      <header className="px-4 lg:px-6 h-16 flex items-center justify-between border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <Link href="/" className="flex items-center space-x-2">
           <Droplets className="h-8 w-8 text-blue-600" />
           <span className="hidden md:inline text-xl font-bold text-gray-900">WaterForTheWorld</span>
         </Link>
+        <div className="flex items-center">
+          <span className="text-sm font-medium text-gray-700 bg-gray-100 px-3 py-1 rounded-full">
+            {TOPICS.find(t => t.id === selectedTopic)?.name}
+          </span>
+        </div>
         <nav className="ml-auto flex gap-6">
           <Link href="/#videos" className="text-sm font-medium hover:text-blue-600 transition-colors">
             Videos
