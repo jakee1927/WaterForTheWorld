@@ -1,0 +1,48 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Which planet is known as the 'Red Planet'?",
+      "options": [
+        { "id": "q1o1", "label": "Venus" },
+        { "id": "q1o2", "label": "Mars" },
+        { "id": "q1o3", "label": "Jupiter" },
+        { "id": "q1o4", "label": "Saturn" }
+      ],
+      "answer": "q1o2"
+    },
+    {
+      "id": "q2",
+      "question": "What is the largest mammal in the world?",
+      "options": [
+        { "id": "q2o1", "label": "African Elephant" },
+        { "id": "q2o2", "label": "Blue Whale" },
+        { "id": "q2o3", "label": "Giraffe" },
+        { "id": "q2o4", "label": "Polar Bear" }
+      ],
+      "answer": "q2o2"
+    },
+    {
+      "id": "q3",
+      "question": "Which country is home to the Great Barrier Reef?",
+      "options": [
+        { "id": "q3o1", "label": "Brazil" },
+        { "id": "q3o2", "label": "Australia" },
+        { "id": "q3o3", "label": "Thailand" },
+        { "id": "q3o4", "label": "Mexico" }
+      ],
+      "answer": "q3o2"
+    },
+    {
+      "id": "q4",
+      "question": "Who painted the Mona Lisa?",
+      "options": [
+        { "id": "q4o1", "label": "Vincent van Gogh" },
+        { "id": "q4o2", "label": "Pablo Picasso" },
+        { "id": "q4o3", "label": "Leonardo da Vinci" },
+        { "id": "q4o4", "label": "Michelangelo" }
+      ],
+      "answer": "q4o3"
+    }
+  ]
+}

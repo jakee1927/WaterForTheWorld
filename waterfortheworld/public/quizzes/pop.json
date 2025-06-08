@@ -1,0 +1,48 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Which artist released the album 'Midnights' in 2022?",
+      "options": [
+        { "id": "q1o1", "label": "Billie Eilish" },
+        { "id": "q1o2", "label": "Taylor Swift" },
+        { "id": "q1o3", "label": "Ariana Grande" },
+        { "id": "q1o4", "label": "Olivia Rodrigo" }
+      ],
+      "answer": "q1o2"
+    },
+    {
+      "id": "q2",
+      "question": "Which movie won the Academy Award for Best Picture in 2023?",
+      "options": [
+        { "id": "q2o1", "label": "Everything Everywhere All at Once" },
+        { "id": "q2o2", "label": "The Banshees of Inisherin" },
+        { "id": "q2o3", "label": "Elvis" },
+        { "id": "q2o4", "label": "Top Gun: Maverick" }
+      ],
+      "answer": "q2o1"
+    },
+    {
+      "id": "q3",
+      "question": "Which TV show features the fictional 'Upside Down'?",
+      "options": [
+        { "id": "q3o1", "label": "Stranger Things" },
+        { "id": "q3o2", "label": "The Witcher" },
+        { "id": "q3o3", "label": "The Mandalorian" },
+        { "id": "q3o4", "label": "Euphoria" }
+      ],
+      "answer": "q3o1"
+    },
+    {
+      "id": "q4",
+      "question": "Who is known as the 'Queen of Pop'?",
+      "options": [
+        { "id": "q4o1", "label": "Madonna" },
+        { "id": "q4o2", "label": "Beyoncé" },
+        { "id": "q4o3", "label": "Lady Gaga" },
+        { "id": "q4o4", "label": "Rihanna" }
+      ],
+      "answer": "q4o1"
+    }
+  ]
+}

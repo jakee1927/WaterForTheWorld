@@ -1,14 +1,25 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
-import { ArrowRight, Droplets, CheckCircle, XCircle, Brain, Award, Globe, Zap } from "lucide-react";
+import { ArrowRight, Droplets, CheckCircle, XCircle, Award, Globe, Zap, Loader2 } from "lucide-react";
 import Link from "next/link";
 
 type QuizTopic = 'water' | 'sat' | 'pop' | 'general';
+
+interface Question {
+  id: string;
+  question: string;
+  options: { id: string; label: string }[];
+  answer: string;
+}
+
+interface QuizData {
+  questions: Question[];
+}
 
 const TOPICS = [
   {
@@ -49,61 +60,43 @@ const TOPICS = [
   }
 ];
 
-const quizQuestions = [
-  {
-    id: "q1",
-    question: "What percentage of the Earth's water is fresh water?",
-    options: [
-      { id: "q1o1", label: "Approximately 3%" },
-      { id: "q1o2", label: "Approximately 10%" },
-      { id: "q1o3", label: "Approximately 25%" },
-      { id: "q1o4", label: "Approximately 50%" },
-    ],
-    answer: "q1o1",
-  },
-  {
-    id: "q2",
-    question: "Which of these is a major consequence of water scarcity?",
-    options: [
-      { id: "q2o1", label: "Increased biodiversity" },
-      { id: "q2o2", label: "Improved agricultural output" },
-      { id: "q2o3", label: "Food shortages and malnutrition" },
-      { id: "q2o4", label: "Lower global temperatures" },
-    ],
-    answer: "q2o3",
-  },
-  {
-    id: "q3",
-    question: "What is the primary goal of WaterForTheWorld?",
-    options: [
-      { id: "q3o1", label: "To sell bottled water" },
-      { id: "q3o2", label: "To fundraise for water purification projects" },
-      { id: "q3o3", label: "To build swimming pools" },
-      { id: "q3o4", label: "To promote water sports" },
-    ],
-    answer: "q3o2",
-  },
-  {
-    id: "q4",
-    question: "Which mathematical concept is often used in water resource management?",
-    options: [
-      { id: "q4o1", label: "Quantum Physics" },
-      { id: "q4o2", label: "String Theory" },
-      { id: "q4o3", label: "Statistics and Probability" },
-      { id: "q4o4", label: "Abstract Algebra" },
-    ],
-    answer: "q4o3",
-  },
-];
-
 export default function QuizzesPage() {
   const [selectedTopic, setSelectedTopic] = useState<QuizTopic | null>(null);
+  const [quizData, setQuizData] = useState<QuizData | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
 
-  const currentQuestion = quizQuestions[currentQuestionIndex];
+  // Load quiz data when topic is selected
+  useEffect(() => {
+    const loadQuizData = async () => {
+      if (!selectedTopic) return;
+      
+      setIsLoading(true);
+      try {
+        // Move the quiz data to the public directory for static serving
+        const response = await fetch(`/quizzes/${selectedTopic}.json`);
+        if (!response.ok) {
+          throw new Error('Failed to load quiz data');
+        }
+        const data = await response.json();
+        setQuizData(data);
+        setCurrentQuestionIndex(0);
+        setSelectedOptionId(null);
+        setShowFeedback(false);
+      } catch (error) {
+        console.error('Error loading quiz data:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadQuizData();
+  }, [selectedTopic]);
+
+  const currentQuestion = quizData?.questions?.[currentQuestionIndex];
 
   const handleOptionChange = (value: string) => {
     setSelectedOptionId(value);
@@ -114,12 +107,12 @@ export default function QuizzesPage() {
   };
 
   const handleSubmitAndNext = () => {
-    if (!selectedOptionId) {
+    if (!selectedOptionId || !quizData) {
       // Consider a more user-friendly notification if needed
       return;
     }
 
-    const correctAnswer = currentQuestion.answer === selectedOptionId;
+    const correctAnswer = currentQuestion?.answer === selectedOptionId;
     setIsCorrect(correctAnswer);
     setShowFeedback(true);
 
@@ -127,7 +120,7 @@ export default function QuizzesPage() {
       setShowFeedback(false);
       setSelectedOptionId(null);
       setIsCorrect(null);
-      setCurrentQuestionIndex((prevIndex) => (prevIndex + 1) % quizQuestions.length);
+      setCurrentQuestionIndex((prevIndex) => (prevIndex + 1) % quizData.questions.length);
     }, 2000); // 2-second delay to show feedback
   };
 
@@ -223,61 +216,82 @@ export default function QuizzesPage() {
               </p>
             </div>
 
-            <Card className="shadow-lg">
-              <CardHeader>
-                <CardTitle className="text-xl text-blue-700">
-                  Question {currentQuestionIndex + 1} of {quizQuestions.length}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-lg text-gray-800 mb-6">{currentQuestion.question}</p>
-                <RadioGroup
-                  value={selectedOptionId || ""}
-                  onValueChange={handleOptionChange}
-                  disabled={showFeedback}
-                >
-                  {currentQuestion.options.map((option) => (
-                    <div
-                      key={option.id}
-                      className={`flex items-center space-x-3 mb-3 p-3 border rounded-md transition-colors cursor-pointer ${showFeedback ? 'cursor-not-allowed' : 'hover:bg-blue-50'}
-                        ${showFeedback && option.id === currentQuestion.answer ? 'bg-green-100 border-green-400 ring-2 ring-green-300' : ''}
-                        ${showFeedback && option.id === selectedOptionId && !isCorrect ? 'bg-red-100 border-red-400 ring-2 ring-red-300' : ''}
-                        ${showFeedback && option.id !== selectedOptionId && option.id !== currentQuestion.answer ? 'opacity-70' : ''}
-                      `}
+            {isLoading ? (
+              <div className="flex flex-col items-center justify-center space-y-4 py-12">
+                <Loader2 className="h-12 w-12 animate-spin text-blue-500" />
+                <p className="text-gray-600">Loading your quiz...</p>
+              </div>
+            ) : !currentQuestion ? (
+              <div className="text-center py-12">
+                <h2 className="text-2xl font-bold text-gray-800 mb-2">No questions available</h2>
+                <p className="text-gray-600 mb-4">We couldn't load any questions for this topic.</p>
+                <Button onClick={() => setSelectedTopic(null)} variant="outline">
+                  Back to Topics
+                </Button>
+              </div>
+            ) : (
+              <Card className="shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-xl text-blue-700">
+                    Question {currentQuestionIndex + 1} of {quizData?.questions.length || 0}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-lg text-gray-800 mb-6">{currentQuestion.question}</p>
+                  <RadioGroup
+                    value={selectedOptionId || ""}
+                    onValueChange={handleOptionChange}
+                    disabled={showFeedback}
+                    className="space-y-4"
+                  >
+                    {currentQuestion.options.map((option) => (
+                      <div
+                        key={option.id}
+                        className={`flex items-center space-x-3 p-3 border rounded-md transition-colors cursor-pointer ${showFeedback ? 'cursor-not-allowed' : 'hover:bg-blue-50'}
+                          ${showFeedback && option.id === currentQuestion.answer ? 'bg-green-100 border-green-400 ring-2 ring-green-300' : ''}
+                          ${showFeedback && option.id === selectedOptionId && !isCorrect ? 'bg-red-100 border-red-400 ring-2 ring-red-300' : ''}
+                          ${showFeedback && option.id !== selectedOptionId && option.id !== currentQuestion.answer ? 'opacity-70' : ''}
+                        `}
+                      >
+                        <RadioGroupItem value={option.id} id={option.id} disabled={showFeedback} />
+                        <Label htmlFor={option.id} className={`text-md text-gray-700 flex-1 ${showFeedback ? 'cursor-not-allowed' : 'cursor-pointer'}`}>
+                          {option.label}
+                        </Label>
+                      </div>
+                    ))}
+                  </RadioGroup>
+
+                  {showFeedback && (
+                    <div className={`mt-4 p-3 rounded-md flex items-center text-sm font-medium
+                      ${isCorrect ? 'bg-green-100 text-green-700 border border-green-300' : 'bg-red-100 text-red-700 border border-red-300'}`}
                     >
-                      <RadioGroupItem value={option.id} id={option.id} disabled={showFeedback} />
-                      <Label htmlFor={option.id} className={`text-md text-gray-700 flex-1 ${showFeedback ? 'cursor-not-allowed' : 'cursor-pointer'}`}>
-                        {option.label}
-                      </Label>
+                      {isCorrect ? (
+                        <CheckCircle className="mr-2 h-5 w-5 flex-shrink-0" />
+                      ) : (
+                        <XCircle className="mr-2 h-5 w-5 flex-shrink-0" />
+                      )}
+                      <span>
+                        {isCorrect 
+                          ? "Correct!" 
+                          : `Incorrect. The correct answer was: ${currentQuestion.options.find(opt => opt.id === currentQuestion.answer)?.label}`
+                        }
+                      </span>
                     </div>
-                  ))}
-                </RadioGroup>
+                  )}
 
-                {showFeedback && (
-                  <div className={`mt-4 p-3 rounded-md flex items-center text-sm font-medium
-                    ${isCorrect ? 'bg-green-100 text-green-700 border border-green-300' : 'bg-red-100 text-red-700 border border-red-300'}`}
-                  >
-                    {isCorrect ? <CheckCircle className="mr-2 h-5 w-5 flex-shrink-0" /> : <XCircle className="mr-2 h-5 w-5 flex-shrink-0" />}
-                    <span>
-                      {isCorrect ? "Correct!" : 
-                        `Incorrect. The correct answer was: ${currentQuestion.options.find(opt => opt.id === currentQuestion.answer)?.label}`}
-                    </span>
+                  <div className="mt-6 text-right">
+                    <Button
+                      onClick={handleSubmitAndNext}
+                      disabled={showFeedback || !selectedOptionId}
+                      className="bg-blue-600 hover:bg-blue-700 text-white min-w-[150px]"
+                    >
+                      {showFeedback ? "Please wait..." : "Check Answer"}
+                      {!showFeedback && <ArrowRight className="ml-2 h-4 w-4" />}
+                    </Button>
                   </div>
-                )}
-
-                <div className="mt-6 text-right">
-                  <Button
-                    onClick={handleSubmitAndNext}
-                    disabled={showFeedback || !selectedOptionId}
-                    className="bg-blue-600 hover:bg-blue-700 text-white min-w-[150px]"
-                  >
-                    {showFeedback ? "Please wait..." : "Check Answer"}
-                    {!showFeedback && <ArrowRight className="ml-2 h-4 w-4" />}
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
+                </CardContent>
+              </Card>
+            )}
           </div>
 
           {/* Right Ad Placeholder */}
