@@ -13,36 +13,91 @@
     },
     {
       "id": "q2",
-      "question": "What is the largest mammal in the world?",
+      "question": "Which element has the chemical symbol 'W'?",
       "options": [
-        { "id": "q2o1", "label": "African Elephant" },
-        { "id": "q2o2", "label": "Blue Whale" },
-        { "id": "q2o3", "label": "Giraffe" },
-        { "id": "q2o4", "label": "Polar Bear" }
+        { "id": "q2o1", "label": "Tungsten" },
+        { "id": "q2o2", "label": "Silver" },
+        { "id": "q2o3", "label": "Tin" },
+        { "id": "q2o4", "label": "Tellurium" }
       ],
-      "answer": "q2o2"
+      "answer": "q2o1"
     },
     {
       "id": "q3",
-      "question": "Which country is home to the Great Barrier Reef?",
+      "question": "Which author wrote 'One Hundred Years of Solitude'?",
       "options": [
-        { "id": "q3o1", "label": "Brazil" },
-        { "id": "q3o2", "label": "Australia" },
-        { "id": "q3o3", "label": "Thailand" },
-        { "id": "q3o4", "label": "Mexico" }
+        { "id": "q3o1", "label": "Isabel Allende" },
+        { "id": "q3o2", "label": "Gabriel García Márquez" },
+        { "id": "q3o3", "label": "Mario Vargas Llosa" },
+        { "id": "q3o4", "label": "Jorge Luis Borges" }
       ],
       "answer": "q3o2"
     },
     {
       "id": "q4",
-      "question": "Who painted the Mona Lisa?",
+      "question": "Which U.S. state has the longest coastline?",
       "options": [
-        { "id": "q4o1", "label": "Vincent van Gogh" },
-        { "id": "q4o2", "label": "Pablo Picasso" },
-        { "id": "q4o3", "label": "Leonardo da Vinci" },
-        { "id": "q4o4", "label": "Michelangelo" }
+        { "id": "q4o1", "label": "Florida" },
+        { "id": "q4o2", "label": "California" },
+        { "id": "q4o3", "label": "Alaska" },
+        { "id": "q4o4", "label": "Texas" }
       ],
       "answer": "q4o3"
+    },
+    {
+      "id": "q5",
+      "question": "Which mathematician is known for the 'Last Theorem' that was unsolved for centuries?",
+      "options": [
+        { "id": "q5o1", "label": "Euclid" },
+        { "id": "q5o2", "label": "Pierre de Fermat" },
+        { "id": "q5o3", "label": "Carl Gauss" },
+        { "id": "q5o4", "label": "Leonhard Euler" }
+      ],
+      "answer": "q5o2"
+    },
+    {
+      "id": "q6",
+      "question": "Which British monarch had the shortest reign?",
+      "options": [
+        { "id": "q6o1", "label": "Lady Jane Grey" },
+        { "id": "q6o2", "label": "Edward V" },
+        { "id": "q6o3", "label": "Richard III" },
+        { "id": "q6o4", "label": "Henry VIII" }
+      ],
+      "answer": "q6o1"
+    },
+    {
+      "id": "q7",
+      "question": "What is the largest desert in the world by area?",
+      "options": [
+        { "id": "q7o1", "label": "Sahara" },
+        { "id": "q7o2", "label": "Arabian" },
+        { "id": "q7o3", "label": "Gobi" },
+        { "id": "q7o4", "label": "Antarctic" }
+      ],
+      "answer": "q7o4"
+    },
+    {
+      "id": "q8",
+      "question": "Which painting is also known as 'La Gioconda'?",
+      "options": [
+        { "id": "q8o1", "label": "The Starry Night" },
+        { "id": "q8o2", "label": "Mona Lisa" },
+        { "id": "q8o3", "label": "The Scream" },
+        { "id": "q8o4", "label": "The Persistence of Memory" }
+      ],
+      "answer": "q8o2"
+    },
+    {
+      "id": "q9",
+      "question": "What is the only country whose name starts with an 'O'?",
+      "options": [
+        { "id": "q9o1", "label": "Oman" },
+        { "id": "q9o2", "label": "Oceania" },
+        { "id": "q9o3", "label": "Oaxaca" },
+        { "id": "q9o4", "label": "Oran" }
+      ],
+      "answer": "q9o1"
     }
   ]
 }
