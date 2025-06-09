@@ -224,7 +224,7 @@ export default function QuizzesPage() {
             ) : !currentQuestion ? (
               <div className="text-center py-12">
                 <h2 className="text-2xl font-bold text-gray-800 mb-2">No questions available</h2>
-                <p className="text-gray-600 mb-4">We couldn't load any questions for this topic.</p>
+                <p className="text-gray-600 mb-4">We couldn&apos;t load any questions for this topic.</p>
                 <Button onClick={() => setSelectedTopic(null)} variant="outline">
                   Back to Topics
                 </Button>
