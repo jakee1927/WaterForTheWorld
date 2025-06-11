@@ -120,7 +120,11 @@ export default function QuizzesPage() {
       setShowFeedback(false);
       setSelectedOptionId(null);
       setIsCorrect(null);
-      setCurrentQuestionIndex((prevIndex) => (prevIndex + 1) % quizData.questions.length);
+      // Move to next question, loop back to 0 if at the end
+      setCurrentQuestionIndex(prevIndex => {
+        const nextIndex = prevIndex + 1;
+        return nextIndex >= quizData.questions.length ? 0 : nextIndex;
+      });
     }, 2000); // 2-second delay to show feedback
   };
 
