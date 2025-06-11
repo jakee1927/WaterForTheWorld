@@ -2,47 +2,278 @@
   "questions": [
     {
       "id": "q1",
-      "question": "Which artist released the album 'Midnights' in 2022?",
+      "question": "Which artist holds the record for the most Grammy wins overall as of 2024?",
       "options": [
-        { "id": "q1o1", "label": "Billie Eilish" },
-        { "id": "q1o2", "label": "Taylor Swift" },
-        { "id": "q1o3", "label": "Ariana Grande" },
-        { "id": "q1o4", "label": "Olivia Rodrigo" }
+        { "id": "q1o1", "label": "Alison Krauss" },
+        { "id": "q1o2", "label": "Quincy Jones" },
+        { "id": "q1o3", "label": "Beyoncé" },
+        { "id": "q1o4", "label": "Georg Solti" }
       ],
-      "answer": "q1o2"
+      "answer": "q1o3"
     },
     {
       "id": "q2",
-      "question": "Which movie won the Academy Award for Best Picture in 2023?",
+      "question": "Which film was the first non-English language film to win the Academy Award for Best Picture?",
       "options": [
-        { "id": "q2o1", "label": "Everything Everywhere All at Once" },
-        { "id": "q2o2", "label": "The Banshees of Inisherin" },
-        { "id": "q2o3", "label": "Elvis" },
-        { "id": "q2o4", "label": "Top Gun: Maverick" }
+        { "id": "q2o1", "label": "Roma" },
+        { "id": "q2o2", "label": "Parasite" },
+        { "id": "q2o3", "label": "Crouching Tiger, Hidden Dragon" },
+        { "id": "q2o4", "label": "Amélie" }
       ],
-      "answer": "q2o1"
+      "answer": "q2o2"
     },
     {
       "id": "q3",
-      "question": "Which TV show features the fictional 'Upside Down'?",
+      "question": "Which video game set the record as the fastest-selling title on Steam, achieving over 500,000 copies sold in its first 24 hours?",
       "options": [
-        { "id": "q3o1", "label": "Stranger Things" },
-        { "id": "q3o2", "label": "The Witcher" },
-        { "id": "q3o3", "label": "The Mandalorian" },
-        { "id": "q3o4", "label": "Euphoria" }
+        { "id": "q3o1", "label": "Cyberpunk 2077" },
+        { "id": "q3o2", "label": "Baldur's Gate 3" },
+        { "id": "q3o3", "label": "Elden Ring" },
+        { "id": "q3o4", "label": "Among Us" }
       ],
-      "answer": "q3o1"
+      "answer": "q3o2"
     },
     {
       "id": "q4",
-      "question": "Who is known as the 'Queen of Pop'?",
+      "question": "Who directed the 2017 Oscar-winning film 'The Shape of Water'?",
       "options": [
-        { "id": "q4o1", "label": "Madonna" },
-        { "id": "q4o2", "label": "Beyoncé" },
-        { "id": "q4o3", "label": "Lady Gaga" },
-        { "id": "q4o4", "label": "Rihanna" }
+        { "id": "q4o1", "label": "James Cameron" },
+        { "id": "q4o2", "label": "Alfonso Cuarón" },
+        { "id": "q4o3", "label": "Guillermo del Toro" },
+        { "id": "q4o4", "label": "Steven Spielberg" }
       ],
-      "answer": "q4o1"
+      "answer": "q4o3"
+    },
+    {
+      "id": "q5",
+      "question": "Which television series holds the record for the most Emmy wins in a single year?",
+      "options": [
+        { "id": "q5o1", "label": "The Marvelous Mrs. Maisel" },
+        { "id": "q5o2", "label": "Game of Thrones" },
+        { "id": "q5o3", "label": "Schitt's Creek" },
+        { "id": "q5o4", "label": "Breaking Bad" }
+      ],
+      "answer": "q5o2"
+    },
+    {
+      "id": "q6",
+      "question": "Which song set the Spotify record for most global streams in a single day upon its release?",
+      "options": [
+        { "id": "q6o1", "label": "Easy on Me by Adele" },
+        { "id": "q6o2", "label": "Butter by BTS" },
+        { "id": "q6o3", "label": "Flowers by Miley Cyrus" },
+        { "id": "q6o4", "label": "As It Was by Harry Styles" }
+      ],
+      "answer": "q6o3"
+    },
+    {
+      "id": "q7",
+      "question": "Which film won the Palme d'Or at the 2023 Cannes Film Festival?",
+      "options": [
+        { "id": "q7o1", "label": "Killers of the Flower Moon" },
+        { "id": "q7o2", "label": "Anatomy of a Fall" },
+        { "id": "q7o3", "label": "Barbie" },
+        { "id": "q7o4", "label": "The Zone of Interest" }
+      ],
+      "answer": "q7o2"
+    },
+    {
+      "id": "q8",
+      "question": "Which Netflix series broke records by logging over 1.45 billion minutes watched in its first weekend?",
+      "options": [
+        { "id": "q8o1", "label": "Stranger Things" },
+        { "id": "q8o2", "label": "Wednesday" },
+        { "id": "q8o3", "label": "Squid Game" },
+        { "id": "q8o4", "label": "Bridgerton" }
+      ],
+      "answer": "q8o2"
+    },
+    {
+      "id": "q9",
+      "question": "Which Christopher Nolan film was the first to feature a score composed by Ludwig Göransson?",
+      "options": [
+        { "id": "q9o1", "label": "Dunkirk" },
+        { "id": "q9o2", "label": "Interstellar" },
+        { "id": "q9o3", "label": "Tenet" },
+        { "id": "q9o4", "label": "Memento" }
+      ],
+      "answer": "q9o3"
+    },
+    {
+      "id": "q10",
+      "question": "Which 2019 song became the soundtrack for the viral 'Renegade' dance challenge on TikTok?",
+      "options": [
+        { "id": "q10o1", "label": "Old Town Road by Lil Nas X" },
+        { "id": "q10o2", "label": "Lottery (Renegade) by K CAMP" },
+        { "id": "q10o3", "label": "Savage Love by Jawsh 685 & Jason Derulo" },
+        { "id": "q10o4", "label": "Blinding Lights by The Weeknd" }
+      ],
+      "answer": "q10o2"
+    },
+    {
+      "id": "q11",
+      "question": "Which K-pop act became the first to reach number one on the US Billboard Hot 100?",
+      "options": [
+        { "id": "q11o1", "label": "Blackpink" },
+        { "id": "q11o2", "label": "BTS" },
+        { "id": "q11o3", "label": "EXO" },
+        { "id": "q11o4", "label": "Twice" }
+      ],
+      "answer": "q11o2"
+    },
+    {
+      "id": "q12",
+      "question": "Which game won 'Game of the Year' at The Game Awards 2021?",
+      "options": [
+        { "id": "q12o1", "label": "It Takes Two" },
+        { "id": "q12o2", "label": "Elden Ring" },
+        { "id": "q12o3", "label": "The Last of Us Part II" },
+        { "id": "q12o4", "label": "Hades" }
+      ],
+      "answer": "q12o1"
+    },
+    {
+      "id": "q13",
+      "question": "Which film won the most Oscars at the 94th Academy Awards in 2022?",
+      "options": [
+        { "id": "q13o1", "label": "The Power of the Dog" },
+        { "id": "q13o2", "label": "CODA" },
+        { "id": "q13o3", "label": "Dune" },
+        { "id": "q13o4", "label": "Belfast" }
+      ],
+      "answer": "q13o3"
+    },
+    {
+      "id": "q14",
+      "question": "Which film was the first to gross over $2 billion worldwide?",
+      "options": [
+        { "id": "q14o1", "label": "Titanic" },
+        { "id": "q14o2", "label": "Avengers: Endgame" },
+        { "id": "q14o3", "label": "Avatar" },
+        { "id": "q14o4", "label": "Star Wars: The Force Awakens" }
+      ],
+      "answer": "q14o3"
+    },
+    {
+      "id": "q15",
+      "question": "What is the title of the final episode of 'Breaking Bad'?",
+      "options": [
+        { "id": "q15o1", "label": "Ozymandias" },
+        { "id": "q15o2", "label": "Felina" },
+        { "id": "q15o3", "label": "Face Off" },
+        { "id": "q15o4", "label": "Pilot" }
+      ],
+      "answer": "q15o2"
+    },
+    {
+      "id": "q16",
+      "question": "Which actor holds the record for the most Oscar nominations without ever winning?",
+      "options": [
+        { "id": "q16o1", "label": "Glenn Close" },
+        { "id": "q16o2", "label": "Peter O'Toole" },
+        { "id": "q16o3", "label": "Leonardo DiCaprio" },
+        { "id": "q16o4", "label": "Amy Adams" }
+      ],
+      "answer": "q16o2"
+    },
+    {
+      "id": "q17",
+      "question": "Which was the first Marvel Cinematic Universe series released on Disney+?",
+      "options": [
+        { "id": "q17o1", "label": "Moon Knight" },
+        { "id": "q17o2", "label": "WandaVision" },
+        { "id": "q17o3", "label": "Loki" },
+        { "id": "q17o4", "label": "The Falcon and the Winter Soldier" }
+      ],
+      "answer": "q17o2"
+    },
+    {
+      "id": "q18",
+      "question": "Which feature film was famously shot over a 12-year span to document its characters growing up?",
+      "options": [
+        { "id": "q18o1", "label": "Boyhood" },
+        { "id": "q18o2", "label": "Inception" },
+        { "id": "q18o3", "label": "Dunkirk" },
+        { "id": "q18o4", "label": "The Revenant" }
+      ],
+      "answer": "q18o1"
+    },
+    {
+      "id": "q19",
+      "question": "Which song won the Academy Award for Best Original Song in 2023?",
+      "options": [
+        { "id": "q19o1", "label": "Hold My Hand (Top Gun: Maverick)" },
+        { "id": "q19o2", "label": "Naatu Naatu (RRR)" },
+        { "id": "q19o3", "label": "Dos Oruguitas (Encanto)" },
+        { "id": "q19o4", "label": "I'm Just Ken (Barbie)" }
+      ],
+      "answer": "q19o2"
+    },
+    {
+      "id": "q20",
+      "question": "Which streaming service secured exclusive rights to Thursday Night Football in 2022?",
+      "options": [
+        { "id": "q20o1", "label": "Netflix" },
+        { "id": "q20o2", "label": "Amazon Prime Video" },
+        { "id": "q20o3", "label": "Hulu" },
+        { "id": "q20o4", "label": "Disney+" }
+      ],
+      "answer": "q20o2"
+    },
+    {
+      "id": "q21",
+      "question": "Which film features three different actors reprising their roles as Spider-Man together?",
+      "options": [
+        { "id": "q21o1", "label": "Spider-Man: No Way Home" },
+        { "id": "q21o2", "label": "Avengers: Endgame" },
+        { "id": "q21o3", "label": "Far From Home" },
+        { "id": "q21o4", "label": "Homecoming" }
+      ],
+      "answer": "q21o1"
+    },
+    {
+      "id": "q22",
+      "question": "Which artist released the album 'Dawn FM' in January 2022?",
+      "options": [
+        { "id": "q22o1", "label": "The Weeknd" },
+        { "id": "q22o2", "label": "Drake" },
+        { "id": "q22o3", "label": "Justin Bieber" },
+        { "id": "q22o4", "label": "Adele" }
+      ],
+      "answer": "q22o1"
+    },
+    {
+      "id": "q23",
+      "question": "Who played the villain Safin in the James Bond film 'No Time to Die'?",
+      "options": [
+        { "id": "q23o1", "label": "Christoph Waltz" },
+        { "id": "q23o2", "label": "Mads Mikkelsen" },
+        { "id": "q23o3", "label": "Rami Malek" },
+        { "id": "q23o4", "label": "Javier Bardem" }
+      ],
+      "answer": "q23o3"
+    },
+    {
+      "id": "q24",
+      "question": "Which film still holds the record for the most Oscar wins without ever receiving a Best Picture nomination?",
+      "options": [
+        { "id": "q24o1", "label": "Cabaret" },
+        { "id": "q24o2", "label": "Spartacus" },
+        { "id": "q24o3", "label": "Amadeus" },
+        { "id": "q24o4", "label": "The Turning Point" }
+      ],
+      "answer": "q24o1"
+    },
+    {
+      "id": "q25",
+      "question": "Which series won Outstanding Drama Series at the 2023 Primetime Emmy Awards?",
+      "options": [
+        { "id": "q25o1", "label": "Stranger Things" },
+        { "id": "q25o2", "label": "Better Call Saul" },
+        { "id": "q25o3", "label": "The Crown" },
+        { "id": "q25o4", "label": "Succession" }
+      ],
+      "answer": "q25o4"
     }
   ]
 }
