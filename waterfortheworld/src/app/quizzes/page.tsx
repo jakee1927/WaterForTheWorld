@@ -23,22 +23,14 @@ interface QuizData {
 
 const TOPICS = [
   {
-    id: 'water',
-    name: 'Water Scarcity',
-    description: 'Test your knowledge about global water issues and conservation',
-    icon: Droplets,
-    color: 'text-blue-500',
-    bgColor: 'bg-blue-50',
-    hoverColor: 'hover:bg-blue-100'
-  },
-  {
-    id: 'sat',
-    name: 'SAT Prep',
-    description: 'Practice questions to help with your SAT preparation',
-    icon: Award,
-    color: 'text-purple-500',
-    bgColor: 'bg-purple-50',
-    hoverColor: 'hover:bg-purple-100'
+    id: 'general',
+    name: 'General Trivia',
+    description: 'A mix of questions from various categories',
+    icon: Globe,
+    color: 'text-green-500',
+    bgColor: 'bg-green-50',
+    hoverColor: 'hover:bg-green-100',
+    comingSoon: false
   },
   {
     id: 'pop',
@@ -47,16 +39,28 @@ const TOPICS = [
     icon: Zap,
     color: 'text-pink-500',
     bgColor: 'bg-pink-50',
-    hoverColor: 'hover:bg-pink-100'
+    hoverColor: 'hover:bg-pink-100',
+    comingSoon: false
   },
   {
-    id: 'general',
-    name: 'General Trivia',
-    description: 'A mix of questions from various categories',
-    icon: Globe,
-    color: 'text-green-500',
-    bgColor: 'bg-green-50',
-    hoverColor: 'hover:bg-green-100'
+    id: 'water',
+    name: 'Water Scarcity',
+    description: 'Test your knowledge about global water issues and conservation',
+    icon: Droplets,
+    color: 'text-blue-500',
+    bgColor: 'bg-blue-50',
+    hoverColor: 'hover:bg-blue-100',
+    comingSoon: true
+  },
+  {
+    id: 'sat',
+    name: 'SAT Prep',
+    description: 'Practice questions to help with your SAT preparation',
+    icon: Award,
+    color: 'text-purple-500',
+    bgColor: 'bg-purple-50',
+    hoverColor: 'hover:bg-purple-100',
+    comingSoon: true
   }
 ];
 
@@ -148,17 +152,33 @@ export default function QuizzesPage() {
               {TOPICS.map((topic) => {
                 const Icon = topic.icon;
                 return (
-                  <button
-                    key={topic.id}
-                    onClick={() => setSelectedTopic(topic.id as QuizTopic)}
-                    className={`${topic.bgColor} ${topic.hoverColor} p-6 rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-md flex flex-col items-center text-center border border-transparent hover:border-${topic.color.split('-')[1]}-200`}
-                  >
-                    <div className={`${topic.color} mb-4 p-3 rounded-full bg-white`}>
-                      <Icon className="h-8 w-8" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{topic.name}</h3>
-                    <p className="text-gray-600 text-sm">{topic.description}</p>
-                  </button>
+                  <div key={topic.id} className="relative">
+                    <button
+                      onClick={() => !topic.comingSoon && setSelectedTopic(topic.id as QuizTopic)}
+                      disabled={topic.comingSoon}
+                      className={`${topic.bgColor} ${topic.hoverColor} p-6 rounded-xl transition-all duration-200 transform ${
+                        topic.comingSoon ? 'opacity-60' : 'hover:scale-105 hover:shadow-md'
+                      } flex flex-col items-center text-center border border-transparent ${
+                        !topic.comingSoon && `hover:border-${topic.color.split('-')[1]}-200`
+                      } w-full h-full`}
+                    >
+                      <div className={`${topic.color} mb-4 p-3 rounded-full ${topic.comingSoon ? 'bg-gray-100' : 'bg-white'}`}>
+                        <Icon className="h-8 w-8" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        {topic.name}
+                        {topic.comingSoon}
+                      </h3>
+                      <p className="text-gray-600 text-sm">{topic.description}</p>
+                    </button>
+                    {topic.comingSoon && (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="bg-black bg-opacity-70 text-white text-sm font-medium px-3 py-1 rounded-full">
+                          Coming Soon
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 );
               })}
             </div>
@@ -237,7 +257,7 @@ export default function QuizzesPage() {
               <Card className="shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-xl text-blue-700">
-                    Question {currentQuestionIndex + 1} of {quizData?.questions.length || 0}
+                    Question {currentQuestionIndex + 1}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
