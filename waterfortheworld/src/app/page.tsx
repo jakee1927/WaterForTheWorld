@@ -77,9 +77,9 @@ export default function HomePage() {
             </div>
 
             <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Step 1 */}
-                <Card className="text-center p-6 border-2 border-blue-100 hover:border-blue-200 transition-colors">
+                <Card className="text-center p-6 border-2 border-blue-100 hover:border-blue-200 transition-colors h-full flex flex-col">
                   <CardContent className="pt-6">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <BookOpen className="h-8 w-8 text-blue-600" />
@@ -92,12 +92,12 @@ export default function HomePage() {
                 </Card>
 
                 {/* Arrow */}
-                <div className="hidden md:hidden justify-center">
-                  <ArrowRight className="h-8 w-8 text-blue-400" />
-                </div>
+                {/* <div className="hidden md:flex items-center justify-center">
+                  <ArrowRight className="h-12 w-12 text-blue-400" />
+                </div> */}
 
                 {/* Step 2 */}
-                <Card className="text-center p-6 border-2 border-green-100 hover:border-green-200 transition-colors">
+                <Card className="text-center p-6 border-2 border-green-100 hover:border-green-200 transition-colors h-full flex flex-col">
                   <CardContent className="pt-6">
                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Droplets className="h-8 w-8 text-green-600" />
@@ -110,12 +110,12 @@ export default function HomePage() {
                 </Card>
 
                 {/* Arrow */}
-                <div className="hidden md:hidden justify-center md:col-span-1">
-                  <ArrowRight className="h-8 w-8 text-blue-400" />
-                </div>
+                {/* <div className="hidden md:flex items-center justify-center">
+                  <ArrowRight className="h-12 w-12 text-blue-400" />
+                </div> */}
 
                 {/* Step 3 */}
-                <Card className="text-center p-6 border-2 border-purple-100 hover:border-purple-200 transition-colors">
+                <Card className="text-center p-6 border-2 border-purple-100 hover:border-purple-200 transition-colors h-full flex flex-col">
                   <CardContent className="pt-6">
                     <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Heart className="h-8 w-8 text-purple-600" />
