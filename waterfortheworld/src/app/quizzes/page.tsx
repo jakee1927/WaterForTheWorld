@@ -198,19 +198,19 @@ export default function QuizzesPage() {
           <span className="hidden md:inline text-xl font-bold text-gray-900">WaterForTheWorld</span>
         </Link>
         <div className="flex items-center">
-          <span className="text-sm font-medium text-gray-700 bg-gray-100 px-3 py-1 rounded-full">
+          <span className="text-sm font-medium text-gray-700 bg-gray-100 px-5 py-1 rounded-full">
             {TOPICS.find(t => t.id === selectedTopic)?.name}
           </span>
         </div>
         <nav className="ml-auto flex gap-6">
-          <Link href="/#videos" className="text-sm font-medium hover:text-blue-600 transition-colors">
-            Videos
-          </Link>
-          <Link href="/quizzes" className="text-sm font-medium text-blue-600 transition-colors">
+          <Link href="#quizzes" className="text-sm font-medium hover:text-blue-600 transition-colors">
             Quizzes
           </Link>
-          <Link href="/#impact" className="text-sm font-medium hover:text-blue-600 transition-colors">
+          <Link href="#impact" className="text-sm font-medium hover:text-blue-600 transition-colors">
             Impact
+          </Link>
+          <Link href="#about" className="text-sm font-medium hover:text-blue-600 transition-colors">
+            About Us
           </Link>
         </nav>
       </header>
@@ -353,7 +353,7 @@ export default function QuizzesPage() {
             </div>
           </div>
           <div className="mt-6 pt-6 border-t border-gray-800 text-center text-gray-400">
-            <p>&copy; 2024 WaterForTheWorld. All revenue donated to fight water scarcity.</p>
+            <p>&copy; 2025 WaterForTheWorld. All revenue donated to fight water scarcity.</p>
           </div>
         </div>
       </footer>

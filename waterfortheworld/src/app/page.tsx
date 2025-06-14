@@ -13,14 +13,14 @@ export default function HomePage() {
           <span className="hidden md:inline text-xl font-bold text-gray-900">WaterForTheWorld</span>
         </Link>
         <nav className="ml-auto flex gap-6">
-          <Link href="#videos" className="text-sm font-medium hover:text-blue-600 transition-colors">
-            Videos
-          </Link>
           <Link href="#quizzes" className="text-sm font-medium hover:text-blue-600 transition-colors">
             Quizzes
           </Link>
           <Link href="#impact" className="text-sm font-medium hover:text-blue-600 transition-colors">
             Impact
+          </Link>
+          <Link href="#about" className="text-sm font-medium hover:text-blue-600 transition-colors">
+            About Us
           </Link>
         </nav>
       </header>
@@ -39,28 +39,28 @@ export default function HomePage() {
             <div className="flex flex-col items-center space-y-8 text-center">
               <div className="space-y-4 max-w-3xl">
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 relative z-10">
-                  Learn. Watch. Make a <span className="text-blue-600">Difference</span>
+                  Learn. Donate. Make a <span className="text-blue-600">Difference</span>
                 </h1>
                 <p className="mx-auto max-w-2xl text-gray-700 md:text-xl lg:text-2xl relative z-10">
-                  Educational content about water insecurity and math that turns your engagement into real impact. Every
-                  video watched and quiz completed generates revenue donated to fight water scarcity.
+                  Support our mission to provide clean water worldwide. Every quiz completed helps bring clean water to communities in need.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 relative z-10">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 cursor-pointer">
-                  <Play className="mr-2 h-5 w-5" />
-                  Watch Videos
-                </Button>
                 <Link href="/quizzes">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 cursor-pointer">
+                  <Brain className="mr-2 h-5 w-5" />
+                    Take Quizzes
+                  </Button>
+                  </Link>
+                  
                   <Button
                     size="lg"
                     variant="outline"
                     className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 cursor-pointer"
                   >
-                    <Brain className="mr-2 h-5 w-5" />
-                    Take Quizzes
-                  </Button>
-                </Link>
+                    <Heart className="mr-2 h-5 w-5" />
+                  Donate Now
+                </Button>
               </div>
             </div>
           </div>
@@ -86,7 +86,7 @@ export default function HomePage() {
                     </div>
                     <h3 className="text-xl font-semibold mb-2">You Learn</h3>
                     <p className="text-gray-600">
-                      Watch educational videos and take quizzes about water insecurity and math
+                      Take quizzes about water insecurity and learn how you can help make a difference
                     </p>
                   </CardContent>
                 </Card>
@@ -137,31 +137,30 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card className="p-6 bg-white hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">
-                  <Play className="h-12 w-12 text-blue-600 mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Educational Videos</h3>
+                  <Heart className="h-12 w-12 text-red-600 mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Direct Impact</h3>
                   <p className="text-gray-600">
-                    Engaging video content that explores water insecurity issues and mathematical concepts in an
-                    accessible way.
+                    100% of donations go directly to providing clean water solutions to communities in need worldwide.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="p-6 bg-white hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">
-                  <Brain className="h-12 w-12 text-green-600 mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Interactive Quizzes</h3>
+                  <BookOpen className="h-12 w-12 text-purple-600 mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Real Learning</h3>
                   <p className="text-gray-600">
-                    Test your knowledge with quizzes that reinforce learning while generating revenue for our cause.
+                    Engage with interactive quizzes that educate about topics from water conservation to pop culture.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="p-6 bg-white hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">
-                  <Users className="h-12 w-12 text-purple-600 mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Real Impact</h3>
+                  <Droplets className="h-12 w-12 text-blue-600 mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Clean Water</h3>
                   <p className="text-gray-600">
-                    Track how your learning contributes to real-world solutions for water scarcity around the globe.
+                    Every donation helps bring clean water to communities in need worldwide.
                   </p>
                 </CardContent>
               </Card>
@@ -177,12 +176,12 @@ export default function HomePage() {
                 Ready to Make a Difference?
               </h2>
               <p className="mx-auto max-w-2xl text-blue-100 text-lg">
-                Start learning today and help us fight water scarcity one video and quiz at a time.
+                You can help provide clean water to those in need. Every quiz completed makes an impact.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 cursor-pointer">
-                  <Play className="mr-2 h-5 w-5" />
-                  Start Watching
+                  <Heart className="mr-2 h-5 w-5" />
+                  Donate Now
                 </Button>
                 <Link href="/quizzes">
                   <Button
@@ -221,7 +220,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="mt-6 pt-6 border-t border-gray-800 text-center text-gray-400">
-            <p>&copy; 2024 WaterForTheWorld. All revenue donated to fight water scarcity.</p>
+            <p>&copy; 2025 WaterForTheWorld. All revenue donated to fight water scarcity.</p>
           </div>
         </div>
       </footer>
