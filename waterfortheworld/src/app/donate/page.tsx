@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Droplets, Heart, Zap, Globe, Shield, Users } from "lucide-react"
+import { Droplets, Heart, Zap, Globe, Shield, Users, BookOpen } from "lucide-react"
 import Link from "next/link"
 
 export default function DonatePage() {
@@ -46,87 +46,109 @@ export default function DonatePage() {
         {/* Donation Form Section */}
         <section className="py-12 md:py-16 lg:py-20">
           <div className="container px-4 md:px-6 mx-auto">
-            <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-start">
-              <div className="space-y-6">
-                <h2 className="text-3xl font-bold tracking-tight">Donate Now</h2>
-                <p className="text-gray-600">
-                  Every dollar you donate goes directly to funding clean water projects in communities that need it most. 
-                  Your support changes lives.
-                </p>
-                
-                <div className="space-y-4">
-                  <Card>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-lg flex items-center">
-                        <Zap className="h-5 w-5 mr-2 text-blue-600" />
-                        Quick Donation
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="grid grid-cols-2 gap-4 mb-4">
-                        {[25, 50, 100, 250].map((amount) => (
-                          <Button key={amount} variant="outline" className="h-14 text-lg">
-                            ${amount}
-                          </Button>
-                        ))}
-                      </div>
-                      <div className="relative">
-                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">$</span>
-                        <input 
-                          type="number" 
-                          placeholder="Custom amount" 
-                          className="w-full pl-8 pr-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        />
-                      </div>
-                    </CardContent>
-                  </Card>
-
+            <div className="max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 items-start">
+                <div className="space-y-6">
+                  <h2 className="text-3xl font-bold tracking-tight">Donate Now</h2>
+                  <p className="text-gray-600">
+                    Every dollar you donate goes directly to funding clean water projects in communities that need it most. 
+                    Your support changes lives.
+                  </p>
+                  
                   <div className="space-y-4">
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700 h-14 text-lg">
-                      Donate Now
-                    </Button>
-                    <p className="text-sm text-gray-500 text-center">
-                      Secure payment processing powered by Givebutter
-                    </p>
+                    <Card>
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-lg flex items-center">
+                          <Zap className="h-5 w-5 mr-2 text-blue-600" />
+                          Quick Donation
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="grid grid-cols-2 gap-4 mb-4">
+                          {[25, 50, 100, 250].map((amount) => (
+                            <Button key={amount} variant="outline" className="h-14 text-lg">
+                              ${amount}
+                            </Button>
+                          ))}
+                        </div>
+                        <div className="relative">
+                          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">$</span>
+                          <input 
+                            type="number" 
+                            placeholder="Custom amount" 
+                            className="w-full pl-8 pr-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          />
+                        </div>
+                      </CardContent>
+                    </Card>
+
+                    <div className="space-y-4">
+                      <Button className="w-full bg-blue-600 hover:bg-blue-700 h-14 text-lg">
+                        Donate Now
+                      </Button>
+                      <p className="text-sm text-gray-500 text-center">
+                        Secure payment processing powered by Givebutter
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="bg-white p-6 rounded-lg border shadow-sm">
-                <h3 className="text-xl font-semibold mb-4">How Your Donation Helps</h3>
-                <div className="space-y-6">
-                  {[
-                    {
-                      icon: <Droplets className="h-6 w-6 text-blue-600" />,
-                      title: "Clean Water",
-                      text: "$25 provides clean water for one person for a year"
-                    },
-                    {
-                      icon: <Users className="h-6 w-6 text-blue-600" />,
-                      title: "Community Impact",
-                      text: "$100 helps provide water access for an entire family"
-                    },
-                    {
-                      icon: <Globe className="h-6 w-6 text-blue-600" />,
-                      title: "Global Reach",
-                      text: "$1,000 can fund a water project for a small community"
-                    },
-                    {
-                      icon: <Shield className="h-6 w-6 text-blue-600" />,
-                      title: "Sustainable Solutions",
-                      text: "We partner with local organizations to ensure long-term impact"
-                    }
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start space-x-4">
-                      <div className="p-2 bg-blue-50 rounded-full">
-                        {item.icon}
-                      </div>
-                      <div>
-                        <h4 className="font-medium">{item.title}</h4>
-                        <p className="text-sm text-gray-600">{item.text}</p>
-                      </div>
+                <div className="space-y-8">
+                  <div className="bg-white p-6 rounded-lg border shadow-sm">
+                    <h3 className="text-xl font-semibold mb-4">How Your Donation Helps</h3>
+                    <div className="space-y-6">
+                      {[
+                        {
+                          icon: <Droplets className="h-6 w-6 text-blue-600" />,
+                          title: "Clean Water",
+                          text: "$25 provides clean water for one person for a year"
+                        },
+                        {
+                          icon: <Users className="h-6 w-6 text-blue-600" />,
+                          title: "Community Impact",
+                          text: "$100 helps provide water access for an entire family"
+                        },
+                        {
+                          icon: <Globe className="h-6 w-6 text-blue-600" />,
+                          title: "Global Reach",
+                          text: "$1,000 can fund a water project for a small community"
+                        },
+                        {
+                          icon: <Shield className="h-6 w-6 text-blue-600" />,
+                          title: "Sustainable Solutions",
+                          text: "We partner with local organizations to ensure long-term impact"
+                        }
+                      ].map((item, index) => (
+                        <div key={index} className="flex items-start space-x-4">
+                          <div className="p-2 bg-blue-50 rounded-full">
+                            {item.icon}
+                          </div>
+                          <div>
+                            <h4 className="font-medium">{item.title}</h4>
+                            <p className="text-sm text-gray-600">{item.text}</p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
+
+                  {/* Learn More Section */}
+                  <div className="bg-white p-6 rounded-lg border shadow-sm">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="p-2 bg-blue-100 rounded-full">
+                        <BookOpen className="h-5 w-5 text-blue-600" />
+                      </div>
+                      <h3 className="text-lg font-semibold">Learn More About Our Impact</h3>
+                    </div>
+                    <p className="text-gray-600 mb-4 text-sm">
+                      Discover how your contribution helps provide clean water, improve health, and transform communities around the world.
+                    </p>
+                    <Link href="/documentation">
+                      <Button variant="outline" size="sm" className="border-blue-600 text-blue-600 hover:bg-blue-50 w-full sm:w-auto">
+                        Read Our Impact Report
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -134,7 +156,7 @@ export default function DonatePage() {
         </section>
 
         {/* Givebutter Integration Section */}
-        <section className="py-12 md:py-16 bg-gray-50">
+        <section className="py-4 md:py-16 bg-gray-50">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold tracking-tight mb-8">Make a Recurring Impact</h2>
