@@ -131,9 +131,7 @@ export default function HomePage() {
               Who We Are
             </h2>
             <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-              We are a passionate team dedicated to solving the global water crisis through education and direct action. 
-              Our innovative platform combines learning with real-world impact, ensuring that every interaction 
-              contributes to providing clean water to communities in need around the world.
+              We are Inspire-EDU, a non-profit organization dedicated to developing student leaders through addressing community and global issues. 
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
               <Link href="/about">
