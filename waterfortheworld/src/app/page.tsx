@@ -53,14 +53,16 @@ export default function HomePage() {
                   </Button>
                   </Link>
                   
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 cursor-pointer"
-                  >
-                    <Heart className="mr-2 h-5 w-5" />
-                  Donate Now
-                </Button>
+                  <Link href="/donate">
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 cursor-pointer"
+                    >
+                      <Heart className="mr-2 h-5 w-5" />
+                    Donate Now
+                                    </Button>
+                  </Link>
               </div>
             </div>
           </div>
