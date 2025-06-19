@@ -116,7 +116,7 @@ export default function DonatePage() {
                         {
                           icon: <Shield className="h-6 w-6 text-blue-600" />,
                           title: "Sustainable Solutions",
-                          text: "We partner with local organizations to ensure long-term impact"
+                          text: "We partner with leading organizations like charity:water to ensure long-term impact"
                         }
                       ].map((item, index) => (
                         <div key={index} className="flex items-start space-x-4">
@@ -138,14 +138,15 @@ export default function DonatePage() {
                       <div className="p-2 bg-blue-100 rounded-full">
                         <BookOpen className="h-5 w-5 text-blue-600" />
                       </div>
-                      <h3 className="text-lg font-semibold">Learn More About Our Impact</h3>
+                      <h3 className="text-lg font-semibold">Accountability and Transparency</h3>
                     </div>
                     <p className="text-gray-600 mb-4 text-sm">
-                      Discover how your contribution helps provide clean water, improve health, and transform communities around the world.
+                      We are committed to transparency and accountability in our operations. 
+                      Your contribution helps provide clean water, improve health, and transform communities around the world.
                     </p>
                     <Link href="/documentation">
                       <Button variant="outline" size="sm" className="border-blue-600 text-blue-600 hover:bg-blue-50 w-full sm:w-auto">
-                        Read Our Impact Report
+                        Read Our Financial Report
                       </Button>
                     </Link>
                   </div>

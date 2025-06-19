@@ -135,15 +135,26 @@ export default function QuizzesPage() {
   // Topic selection screen
   if (!selectedTopic) {
     return (
-      <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-white p-4 md:p-8">
-        <header className="mb-8">
+      <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-white">
+        <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
           <Link href="/" className="flex items-center space-x-2">
             <Droplets className="h-8 w-8 text-blue-600" />
-            <span className="text-xl font-bold text-gray-900">WaterForTheWorld</span>
+            <span className="hidden md:inline text-xl font-bold text-gray-900">WaterForTheWorld</span>
           </Link>
+          <nav className="ml-auto flex gap-6">
+            <Link href="/" className="text-sm font-medium hover:text-blue-600 transition-colors">
+              Home
+            </Link>
+            <Link href="/quizzes" className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors">
+              Quizzes
+            </Link>
+            <Link href="/donate" className="text-sm font-medium hover:text-blue-600 transition-colors">
+              Donate
+            </Link>
+          </nav>
         </header>
         
-        <main className="flex-1 flex flex-col items-center justify-center">
+        <main className="flex-1 flex flex-col items-center justify-center p-4 md:p-8 w-full">
           <div className="w-full max-w-4xl mx-auto text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Select a Quiz Topic</h1>
             <p className="text-lg text-gray-600 mb-8">Choose a category to start your quiz journey</p>
@@ -192,25 +203,25 @@ export default function QuizzesPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Header */}
-      <header className="px-4 lg:px-6 h-16 flex items-center justify-between border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+      <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <Link href="/" className="flex items-center space-x-2">
           <Droplets className="h-8 w-8 text-blue-600" />
           <span className="hidden md:inline text-xl font-bold text-gray-900">WaterForTheWorld</span>
         </Link>
-        <div className="flex items-center">
-          <span className="text-sm font-medium text-gray-700 bg-gray-100 px-5 py-1 rounded-full">
+        <div className="ml-4">
+          <span className="text-sm font-medium text-gray-700 bg-gray-100 px-3 py-1 rounded-full">
             {TOPICS.find(t => t.id === selectedTopic)?.name}
           </span>
         </div>
         <nav className="ml-auto flex gap-6">
-          <Link href="#quizzes" className="text-sm font-medium hover:text-blue-600 transition-colors">
+          <Link href="/" className="text-sm font-medium hover:text-blue-600 transition-colors">
+            Home
+          </Link>
+          <Link href="/quizzes" className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors">
             Quizzes
           </Link>
-          <Link href="#impact" className="text-sm font-medium hover:text-blue-600 transition-colors">
-            Impact
-          </Link>
-          <Link href="#about" className="text-sm font-medium hover:text-blue-600 transition-colors">
-            About Us
+          <Link href="/donate" className="text-sm font-medium hover:text-blue-600 transition-colors">
+            Donate
           </Link>
         </nav>
       </header>

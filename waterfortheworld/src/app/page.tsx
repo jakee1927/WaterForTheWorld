@@ -13,14 +13,14 @@ export default function HomePage() {
           <span className="hidden md:inline text-xl font-bold text-gray-900">WaterForTheWorld</span>
         </Link>
         <nav className="ml-auto flex gap-6">
-          <Link href="#quizzes" className="text-sm font-medium hover:text-blue-600 transition-colors">
+          <Link href="/" className="text-sm font-medium hover:text-blue-600 transition-colors">
+            Home
+          </Link>
+          <Link href="/quizzes" className="text-sm font-medium hover:text-blue-600 transition-colors">
             Quizzes
           </Link>
-          <Link href="#impact" className="text-sm font-medium hover:text-blue-600 transition-colors">
-            Impact
-          </Link>
-          <Link href="#about" className="text-sm font-medium hover:text-blue-600 transition-colors">
-            About Us
+          <Link href="/donate" className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors">
+            Donate
           </Link>
         </nav>
       </header>
