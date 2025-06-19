@@ -91,10 +91,6 @@ export default function HomePage() {
                   </CardContent>
                 </Card>
 
-                {/* Arrow */}
-                {/* <div className="hidden md:flex items-center justify-center">
-                  <ArrowRight className="h-12 w-12 text-blue-400" />
-                </div> */}
 
                 {/* Step 2 */}
                 <Card className="text-center p-6 border-2 border-green-100 hover:border-green-200 transition-colors h-full flex flex-col">
@@ -108,11 +104,6 @@ export default function HomePage() {
                     </p>
                   </CardContent>
                 </Card>
-
-                {/* Arrow */}
-                {/* <div className="hidden md:flex items-center justify-center">
-                  <ArrowRight className="h-12 w-12 text-blue-400" />
-                </div> */}
 
                 {/* Step 3 */}
                 <Card className="text-center p-6 border-2 border-purple-100 hover:border-purple-200 transition-colors h-full flex flex-col">
@@ -131,39 +122,28 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Who We Are Section */}
         <section className="w-full py-16 bg-gray-50">
-          <div className="container px-4 md:px-6 mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="p-6 bg-white hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6">
-                  <Heart className="h-12 w-12 text-red-600 mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Direct Impact</h3>
-                  <p className="text-gray-600">
-                    100% of donations go directly to providing clean water solutions to communities in need worldwide.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="p-6 bg-white hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6">
-                  <BookOpen className="h-12 w-12 text-purple-600 mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Real Learning</h3>
-                  <p className="text-gray-600">
-                    Engage with interactive quizzes that educate about topics from water conservation to pop culture.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="p-6 bg-white hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6">
-                  <Droplets className="h-12 w-12 text-blue-600 mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Clean Water</h3>
-                  <p className="text-gray-600">
-                    Every donation helps bring clean water to communities in need worldwide.
-                  </p>
-                </CardContent>
-              </Card>
+          <div className="container px-4 md:px-6 mx-auto max-w-4xl text-center">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gray-900 mb-8">
+              Who We Are
+            </h2>
+            <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+              We are a passionate team dedicated to solving the global water crisis through education and direct action. 
+              Our innovative platform combines learning with real-world impact, ensuring that every interaction 
+              contributes to providing clean water to communities in need around the world.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+              <Link href="/about">
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg">
+                  Learn More About Us
+                </Button>
+              </Link>
+              <Link href="/documents">
+                <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg">
+                  View Our Documents
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
