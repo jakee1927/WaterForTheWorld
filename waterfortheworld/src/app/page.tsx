@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Brain, Droplets, BookOpen, Heart } from "lucide-react"
+import { Brain, Droplets, BookOpen, Heart, Instagram } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
@@ -134,14 +134,15 @@ export default function HomePage() {
               We are Inspire-EDU, a non-profit organization dedicated to developing student leaders through addressing community and global issues. 
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
-              <Link href="/about">
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg">
-                  Learn More About Us
+              <a href="https://www.instagram.com/joininspireedu" target="_blank" rel="noopener noreferrer">
+                <Button className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-6 text-lg">
+                  <Instagram className="mr-2 h-5 w-5" />
+                  Follow Us on Instagram
                 </Button>
-              </Link>
+              </a>
               <Link href="/documents">
                 <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg">
-                  View Our Documents
+                  View Our Financals
                 </Button>
               </Link>
             </div>
