@@ -73,6 +73,7 @@ export default function QuizzesPage() {
   const [showFeedback, setShowFeedback] = useState(false);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const [waterDrops, setWaterDrops] = useState(0);
+  const [shouldBounce, setShouldBounce] = useState(false);
 
   // Load water drops from localStorage on component mount
   useEffect(() => {
@@ -138,6 +139,9 @@ export default function QuizzesPage() {
     if (correctAnswer) {
       const newDrops = waterDrops + 10;
       setWaterDrops(newDrops);
+      setShouldBounce(true);
+      // Reset bounce after animation completes
+      setTimeout(() => setShouldBounce(false), 1000);
     }
 
     setTimeout(() => {
@@ -222,17 +226,33 @@ export default function QuizzesPage() {
   // Quiz screen
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-white">
+      {/* Floating Water Drop Counter */}
+      <div className="fixed top-4 right-4 z-50">
+        <div className="flex items-center space-x-2 bg-white/90 backdrop-blur-sm border border-blue-100 rounded-full shadow-lg px-4 py-2 transition-all duration-300 hover:shadow-xl hover:scale-105">
+          <Droplets className="h-5 w-5 text-blue-500" />
+          <div className="flex flex-col items-center">
+            <span className="text-xs text-gray-500 font-medium">Water Drops</span>
+            <span className="text-lg font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+              {waterDrops}
+            </span>
+          </div>
+          <div className="h-8 w-0.5 bg-blue-100 mx-1"></div>
+          <div className="w-16 h-2 bg-blue-100 rounded-full overflow-hidden">
+            <div 
+              className="h-full bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-1000"
+              style={{ width: `${Math.min(100, (waterDrops % 1000) / 10)}%` }}
+            ></div>
+          </div>
+        </div>
+      </div>
+
       {/* Header */}
-      <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+      <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
         <Link href="/" className="flex items-center space-x-2">
           <Droplets className="h-8 w-8 text-blue-600" />
           <span className="hidden md:inline text-xl font-bold text-gray-900">WaterForTheWorld</span>
         </Link>
-        <div className="ml-4 flex items-center space-x-4">
-          <div className="flex items-center space-x-1 bg-blue-50 px-3 py-1 rounded-full">
-            <Droplets className="h-4 w-4 text-blue-600" />
-            <span className="text-sm font-medium text-blue-700">{waterDrops}</span>
-          </div>
+        <div className="ml-4">
           <span className="text-sm font-medium text-gray-700 bg-gray-100 px-3 py-1 rounded-full">
             {TOPICS.find(t => t.id === selectedTopic)?.name}
           </span>
@@ -331,7 +351,7 @@ export default function QuizzesPage() {
                       )}
                       <span>
                         {isCorrect 
-                          ? `Correct! +10 drops!` 
+                          ? <span>Correct! <span className="font-bold text-green-600">+10 drops!</span> 💧</span>
                           : `Incorrect. The correct answer was: ${currentQuestion.options.find(opt => opt.id === currentQuestion.answer)?.label}`
                         }
                       </span>
@@ -342,10 +362,23 @@ export default function QuizzesPage() {
                     <Button
                       onClick={handleSubmitAndNext}
                       disabled={showFeedback || !selectedOptionId}
-                      className="bg-blue-600 hover:bg-blue-700 text-white min-w-[150px]"
+                      className={`bg-blue-600 hover:bg-blue-700 text-white min-w-[150px] relative overflow-hidden ${shouldBounce && isCorrect ? 'animate-bounce' : ''}`}
                     >
-                      {showFeedback ? "Please wait..." : "Check Answer"}
-                      {!showFeedback && <ArrowRight className="ml-2 h-4 w-4" />}
+                      {showFeedback ? (
+                        <>
+                          <span>Please wait</span>
+                          {isCorrect && (
+                            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                              +10
+                            </span>
+                          )}
+                        </>
+                      ) : (
+                        <>
+                          <span>Check Answer</span>
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </>
+                      )}
                     </Button>
                   </div>
                 </CardContent>
