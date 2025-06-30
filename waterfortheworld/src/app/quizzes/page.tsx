@@ -72,6 +72,20 @@ export default function QuizzesPage() {
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
+  const [waterDrops, setWaterDrops] = useState(0);
+
+  // Load water drops from localStorage on component mount
+  useEffect(() => {
+    const savedDrops = localStorage.getItem('waterDrops');
+    if (savedDrops) {
+      setWaterDrops(parseInt(savedDrops, 10));
+    }
+  }, []);
+
+  // Save water drops to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem('waterDrops', waterDrops.toString());
+  }, [waterDrops]);
 
   // Load quiz data when topic is selected
   useEffect(() => {
@@ -119,6 +133,12 @@ export default function QuizzesPage() {
     const correctAnswer = currentQuestion?.answer === selectedOptionId;
     setIsCorrect(correctAnswer);
     setShowFeedback(true);
+    
+    // Add water drops for correct answers
+    if (correctAnswer) {
+      const newDrops = waterDrops + 10;
+      setWaterDrops(newDrops);
+    }
 
     setTimeout(() => {
       setShowFeedback(false);
@@ -208,7 +228,11 @@ export default function QuizzesPage() {
           <Droplets className="h-8 w-8 text-blue-600" />
           <span className="hidden md:inline text-xl font-bold text-gray-900">WaterForTheWorld</span>
         </Link>
-        <div className="ml-4">
+        <div className="ml-4 flex items-center space-x-4">
+          <div className="flex items-center space-x-1 bg-blue-50 px-3 py-1 rounded-full">
+            <Droplets className="h-4 w-4 text-blue-600" />
+            <span className="text-sm font-medium text-blue-700">{waterDrops}</span>
+          </div>
           <span className="text-sm font-medium text-gray-700 bg-gray-100 px-3 py-1 rounded-full">
             {TOPICS.find(t => t.id === selectedTopic)?.name}
           </span>
@@ -307,7 +331,7 @@ export default function QuizzesPage() {
                       )}
                       <span>
                         {isCorrect 
-                          ? "Correct!" 
+                          ? `Correct! +10 drops!` 
                           : `Incorrect. The correct answer was: ${currentQuestion.options.find(opt => opt.id === currentQuestion.answer)?.label}`
                         }
                       </span>
