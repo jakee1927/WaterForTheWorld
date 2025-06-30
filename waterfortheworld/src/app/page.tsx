@@ -19,8 +19,11 @@ export default function HomePage() {
           <Link href="/quizzes" className="text-sm font-medium hover:text-blue-600 transition-colors">
             Quizzes
           </Link>
-          <Link href="/donate" className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors">
+          <Link href="/donate" className="text-sm font-medium hover:text-blue-600 transition-colors">
             Donate
+          </Link>
+          <Link href="/tutors" className="text-sm font-medium hover:text-blue-600 transition-colors">
+            Free Tutor
           </Link>
         </nav>
       </header>
