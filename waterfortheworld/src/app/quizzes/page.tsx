@@ -362,18 +362,9 @@ export default function QuizzesPage() {
                     <Button
                       onClick={handleSubmitAndNext}
                       disabled={showFeedback || !selectedOptionId}
-                      className={`bg-blue-600 hover:bg-blue-700 text-white min-w-[150px] relative overflow-hidden ${shouldBounce && isCorrect ? 'animate-bounce' : ''}`}
+                      className={`bg-blue-600 hover:bg-blue-700 text-white min-w-[150px] ${shouldBounce ? 'animate-bounce' : ''}`}
                     >
-                      {showFeedback ? (
-                        <>
-                          <span>Please wait</span>
-                          {isCorrect && (
-                            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-                              +10
-                            </span>
-                          )}
-                        </>
-                      ) : (
+                      {showFeedback ? 'Please wait...' : (
                         <>
                           <span>Check Answer</span>
                           <ArrowRight className="ml-2 h-4 w-4" />
