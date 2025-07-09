@@ -74,6 +74,7 @@ export default function QuizzesPage() {
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const [waterDrops, setWaterDrops] = useState(0);
   const [shouldBounce, setShouldBounce] = useState(false);
+  const [showMilestone, setShowMilestone] = useState(false);
 
   // Load water drops from localStorage on component mount
   useEffect(() => {
@@ -86,6 +87,13 @@ export default function QuizzesPage() {
   // Save water drops to localStorage whenever they change
   useEffect(() => {
     localStorage.setItem('waterDrops', waterDrops.toString());
+  }, [waterDrops]);
+
+  // Trigger milestone popup every 100 drops
+  useEffect(() => {
+    if (waterDrops > 0 && waterDrops % 100 === 0) {
+      setShowMilestone(true);
+    }
   }, [waterDrops]);
 
   // Load quiz data when topic is selected
@@ -227,7 +235,7 @@ export default function QuizzesPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Floating Water Drop Counter */}
-      <div className="fixed top-4 right-4 z-50">
+      <div className="fixed top-20 right-4 z-50">
         <div className="flex items-center space-x-2 bg-white/90 backdrop-blur-sm border border-blue-100 rounded-full shadow-lg px-4 py-2 transition-all duration-300 hover:shadow-xl hover:scale-105">
           <Droplets className="h-5 w-5 text-blue-500" />
           <div className="flex flex-col items-center">
@@ -240,11 +248,26 @@ export default function QuizzesPage() {
           <div className="w-16 h-2 bg-blue-100 rounded-full overflow-hidden">
             <div 
               className="h-full bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-1000"
-              style={{ width: `${Math.min(100, (waterDrops % 1000) / 10)}%` }}
-            ></div>
+              style={{ width: `${waterDrops % 100}%` }}
+            />
           </div>
         </div>
       </div>
+
+      {showMilestone && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-sm w-full p-6 text-center">
+            <h2 className="text-2xl font-bold text-blue-700 mb-4">Congratulations!</h2>
+            <p className="text-gray-700">You've earned enough droplets to provide one bottle of water to a person in need. Keep going!</p>
+            <div className="w-full h-32 bg-gray-200/50 border border-gray-300 flex items-center justify-center text-gray-500 my-4">
+              Ad Placeholder (300x250)
+            </div>
+            <Button onClick={() => setShowMilestone(false)} className="bg-blue-600 hover:bg-blue-700 text-white w-full mt-2">
+              Keep Going
+            </Button>
+          </div>
+        </div>
+      )}
 
       {/* Header */}
       <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
