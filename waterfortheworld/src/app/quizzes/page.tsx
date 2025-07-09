@@ -255,15 +255,31 @@ export default function QuizzesPage() {
       </div>
 
       {showMilestone && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
-          <div className="bg-white rounded-lg shadow-xl max-w-sm w-full p-6 text-center">
-            <h2 className="text-2xl font-bold text-blue-700 mb-4">Congratulations!</h2>
-            <p className="text-gray-700">You've earned enough droplets to provide one bottle of water to a person in need. Keep going!</p>
-            <div className="w-full h-32 bg-gray-200/50 border border-gray-300 flex items-center justify-center text-gray-500 my-4">
-              Ad Placeholder (300x250)
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
+          <style jsx>{`
+            @keyframes pop-in {
+              0% {
+                opacity: 0;
+                transform: scale(0.5);
+              }
+              100% {
+                opacity: 1;
+                transform: scale(1);
+              }
+            }
+            .animate-pop-in {
+              animation: pop-in 0.3s ease-out forwards;
+            }
+          `}</style>
+          <div className="bg-white rounded-2xl shadow-xl text-center w-full max-w-md p-8 relative animate-pop-in">
+            <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-blue-500 rounded-full p-4 border-4 border-white">
+              <Award className="h-10 w-10 text-white" />
             </div>
-            <Button onClick={() => setShowMilestone(false)} className="bg-blue-600 hover:bg-blue-700 text-white w-full mt-2">
-              Keep Going
+            <h2 className="text-3xl font-bold text-gray-800 mt-8 mb-2">Milestone Reached!</h2>
+            <p className="text-5xl font-bold text-blue-600 my-4">{waterDrops}</p>
+            <p className="text-lg text-gray-600 mb-6">You're making a real difference, drop by drop!</p>
+            <Button onClick={() => setShowMilestone(false)} className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-6 rounded-full transition-transform hover:scale-105">
+              Keep Going!
             </Button>
           </div>
         </div>
@@ -340,26 +356,23 @@ export default function QuizzesPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-lg text-gray-800 mb-6">{currentQuestion.question}</p>
-                  <RadioGroup
-                    value={selectedOptionId || ""}
-                    onValueChange={handleOptionChange}
-                    disabled={showFeedback}
-                    className="space-y-4"
-                  >
+                  <RadioGroup value={selectedOptionId || ''} onValueChange={handleOptionChange} className="space-y-3">
                     {currentQuestion.options.map((option) => (
-                      <div
+                      <Label
                         key={option.id}
-                        className={`flex items-center space-x-3 p-3 border rounded-md transition-colors cursor-pointer ${showFeedback ? 'cursor-not-allowed' : 'hover:bg-blue-50'}
-                          ${showFeedback && option.id === currentQuestion.answer ? 'bg-green-100 border-green-400 ring-2 ring-green-300' : ''}
-                          ${showFeedback && option.id === selectedOptionId && !isCorrect ? 'bg-red-100 border-red-400 ring-2 ring-red-300' : ''}
-                          ${showFeedback && option.id !== selectedOptionId && option.id !== currentQuestion.answer ? 'opacity-70' : ''}
+                        htmlFor={option.id}
+                        className={`flex items-center space-x-3 p-4 rounded-lg border transition-all duration-200 ease-in-out
+                          ${showFeedback ? 'cursor-not-allowed' : 'cursor-pointer hover:bg-gray-100'}
+                          ${selectedOptionId === option.id ? 'border-blue-500 bg-blue-50' : 'border-gray-200'}
+                          ${showFeedback && option.id === currentQuestion.answer ? 'border-green-500 bg-green-50' : ''}
+                          ${showFeedback && selectedOptionId === option.id && option.id !== currentQuestion.answer ? 'border-red-500 bg-red-50' : ''}
                         `}
                       >
                         <RadioGroupItem value={option.id} id={option.id} disabled={showFeedback} />
-                        <Label htmlFor={option.id} className={`text-md text-gray-700 flex-1 ${showFeedback ? 'cursor-not-allowed' : 'cursor-pointer'}`}>
+                        <span className="text-md text-gray-700 flex-1">
                           {option.label}
-                        </Label>
-                      </div>
+                        </span>
+                      </Label>
                     ))}
                   </RadioGroup>
 
