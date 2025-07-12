@@ -217,8 +217,8 @@ export default function QuizzesPage() {
   // Quiz screen
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      {/* Floating Water Drop Counter */}
-      <div className="fixed top-4 right-4 z-50">
+      {/* Floating Water Drop Counter - Positioned below the navbar */}
+      <div className="fixed top-16 right-4 z-50">
         <div className="flex items-center space-x-2 bg-white/90 backdrop-blur-sm border border-blue-100 rounded-full shadow-lg px-4 py-2 transition-all duration-300 hover:shadow-xl hover:scale-105">
           <Droplets className="h-5 w-5 text-blue-500" />
           <div className="flex flex-col items-center">
