@@ -19,7 +19,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
     <AuthProvider>
       <div className="min-h-screen bg-gray-50">
         <Navbar />
-        <main className="py-8">
+        <main>
           {children}
         </main>
         <Toaster position="top-center" />

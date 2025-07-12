@@ -218,7 +218,7 @@ export default function QuizzesPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Floating Water Drop Counter */}
-      <div className="fixed top-20 right-4 z-50">
+      <div className="fixed top-4 right-4 z-50">
         <div className="flex items-center space-x-2 bg-white/90 backdrop-blur-sm border border-blue-100 rounded-full shadow-lg px-4 py-2 transition-all duration-300 hover:shadow-xl hover:scale-105">
           <Droplets className="h-5 w-5 text-blue-500" />
           <div className="flex flex-col items-center">
@@ -268,29 +268,7 @@ export default function QuizzesPage() {
         </div>
       )}
 
-      {/* Header */}
-      <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/80 backdrop-blur-sm sticky top-0 z-40">
-        <Link href="/" className="flex items-center space-x-2">
-          <Droplets className="h-8 w-8 text-blue-600" />
-          <span className="hidden md:inline text-xl font-bold text-gray-900">WaterForTheWorld</span>
-        </Link>
-        <div className="ml-4">
-          <span className="text-sm font-medium text-gray-700 bg-gray-100 px-3 py-1 rounded-full">
-            {TOPICS.find(t => t.id === selectedTopic)?.name}
-          </span>
-        </div>
-        <nav className="ml-auto flex gap-6">
-          <Link href="/" className="text-sm font-medium hover:text-blue-600 transition-colors">
-            Home
-          </Link>
-          <Link href="/quizzes" className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors">
-            Quizzes
-          </Link>
-          <Link href="/donate" className="text-sm font-medium hover:text-blue-600 transition-colors">
-            Donate
-          </Link>
-        </nav>
-      </header>
+
 
       <main className="flex-1 flex flex-col items-center w-full">
         {/* Top Ad Placeholder */}
