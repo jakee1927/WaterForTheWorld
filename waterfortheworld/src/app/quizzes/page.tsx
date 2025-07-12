@@ -260,7 +260,7 @@ export default function QuizzesPage() {
             </div>
             <h2 className="text-3xl font-bold text-gray-800 mt-8 mb-2">Milestone Reached!</h2>
             <p className="text-5xl font-bold text-blue-600 my-4">{waterDrops}</p>
-            <p className="text-lg text-gray-600 mb-6">You're making a real difference, drop by drop!</p>
+            <p className="text-lg text-gray-600 mb-6">You&apos;re making a real difference, drop by drop!</p>
             <Button onClick={() => setShowMilestone(false)} className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-6 rounded-full transition-transform hover:scale-105">
               Keep Going!
             </Button>

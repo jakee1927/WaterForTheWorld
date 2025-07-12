@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Droplets } from "lucide-react"
-import { User, BookOpen, MessageCircle } from "lucide-react"
+import { Droplets, User } from "lucide-react"
 import Link from "next/link"
 
 export default function TutorMatchPage() {
