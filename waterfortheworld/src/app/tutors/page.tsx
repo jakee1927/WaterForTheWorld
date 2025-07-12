@@ -7,27 +7,6 @@ import Link from "next/link"
 export default function TutorMatchPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      {/* Header */}
-      <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <Link href="/" className="flex items-center space-x-2">
-          <Droplets className="h-8 w-8 text-blue-600" />
-          <span className="hidden md:inline text-xl font-bold text-gray-900">WaterForTheWorld</span>
-        </Link>
-        <nav className="ml-auto flex gap-6">
-          <Link href="/" className="text-sm font-medium hover:text-blue-600 transition-colors">
-            Home
-          </Link>
-          <Link href="/quizzes" className="text-sm font-medium hover:text-blue-600 transition-colors">
-            Quizzes
-          </Link>
-          <Link href="/donate" className="text-sm font-medium hover:text-blue-600 transition-colors">
-            Donate
-          </Link>
-          <Link href="/tutors" className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors">
-            Free Tutor
-          </Link>
-        </nav>
-      </header>
 
       <main className="flex-1">
         {/* Hero Section */}
