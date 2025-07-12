@@ -10,8 +10,9 @@ import {
   sendPasswordResetEmail,
   updateProfile
 } from 'firebase/auth';
-import { doc, setDoc, getDoc, updateDoc } from 'firebase/firestore';
-import { auth, db, UserData } from '@/lib/firebase/config';
+import { auth, db } from '@/lib/firebase/init';
+import { getUserDoc, createUserDoc, updateUserDoc } from '@/lib/firebase/utils';
+import type { UserData } from '@/lib/firebase/config';
 
 interface AuthContextType {
   currentUser: User | null;
@@ -42,25 +43,23 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // Create or update user data in Firestore
   const createUserDocument = async (user: User, displayName: string) => {
-    const userRef = doc(db, 'users', user.uid);
-    const userSnap = await getDoc(userRef);
+    if (!auth.currentUser) return;
     
-    if (!userSnap.exists()) {
-      const newUserData: UserData = {
-        uid: user.uid,
+    let userData = await getUserDoc(db, user.uid);
+    
+    if (!userData) {
+      userData = await createUserDoc(db, user.uid, {
         email: user.email || '',
-        displayName: displayName,
+        displayName: displayName || user.displayName || '',
         photoURL: user.photoURL || '',
         dropletCount: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
-      };
-      
-      await setDoc(userRef, newUserData);
-      setUserData(newUserData);
-    } else {
-      const existingData = userSnap.data() as UserData;
-      setUserData(existingData);
+      });
+    }
+    
+    if (userData) {
+      setUserData(userData);
     }
   };
 
@@ -84,29 +83,34 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const updateUserProfile = async (updates: { displayName?: string; photoURL?: string }) => {
-    if (!currentUser) return;
-    
-    await updateProfile(currentUser, updates);
-    
-    const userRef = doc(db, 'users', currentUser.uid);
-    await updateDoc(userRef, {
-      ...updates,
-      updatedAt: new Date(),
-    });
-    
-    setUserData(prev => ({
-      ...prev!,
-      ...updates,
-    }));
+    if (!auth.currentUser) return;
+
+    try {
+      // Update Firebase Auth profile
+      await updateProfile(auth.currentUser, updates);
+      
+      // Update Firestore user document
+      await updateUserDoc(db, auth.currentUser.uid, updates);
+      
+      // Update local state
+      setUserData(prev => ({
+        ...prev!,
+        ...updates,
+      }));
+      
+      // Refresh current user
+      setCurrentUser({ ...auth.currentUser });
+    } catch (error) {
+      console.error('Error updating profile:', error);
+      throw error;
+    }
   };
 
   const updateDropletCount = async (newCount: number) => {
-    if (!currentUser) return;
+    if (!auth.currentUser) return;
     
-    const userRef = doc(db, 'users', currentUser.uid);
-    await updateDoc(userRef, {
+    await updateUserDoc(db, auth.currentUser.uid, {
       dropletCount: newCount,
-      updatedAt: new Date(),
     });
     
     setUserData(prev => ({
@@ -120,21 +124,27 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setCurrentUser(user);
       
       if (user) {
-        const userRef = doc(db, 'users', user.uid);
-        const userSnap = await getDoc(userRef);
-        
-        if (userSnap.exists()) {
-          setUserData(userSnap.data() as UserData);
-        } else if (user.displayName) {
-          // Create user document if it doesn't exist
-          await createUserDocument(user, user.displayName);
+        try {
+          // Try to get user data
+          const userData = await getUserDoc(db, user.uid);
+          
+          if (userData) {
+            setUserData(userData);
+          } else if (user.displayName || user.email) {
+            // Create user document if it doesn't exist
+            await createUserDocument(user, user.displayName || '');
+          }
+        } catch (error) {
+          console.error('Error fetching user data:', error);
         }
+      } else {
+        setUserData(null);
       }
       
       setLoading(false);
     });
 
-    return unsubscribe;
+    return () => unsubscribe();
   }, []);
 
   const value = {
