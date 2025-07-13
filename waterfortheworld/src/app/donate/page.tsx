@@ -166,15 +166,14 @@ export default function DonatePage() {
               <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-8">
                 Together, we can bring clean water to communities in need and transform lives.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link href="/quizzes">
-                  <Button variant="secondary" className="bg-white text-blue-600 hover:bg-blue-50 h-12 px-8">
+              <div className="w-full max-w-md mx-auto">
+                <Link href="/quizzes" className="w-full">
+                  <Button 
+                    variant="secondary" 
+                    className="w-full bg-white text-blue-600 hover:bg-blue-50 h-16 px-8 text-lg"
+                  >
+                    <Droplets className="h-7 w-7 mr-3" />
                     Take a Quiz
-                  </Button>
-                </Link>
-                <Link href="/">
-                  <Button variant="outline" className="border-white text-white hover:bg-blue-700 h-12 px-8">
-                    Learn More
                   </Button>
                 </Link>
               </div>
