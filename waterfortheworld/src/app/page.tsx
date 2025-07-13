@@ -27,24 +27,26 @@ export default function HomePage() {
                   Support our mission to provide clean water worldwide. Every quiz completed helps bring clean water to communities in need.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 relative z-10">
-                <Link href="/quizzes">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 cursor-pointer">
-                  <Brain className="mr-2 h-5 w-5" />
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto max-w-md mx-auto relative z-10 px-4 sm:px-0">
+                <Link href="/quizzes" className="w-full sm:w-auto">
+                  <Button 
+                    size="lg" 
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 cursor-pointer"
+                  >
+                    <Brain className="mr-2 h-5 w-5" />
                     Take Quizzes
                   </Button>
-                  </Link>
-                  
-                  <Link href="/donate">
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 cursor-pointer"
-                    >
-                      <Heart className="mr-2 h-5 w-5" />
+                </Link>
+                <Link href="/donate" className="w-full sm:w-auto">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="w-full border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 cursor-pointer"
+                  >
+                    <Heart className="mr-2 h-5 w-5" />
                     Donate Now
-                                    </Button>
-                  </Link>
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -141,16 +143,18 @@ export default function HomePage() {
               <p className="mx-auto max-w-2xl text-blue-100 text-lg">
                 You can help provide clean water to those in need. Every quiz completed makes an impact.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 cursor-pointer">
-                  <Heart className="mr-2 h-5 w-5" />
-                  Donate Now
-                </Button>
-                <Link href="/quizzes">
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <Link href="/donate" className="w-full sm:w-auto">
+                  <Button size="lg" className="w-full bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 cursor-pointer">
+                    <Heart className="mr-2 h-5 w-5" />
+                    Donate Now
+                  </Button>
+                </Link>
+                <Link href="/quizzes" className="w-full sm:w-auto">
                   <Button
                     size="lg"
                     variant="outline"
-                    className="text-blue-600 border-blue-600 hover:bg-gray-100 hover:text-blue-600 px-8 py-3 cursor-pointer"
+                    className="w-full text-blue-600 border-blue-600 hover:bg-gray-100 hover:text-blue-600 px-8 py-3 cursor-pointer"
                   >
                     <Brain className="mr-2 h-5 w-5" />
                     Take a Quiz
