@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Droplets, Heart, Zap, Globe, Shield, Users, BookOpen } from "lucide-react"
+import { Droplet, Droplets, Heart, Zap, Globe, Shield, Users, BookOpen } from "lucide-react"
 import Link from "next/link"
 
 export default function DonatePage() {
@@ -81,7 +81,7 @@ export default function DonatePage() {
                     <div className="space-y-6">
                       {[
                         {
-                          icon: <Droplets className="h-6 w-6 text-blue-600" />,
+                          icon: <Droplet className="h-6 w-6 text-blue-600" />,
                           title: "Clean Water",
                           text: "$25 provides clean water for one person for a year"
                         },
@@ -170,10 +170,10 @@ export default function DonatePage() {
                 <Link href="/quizzes" className="w-full">
                   <Button 
                     variant="secondary" 
-                    className="w-full bg-white text-blue-600 hover:bg-blue-50 h-16 px-8 text-lg"
+                    className="w-full bg-white text-blue-600 hover:bg-blue-50 h-14 px-8 text-lg group"
                   >
-                    <Droplets className="h-7 w-7 mr-3" />
-                    Take a Quiz
+                    <Droplet className="!h-7 !w-7 mr-3 text-blue-600 drop-shadow-md" />
+                    <span className="text-lg">Start Earning Droplets</span>
                   </Button>
                 </Link>
               </div>

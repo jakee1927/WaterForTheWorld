@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Brain, Droplets, BookOpen, Heart, Instagram } from "lucide-react"
+import { Brain, Droplets, BookOpen, Heart, Instagram, Droplet } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
@@ -33,8 +33,8 @@ export default function HomePage() {
                     size="lg" 
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 cursor-pointer"
                   >
-                    <Brain className="mr-2 h-5 w-5" />
-                    Take Quizzes
+                    <Droplet className="mr-2 h-5 w-5 text-white" />
+                    Start Earning Droplets
                   </Button>
                 </Link>
                 <Link href="/donate" className="w-full sm:w-auto">
@@ -156,8 +156,8 @@ export default function HomePage() {
                     variant="outline"
                     className="w-full text-blue-600 border-blue-600 hover:bg-gray-100 hover:text-blue-600 px-8 py-3 cursor-pointer"
                   >
-                    <Brain className="mr-2 h-5 w-5" />
-                    Take a Quiz
+                    <Droplet className="!h-5 !w-5 mr-2 text-blue-600" />
+                    Start Earning Droplets
                   </Button>
                 </Link>
               </div>
