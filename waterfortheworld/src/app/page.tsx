@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Brain, Droplets, BookOpen, Heart, Instagram, Droplet } from "lucide-react"
+import { Droplets, BookOpen, Heart, Instagram, Droplet } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
