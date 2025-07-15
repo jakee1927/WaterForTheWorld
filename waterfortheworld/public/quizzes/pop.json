@@ -274,6 +274,1106 @@
         { "id": "q25o4", "label": "Succession" }
       ],
       "answer": "q25o4"
+    },
+    {
+      "id": "q26",
+      "question": "In the movie 'Get Out', what does Chris use to momentarily disable his captors and escape the 'Sunken Place'?",
+      "options": [
+        { "id": "q26o1", "label": "A glass of water" },
+        { "id": "q26o2", "label": "A camera flash" },
+        { "id": "q26o3", "label": "A loud scream" },
+        { "id": "q26o4", "label": "A silver spoon" }
+      ],
+      "answer": "q26o2"
+    },
+    {
+      "id": "q27",
+      "question": "In the HBO series 'Succession', what is the name of the family's media conglomerate?",
+      "options": [
+        { "id": "q27o1", "label": "Pierce Global Media" },
+        { "id": "q27o2", "label": "Vaulter" },
+        { "id": "q27o3", "label": "GoJo" },
+        { "id": "q27o4", "label": "Waystar RoyCo" }
+      ],
+      "answer": "q27o4"
+    },
+    {
+      "id": "q28",
+      "question": "The supergroup boygenius, which won multiple Grammys in 2024, consists of Phoebe Bridgers, Lucy Dacus, and which other artist?",
+      "options": [
+        { "id": "q28o1", "label": "Julien Baker" },
+        { "id": "q28o2", "label": "Fiona Apple" },
+        { "id": "q28o3", "label": "Sharon Van Etten" },
+        { "id": "q28o4", "label": "Snail Mail" }
+      ],
+      "answer": "q28o1"
+    },
+    {
+      "id": "q29",
+      "question": "What is the name of the fictional metropolis where the majority of 'Cyberpunk 2077' takes place?",
+      "options": [
+        { "id": "q29o1", "label": "Neo-Tokyo" },
+        { "id": "q29o2", "label": "The Sprawl" },
+        { "id": "q29o3", "label": "Night City" },
+        { "id": "q29o4", "label": "Mega-City One" }
+      ],
+      "answer": "q29o3"
+    },
+    {
+      "id": "q30",
+      "question": "Which Wes Anderson film is known for being animated entirely in stop-motion and is set in a dystopian Japan?",
+      "options": [
+        { "id": "q30o1", "label": "The Grand Budapest Hotel" },
+        { "id": "q30o2", "label": "Isle of Dogs" },
+        { "id": "q30o3", "label": "Fantastic Mr. Fox" },
+        { "id": "q30o4", "label": "The French Dispatch" }
+      ],
+      "answer": "q30o2"
+    },
+    {
+      "id": "q31",
+      "question": "In 'The Office' (US), what is the name of the printer company that acquires Dunder Mifflin in Season 6?",
+      "options": [
+        { "id": "q31o1", "label": "Sabre" },
+        { "id": "q31o2", "label": "Prince Family Paper" },
+        { "id": "q31o3", "label": "Hammermill" },
+        { "id": "q31o4", "label": "Vance Refrigeration" }
+      ],
+      "answer": "q31o1"
+    },
+    {
+      "id": "q32",
+      "question": "The viral 'Woman Yelling at a Cat' meme features a cast member from 'The Real Housewives of Beverly Hills' and a white cat named what?",
+      "options": [
+        { "id": "q32o1", "label": "Lil Bub" },
+        { "id": "q32o2", "label": "Grumpy Cat" },
+        { "id": "q32o3", "label": "Smudge" },
+        { "id": "q32o4", "label": "Nyan Cat" }
+      ],
+      "answer": "q32o3"
+    },
+    {
+      "id": "q33",
+      "question": "Kendrick Lamar's 2017 album, which won the Pulitzer Prize for Music, is titled what?",
+      "options": [
+        { "id": "q33o1", "label": "To Pimp a Butterfly" },
+        { "id": "q33o2", "label": "good kid, m.A.A.d city" },
+        { "id": "q33o3", "label": "Mr. Morale & the Big Steppers" },
+        { "id": "q33o4", "label": "DAMN." }
+      ],
+      "answer": "q33o4"
+    },
+    {
+      "id": "q34",
+      "question": "In 'Everything Everywhere All at Once', what seemingly mundane object symbolizes the nihilistic philosophy of Jobu Tupaki?",
+      "options": [
+        { "id": "q34o1", "label": "A googly eye" },
+        { "id": "q34o2", "label": "A pet rock" },
+        { "id": "q34o3", "label": "An everything bagel" },
+        { "id": "q34o4", "label": "A hot dog finger" }
+      ],
+      "answer": "q34o3"
+    },
+    {
+      "id": "q35",
+      "question": "In 'Breaking Bad', what is the street name of the highly pure methamphetamine created by Walter White?",
+      "options": [
+        { "id": "q35o1", "label": "Crystal Blue" },
+        { "id": "q35o2", "label": "Blue Magic" },
+        { "id": "q35o3", "label": "Big Blue" },
+        { "id": "q35o4", "label": "Blue Sky" }
+      ],
+      "answer": "q35o4"
+    },
+    {
+      "id": "q36",
+      "question": "Who was the first woman to win the Academy Award for Best Director, for the film 'The Hurt Locker'?",
+      "options": [
+        { "id": "q36o1", "label": "Jane Campion" },
+        { "id": "q36o2", "label": "Chloé Zhao" },
+        { "id": "q36o3", "label": "Kathryn Bigelow" },
+        { "id": "q36o4", "label": "Sofia Coppola" }
+      ],
+      "answer": "q36o3"
+    },
+    {
+      "id": "q37",
+      "question": "Which 2021 song by Olivia Rodrigo became a global phenomenon, breaking numerous streaming records upon its debut?",
+      "options": [
+        { "id": "q37o1", "label": "good 4 u" },
+        { "id": "q37o2", "label": "deja vu" },
+        { "id": "q37o3", "label": "drivers license" },
+        { "id": "q37o4", "label": "vampire" }
+      ],
+      "answer": "q37o3"
+    },
+    {
+      "id": "q38",
+      "question": "The HBO anthology series 'The White Lotus' was created by which writer and director, also known for 'School of Rock'?",
+      "options": [
+        { "id": "q38o1", "label": "Mike Schur" },
+        { "id": "q38o2", "label": "David E. Kelley" },
+        { "id": "q38o3", "label": "Mike White" },
+        { "id": "q38o4", "label": "Jesse Armstrong" }
+      ],
+      "answer": "q38o3"
+    },
+    {
+      "id": "q39",
+      "question": "In 'Blade Runner 2049', what small, carved animal is a key memory object for the protagonist, K?",
+      "options": [
+        { "id": "q39o1", "label": "A wooden horse" },
+        { "id": "q39o2", "label": "An origami unicorn" },
+        { "id": "q39o3", "label": "A stone owl" },
+        { "id": "q39o4", "label": "A metal sheep" }
+      ],
+      "answer": "q39o1"
+    },
+    {
+      "id": "q40",
+      "question": "Which indie farming simulation game, largely developed by a single person, has sold over 30 million copies?",
+      "options": [
+        { "id": "q40o1", "label": "Animal Crossing" },
+        { "id": "q40o2", "label": "Harvest Moon" },
+        { "id": "q40o3", "label": "Stardew Valley" },
+        { "id": "q40o4", "label": "My Time at Portia" }
+      ],
+      "answer": "q40o3"
+    },
+    {
+      "id": "q41",
+      "question": "The duo Trent Reznor and Atticus Ross won Academy Awards for their musical scores to which two films?",
+      "options": [
+        { "id": "q41o1", "label": "'The Social Network' & 'Soul'" },
+        { "id": "q41o2", "label": "'Dune' & 'The Dark Knight'" },
+        { "id": "q41o3", "label": "'Interstellar' & 'Inception'" },
+        { "id": "q41o4", "label": "'Mank' & 'Babel'" }
+      ],
+      "answer": "q41o1"
+    },
+    {
+      "id": "q42",
+      "question": "In the sitcom 'Community', what is the name of the college's terrifyingly nondescript, anthropomorphic mascot?",
+      "options": [
+        { "id": "q42o1", "label": "The Greendale Grizzly" },
+        { "id": "q42o2", "label": "The City College Cougar" },
+        { "id": "q42o3", "label": "The Human Being" },
+        { "id": "q42o4", "label": "The Study Room Sixer" }
+      ],
+      "answer": "q42o3"
+    },
+    {
+      "id": "q43",
+      "question": "The term 'stan,' referring to an obsessive fan, originates from a 2000 song of the same name by which rapper?",
+      "options": [
+        { "id": "q43o1", "label": "Nas" },
+        { "id": "q43o2", "label": "Jay-Z" },
+        { "id": "q43o3", "label": "Eminem" },
+        { "id": "q43o4", "label": "Dr. Dre" }
+      ],
+      "answer": "q43o3"
+    },
+    {
+      "id": "q44",
+      "question": "In Quentin Tarantino's 'Pulp Fiction', what did the prop master actually put inside the mysterious, glowing briefcase?",
+      "options": [
+        { "id": "q44o1", "label": "A light bulb and a battery" },
+        { "id": "q44o2", "label": "Gold bars" },
+        { "id": "q44o3", "label": "The script of the movie" },
+        { "id": "q44o4", "label": "A single diamond" }
+      ],
+      "answer": "q44o1"
+    },
+    {
+      "id": "q45",
+      "question": "In 'Game of Thrones', what is the name of Jon Snow's loyal direwolf?",
+      "options": [
+        { "id": "q45o1", "label": "Ghost" },
+        { "id": "q45o2", "label": "Grey Wind" },
+        { "id": "q45o3", "label": "Nymeria" },
+        { "id": "q45o4", "label": "Shaggydog" }
+      ],
+      "answer": "q45o1"
+    },
+    {
+      "id": "q46",
+      "question": "Bad Bunny's 2022 album 'Un Verano Sin Ti' made history as the first all-Spanish language album to be nominated for which major Grammy Award?",
+      "options": [
+        { "id": "q46o1", "label": "Record of the Year" },
+        { "id": "q46o2", "label": "Song of the Year" },
+        { "id": "q46o3", "label": "Best New Artist" },
+        { "id": "q46o4", "label": "Album of the Year" }
+      ],
+      "answer": "q46o4"
+    },
+    {
+      "id": "q47",
+      "question": "'Manners Maketh Man' is the code phrase and motto for which fictional secret service organization in film?",
+      "options": [
+        { "id": "q47o1", "label": "The Impossible Missions Force" },
+        { "id": "q47o2", "label": "The Kingsman Agency" },
+        { "id": "q47o3", "label": "The Man from U.N.C.L.E." },
+        { "id": "q47o4", "label": "The Division" }
+      ],
+      "answer": "q47o2"
+    },
+    {
+      "id": "q48",
+      "question": "Who plays the 'hot priest' in the second season of Phoebe Waller-Bridge's series 'Fleabag'?",
+      "options": [
+        { "id": "q48o1", "label": "Andrew Scott" },
+        { "id": "q48o2", "label": "Martin Freeman" },
+        { "id": "q48o3", "label": "Ben Aldridge" },
+        { "id": "q48o4", "label": "Brett Gelman" }
+      ],
+      "answer": "q48o1"
+    },
+    {
+      "id": "q49",
+      "question": "In the 'Mass Effect' video game trilogy, what is the name of Commander Shepard's iconic starship?",
+      "options": [
+        { "id": "q49o1", "label": "The Ebon Hawk" },
+        { "id": "q49o2", "label": "The Pillar of Autumn" },
+        { "id": "q49o3", "label": "The Normandy" },
+        { "id": "q49o4", "label": "The Tempest" }
+      ],
+      "answer": "q49o3"
+    },
+    {
+      "id": "q50",
+      "question": "Who surpassed PewDiePie in 2022 to become the most-subscribed individual creator on YouTube?",
+      "options": [
+        { "id": "q50o1", "label": "T-Series" },
+        { "id": "q50o2", "label": "Cocomelon" },
+        { "id": "q50o3", "label": "MrBeast" },
+        { "id": "q50o4", "label": "Dude Perfect" }
+      ],
+      "answer": "q50o3"
+    },
+    {
+      "id": "q51",
+      "question": "Which Martin Scorsese film holds the record for the most uses of the 'f-word' in his filmography?",
+      "options": [
+        { "id": "q51o1", "label": "Goodfellas" },
+        { "id": "q51o2", "label": "Casino" },
+        { "id": "q51o3", "label": "The Wolf of Wall Street" },
+        { "id": "q51o4", "label": "The Departed" }
+      ],
+      "answer": "q51o3"
+    },
+    {
+      "id": "q52",
+      "question": "In 'Parks and Recreation', Ben Wyatt's obsession with what food item leads him to create the ill-fated 'Low-Cal Calzone Zone'?",
+      "options": [
+        { "id": "q52o1", "label": "Waffles" },
+        { "id": "q52o2", "label": "Calzones" },
+        { "id": "q52o3", "label": "Pizza" },
+        { "id": "q52o4", "label": "Burritos" }
+      ],
+      "answer": "q52o2"
+    },
+    {
+      "id": "q53",
+      "question": "Which British artist enjoyed massive success in 2020 with her disco-influenced album 'Future Nostalgia'?",
+      "options": [
+        { "id": "q53o1", "label": "Adele" },
+        { "id": "q53o2", "label": "Jessie Ware" },
+        { "id": "q53o3", "label": "Dua Lipa" },
+        { "id": "q53o4", "label": "Charli XCX" }
+      ],
+      "answer": "q53o3"
+    },
+    {
+      "id": "q54",
+      "question": "Which actress won an Oscar for playing Queen Elizabeth I and was later nominated for playing Queen Victoria?",
+      "options": [
+        { "id": "q54o1", "label": "Cate Blanchett" },
+        { "id": "q54o2", "label": "Helen Mirren" },
+        { "id": "q54o3", "label": "Judi Dench" },
+        { "id": "q54o4", "label": "Olivia Colman" }
+      ],
+      "answer": "q54o3"
+    },
+    {
+      "id": "q55",
+      "question": "What is the best-selling video game of all time, with over 300 million copies sold across all platforms as of 2024?",
+      "options": [
+        { "id": "q55o1", "label": "Tetris" },
+        { "id": "q55o2", "label": "Grand Theft Auto V" },
+        { "id": "q55o3", "label": "Minecraft" },
+        { "id": "q55o4", "label": "Fortnite" }
+      ],
+      "answer": "q55o3"
+    },
+    {
+      "id": "q56",
+      "question": "What is the name of the fictional tech company at the center of the HBO comedy series 'Silicon Valley'?",
+      "options": [
+        { "id": "q56o1", "label": "Hooli" },
+        { "id": "q56o2", "label": "Pied Piper" },
+        { "id": "q56o3", "label": "Aviato" },
+        { "id": "q56o4", "label": "Stark Industries" }
+      ],
+      "answer": "q56o2"
+    },
+    {
+      "id": "q57",
+      "question": "What is the name of the virtual band created by Damon Albarn and Jamie Hewlett, known for hits like 'Feel Good Inc.'?",
+      "options": [
+        { "id": "q57o1", "label": "Dethklok" },
+        { "id": "q57o2", "label": "The Archies" },
+        { "id": "q57o3", "label": "Gorillaz" },
+        { "id": "q57o4", "label": "K/DA" }
+      ],
+      "answer": "q57o3"
+    },
+    {
+      "id": "q58",
+      "question": "Who played the formidable antagonist Erik Killmonger in the 2018 film 'Black Panther'?",
+      "options": [
+        { "id": "q58o1", "label": "Chadwick Boseman" },
+        { "id": "q58o2", "label": "Winston Duke" },
+        { "id": "q58o3", "label": "Daniel Kaluuya" },
+        { "id": "q58o4", "label": "Michael B. Jordan" }
+      ],
+      "answer": "q58o4"
+    },
+    {
+      "id": "q59",
+      "question": "In the Netflix series 'The Crown', who was the first actress to portray Princess Diana, in Season 4?",
+      "options": [
+        { "id": "q59o1", "label": "Elizabeth Debicki" },
+        { "id": "q59o2", "label": "Emma Corrin" },
+        { "id": "q59o3", "label": "Vanessa Kirby" },
+        { "id": "q59o4", "label": "Helena Bonham Carter" }
+      ],
+      "answer": "q59o2"
+    },
+    {
+      "id": "q60",
+      "question": "The viral 'Ice Bucket Challenge' of 2014 was intended to raise awareness and funds for what neurodegenerative disease?",
+      "options": [
+        { "id": "q60o1", "label": "Parkinson's Disease" },
+        { "id": "q60o2", "label": "Multiple Sclerosis (MS)" },
+        { "id": "q60o3", "label": "Amyotrophic Lateral Sclerosis (ALS)" },
+        { "id": "q60o4", "label": "Huntington's Disease" }
+      ],
+      "answer": "q60o3"
+    },
+    {
+      "id": "q61",
+      "question": "What is the name of the sentient AI, voiced by Scarlett Johansson, in the 2013 Spike Jonze film 'Her'?",
+      "options": [
+        { "id": "q61o1", "label": "Joi" },
+        { "id": "q61o2", "label": "Cortana" },
+        { "id": "q61o3", "label": "GLaDOS" },
+        { "id": "q61o4", "label": "Samantha" }
+      ],
+      "answer": "q61o4"
+    },
+    {
+      "id": "q62",
+      "question": "The Apple TV+ series 'Ted Lasso' stars its co-creator, Jason Sudeikis, as an American coach of what kind of sports team?",
+      "options": [
+        { "id": "q62o1", "label": "An English Premier League football club" },
+        { "id": "q62o2", "label": "An American NFL team" },
+        { "id": "q62o3", "label": "A minor league baseball team" },
+        { "id": "q62o4", "label": "A professional basketball team" }
+      ],
+      "answer": "q62o1"
+    },
+    {
+      "id": "q63",
+      "question": "Which K-pop girl group was the first to perform at the Coachella Valley Music and Arts Festival?",
+      "options": [
+        { "id": "q63o1", "label": "TWICE" },
+        { "id": "q63o2", "label": "BLACKPINK" },
+        { "id": "q63o3", "label": "Red Velvet" },
+        { "id": "q63o4", "label": "Girls' Generation" }
+      ],
+      "answer": "q63o2"
+    },
+    {
+      "id": "q64",
+      "question": "In 'The Legend of Zelda: Twilight Princess', what is the name of Link's imp-like companion from the Twilight Realm?",
+      "options": [
+        { "id": "q64o1", "label": "Navi" },
+        { "id": "q64o2", "label": "Tatl" },
+        { "id": "q64o3", "label": "Midna" },
+        { "id": "q64o4", "label": "Fi" }
+      ],
+      "answer": "q64o3"
+    },
+    {
+      "id": "q65",
+      "question": "The 'Barbenheimer' cultural phenomenon referred to the simultaneous theatrical release of which two major films in July 2023?",
+      "options": [
+        { "id": "q65o1", "label": "'Barbie' and 'Asteroid City'" },
+        { "id": "q65o2", "label": "'Oppenheimer' and 'Mission: Impossible'" },
+        { "id": "q65o3", "label": "'Barbie' and 'Oppenheimer'" },
+        { "id": "q65o4", "label": "'The Little Mermaid' and 'Oppenheimer'" }
+      ],
+      "answer": "q65o3"
+    },
+    {
+      "id": "q66",
+      "question": "While their official motto is 'Hear Me Roar!', what is the more commonly known, unofficial motto of House Lannister in 'Game of Thrones'?",
+      "options": [
+        { "id": "q66o1", "label": "'Ours is the Fury'" },
+        { "id": "q66o2", "label": "'A Lannister Always Pays His Debts'" },
+        { "id": "q66o3", "label": "'Family, Duty, Honor'" },
+        { "id": "q66o4", "label": "'Unbowed, Unbent, Unbroken'" }
+      ],
+      "answer": "q66o2"
+    },
+    {
+      "id": "q67",
+      "question": "Who wrote the book, music, and lyrics for the groundbreaking Broadway musical 'Hamilton'?",
+      "options": [
+        { "id": "q67o1", "label": "Stephen Sondheim" },
+        { "id": "q67o2", "label": "Andrew Lloyd Webber" },
+        { "id": "q67o3", "label": "Lin-Manuel Miranda" },
+        { "id": "q67o4", "label": "Stephen Schwartz" }
+      ],
+      "answer": "q67o3"
+    },
+    {
+      "id": "q68",
+      "question": "Which A24 horror film, directed by Robert Eggers, stars Robert Pattinson and Willem Dafoe as two isolated lighthouse keepers?",
+      "options": [
+        { "id": "q68o1", "label": "Midsommar" },
+        { "id": "q68o2", "label": "Hereditary" },
+        { "id": "q68o3", "label": "The Witch" },
+        { "id": "q68o4", "label": "The Lighthouse" }
+      ],
+      "answer": "q68o4"
+    },
+    {
+      "id": "q69",
+      "question": "Who is the charismatic and profane leader of the anti-superhero vigilante group in the Amazon Prime series 'The Boys'?",
+      "options": [
+        { "id": "q69o1", "label": "Homelander" },
+        { "id": "q69o2", "label": "Hughie Campbell" },
+        { "id": "q69o3", "label": "Billy Butcher" },
+        { "id": "q69o4", "label": "Mother's Milk" }
+      ],
+      "answer": "q69o3"
+    },
+    {
+      "id": "q70",
+      "question": "Which Lizzo song, originally released in 2017, became a surprise #1 hit in 2019 after being featured in a Netflix film?",
+      "options": [
+        { "id": "q70o1", "label": "Good as Hell" },
+        { "id": "q70o2", "label": "Juice" },
+        { "id": "q70o3", "label": "Truth Hurts" },
+        { "id": "q70o4", "label": "About Damn Time" }
+      ],
+      "answer": "q70o3"
+    },
+    {
+      "id": "q71",
+      "question": "Which acclaimed PlayStation exclusive series follows the post-apocalyptic journey of characters Ellie and Joel?",
+      "options": [
+        { "id": "q71o1", "label": "Uncharted" },
+        { "id": "q71o2", "label": "The Last of Us" },
+        { "id": "q71o3", "label": "Horizon Zero Dawn" },
+        { "id": "q71o4", "label": "God of War" }
+      ],
+      "answer": "q71o2"
+    },
+    {
+      "id": "q72",
+      "question": "Which 2010 film directed by David Fincher chronicles the tumultuous founding of Facebook?",
+      "options": [
+        { "id": "q72o1", "label": "The Social Network" },
+        { "id": "q72o2", "label": "Steve Jobs" },
+        { "id": "q72o3", "label": "Zodiac" },
+        { "id": "q72o4", "label": "Mank" }
+      ],
+      "answer": "q72o1"
+    },
+    {
+      "id": "q73",
+      "question": "Which critically acclaimed HBO miniseries dramatizes the events and aftermath of the 1986 nuclear disaster in the Soviet Union?",
+      "options": [
+        { "id": "q73o1", "label": "The Knick" },
+        { "id": "q73o2", "label": "Band of Brothers" },
+        { "id": "q73o3", "label": "Chernobyl" },
+        { "id": "q73o4", "label": "Watchmen" }
+      ],
+      "answer": "q73o3"
+    },
+    {
+      "id": "q74",
+      "question": "What is the real name of the Canadian rapper and global superstar known as Drake?",
+      "options": [
+        { "id": "q74o1", "label": "Abel Tesfaye" },
+        { "id": "q74o2", "label": "Aubrey Graham" },
+        { "id": "q74o3", "label": "Donald Glover" },
+        { "id": "q74o4", "label": "Austin Post" }
+      ],
+      "answer": "q74o2"
+    },
+    {
+      "id": "q75",
+      "question": "In 'Star Wars: The Force Awakens', what is the name of the desert planet where we first meet the character Rey?",
+      "options": [
+        { "id": "q75o1", "label": "Tatooine" },
+        { "id": "q75o2", "label": "Jakku" },
+        { "id": "q75o3", "label": "Pasaana" },
+        { "id": "q75o4", "label": "Jedha" }
+      ],
+      "answer": "q75o2"
+    },
+    {
+      "id": "q76",
+      "question": "What is the name of the actor who wears the helmet and plays the titular character in the Disney+ series 'The Mandalorian'?",
+      "options": [
+        { "id": "q76o1", "label": "Oscar Isaac" },
+        { "id": "q76o2", "label": "Diego Luna" },
+        { "id": "q76o3", "label": "Giancarlo Esposito" },
+        { "id": "q76o4", "label": "Pedro Pascal" }
+      ],
+      "answer": "q76o4"
+    },
+    {
+      "id": "q77",
+      "question": "Which artist's devoted fan base is collectively known as the 'Beyhive'?",
+      "options": [
+        { "id": "q77o1", "label": "Rihanna" },
+        { "id": "q77o2", "label": "Taylor Swift" },
+        { "id": "q77o3", "label": "Beyoncé" },
+        { "id": "q77o4", "label": "Lady Gaga" }
+      ],
+      "answer": "q77o3"
+    },
+    {
+      "id": "q78",
+      "question": "In the 'John Wick' film series, what is the name of the hotel chain that serves as a neutral ground for assassins?",
+      "options": [
+        { "id": "q78o1", "label": "The Grand Budapest" },
+        { "id": "q78o2", "label": "The Continental" },
+        { "id": "q78o3", "label": "The Overlook" },
+        { "id": "q78o4", "label": "The Elysium" }
+      ],
+      "answer": "q78o2"
+    },
+    {
+      "id": "q79",
+      "question": "Which character in the 'Super Mario' franchise is the greedy, yellow-and-purple clad arch-rival of Mario?",
+      "options": [
+        { "id": "q79o1", "label": "Waluigi" },
+        { "id": "q79o2", "label": "Bowser" },
+        { "id": "q79o3", "label": "Wario" },
+        { "id": "q79o4", "label": "Donkey Kong" }
+      ],
+      "answer": "q79o3"
+    },
+    {
+      "id": "q80",
+      "question": "What is the name of the fictional New Jersey mob boss played by James Gandolfini in 'The Sopranos'?",
+      "options": [
+        { "id": "q80o1", "label": "Paulie Gualtieri" },
+        { "id": "q80o2", "label": "Silvio Dante" },
+        { "id": "q80o3", "label": "Tony Soprano" },
+        { "id": "q80o4", "label": "Christopher Moltisanti" }
+      ],
+      "answer": "q80o3"
+    },
+    {
+      "id": "q81",
+      "question": "'I got the horses in the back' is the opening line to which viral country-rap crossover hit by Lil Nas X?",
+      "options": [
+        { "id": "q81o1", "label": "Panini" },
+        { "id": "q81o2", "label": "Old Town Road" },
+        { "id": "q81o3", "label": "Montero (Call Me by Your Name)" },
+        { "id": "q81o4", "label": "Industry Baby" }
+      ],
+      "answer": "q81o2"
+    },
+    {
+      "id": "q82",
+      "question": "Which film director is known for his 'Three Flavours Cornetto Trilogy,' consisting of 'Shaun of the Dead,' 'Hot Fuzz,' and 'The World's End'?",
+      "options": [
+        { "id": "q82o1", "label": "Guy Ritchie" },
+        { "id": "q82o2", "label": "Taika Waititi" },
+        { "id": "q82o3", "label": "Edgar Wright" },
+        { "id": "q82o4", "label": "Matthew Vaughn" }
+      ],
+      "answer": "q82o3"
+    },
+    {
+      "id": "q83",
+      "question": "In 'Stranger Things', what is the name of the gruff but caring police chief of Hawkins, Indiana?",
+      "options": [
+        { "id": "q83o1", "label": "Jim Hopper" },
+        { "id": "q83o2", "label": "Ted Wheeler" },
+        { "id": "q83o3", "label": "Scott Clarke" },
+        { "id": "q83o4", "label": "Murray Bauman" }
+      ],
+      "answer": "q83o1"
+    },
+    {
+      "id": "q84",
+      "question": "The video game 'Hades', which won numerous 'Game of the Year' awards in 2020, is based on the mythology of which ancient culture?",
+      "options": [
+        { "id": "q84o1", "label": "Norse" },
+        { "id": "q84o2", "label": "Egyptian" },
+        { "id": "q84o3", "label": "Roman" },
+        { "id": "q84o4", "label": "Greek" }
+      ],
+      "answer": "q84o4"
+    },
+    {
+      "id": "q85",
+      "question": "Which actor portrays the enigmatic 'Driver' in the 2011 film 'Drive', famous for his white satin scorpion jacket?",
+      "options": [
+        { "id": "q85o1", "label": "Ryan Gosling" },
+        { "id": "q85o2", "label": "Jake Gyllenhaal" },
+        { "id": "q85o3", "label": "Oscar Isaac" },
+        { "id": "q85o4", "label": "Tom Hardy" }
+      ],
+      "answer": "q85o1"
+    },
+    {
+      "id": "q86",
+      "question": "Which female artist holds the record for the most singles to debut at #1 on the Billboard Hot 100 chart?",
+      "options": [
+        { "id": "q86o1", "label": "Mariah Carey" },
+        { "id": "q86o2", "label": "Ariana Grande" },
+        { "id": "q86o3", "label": "Taylor Swift" },
+        { "id": "q86o4", "label": "Rihanna" }
+      ],
+      "answer": "q86o2"
+    },
+    {
+      "id": "q87",
+      "question": "The critically acclaimed surreal comedy-drama series 'Atlanta' was created by and stars which multi-talented artist?",
+      "options": [
+        { "id": "q87o1", "label": "Jordan Peele" },
+        { "id": "q87o2", "label": "Issa Rae" },
+        { "id": "q87o3", "label": "Donald Glover" },
+        { "id": "q87o4", "label": "Phoebe Waller-Bridge" }
+      ],
+      "answer": "q87o3"
+    },
+    {
+      "id": "q88",
+      "question": "Which Jordan Peele horror film features a family terrorized by their own menacing doppelgängers, known as 'The Tethered'?",
+      "options": [
+        { "id": "q88o1", "label": "Get Out" },
+        { "id": "q88o2", "label": "Nope" },
+        { "id": "q88o3", "label": "Us" },
+        { "id": "q88o4", "label": "Candyman" }
+      ],
+      "answer": "q88o3"
+    },
+    {
+      "id": "q89",
+      "question": "What is the primary objective for the 'Impostor' player in the popular multiplayer game 'Among Us'?",
+      "options": [
+        { "id": "q89o1", "label": "Complete all the tasks first" },
+        { "id": "q89o2", "label": "Repair the spaceship" },
+        { "id": "q89o3", "label": "Eliminate crewmates and sabotage the mission" },
+        { "id": "q89o4", "label": "Identify the other Impostor" }
+      ],
+      "answer": "q89o3"
+    },
+    {
+      "id": "q90",
+      "question": "'Fearless', 'Red', and '1989' are all blockbuster albums that were re-recorded by which artist as part of her '(Taylor's Version)' project?",
+      "options": [
+        { "id": "q90o1", "label": "Katy Perry" },
+        { "id": "q90o2", "label": "Taylor Swift" },
+        { "id": "q90o3", "label": "Adele" },
+        { "id": "q90o4", "label": "Lady Gaga" }
+      ],
+      "answer": "q90o2"
+    },
+    {
+      "id": "q91",
+      "question": "Who won an Emmy for her portrayal of the charismatic, yet psychopathic, assassin Villanelle in the series 'Killing Eve'?",
+      "options": [
+        { "id": "q91o1", "label": "Sandra Oh" },
+        { "id": "q91o2", "label": "Fiona Shaw" },
+        { "id": "q91o3", "label": "Jodie Comer" },
+        { "id": "q91o4", "label": "Phoebe Waller-Bridge" }
+      ],
+      "answer": "q91o3"
+    },
+    {
+      "id": "q92",
+      "question": "The highest-grossing film of all time (unadjusted for inflation) is which 2009 James Cameron blockbuster?",
+      "options": [
+        { "id": "q92o1", "label": "Avengers: Endgame" },
+        { "id": "q92o2", "label": "Titanic" },
+        { "id": "q92o3", "label": "Avatar" },
+        { "id": "q92o4", "label": "Star Wars: The Force Awakens" }
+      ],
+      "answer": "q92o3"
+    },
+    {
+      "id": "q93",
+      "question": "Which music festival, promoted by Ja Rule and Billy McFarland, was the subject of two competing 2019 documentaries detailing its disastrous failure?",
+      "options": [
+        { "id": "q93o1", "label": "Woodstock '99" },
+        { "id": "q93o2", "label": "Fyre Festival" },
+        { "id": "q93o3", "label": "TomorrowWorld" },
+        { "id": "q93o4", "label": "Astroworld Festival" }
+      ],
+      "answer": "q93o2"
+    },
+    {
+      "id": "q94",
+      "question": "In the HBO series 'Westworld', what is the name of the AI host, played by Evan Rachel Wood, who is considered the oldest host in the park?",
+      "options": [
+        { "id": "q94o1", "label": "Maeve Millay" },
+        { "id": "q94o2", "label": "Clementine Pennyfeather" },
+        { "id": "q94o3", "label": "Dolores Abernathy" },
+        { "id": "q94o4", "label": "Charlotte Hale" }
+      ],
+      "answer": "q94o3"
+    },
+    {
+      "id": "q95",
+      "question": "In the Marvel Cinematic Universe, what is the name of Thor's enchanted hammer that can only be wielded by the worthy?",
+      "options": [
+        { "id": "q95o1", "label": "Stormbreaker" },
+        { "id": "q95o2", "label": "Gungnir" },
+        { "id": "q95o3", "label": "Mjolnir" },
+        { "id": "q95o4", "label": "Hofund" }
+      ],
+      "answer": "q95o3"
+    },
+    {
+      "id": "q96",
+      "question": "The Konami Code is a famous video game cheat code that traditionally begins with which sequence of inputs?",
+      "options": [
+        { "id": "q96o1", "label": "Up, Down, Up, Down, A, B" },
+        { "id": "q96o2", "label": "A, B, A, C, A, B, B" },
+        { "id": "q96o3", "label": "Up, Up, Down, Down, Left, Right, Left, Right" },
+        { "id": "q96o4", "label": "Down, Right, A, Start" }
+      ],
+      "answer": "q96o3"
+    },
+    {
+      "id": "q97",
+      "question": "Which legendary artist headlined the Super Bowl LIV halftime show in 2020 alongside Shakira?",
+      "options": [
+        { "id": "q97o1", "label": "Beyoncé" },
+        { "id": "q97o2", "label": "Madonna" },
+        { "id": "q97o3", "label": "Jennifer Lopez" },
+        { "id": "q97o4", "label": "Lady Gaga" }
+      ],
+      "answer": "q97o3"
+    },
+    {
+      "id": "q98",
+      "question": "The line 'That's what she said' was a recurring catchphrase for which character in 'The Office' (US)?",
+      "options": [
+        { "id": "q98o1", "label": "Dwight Schrute" },
+        { "id": "q98o2", "label": "Michael Scott" },
+        { "id": "q98o3", "label": "Jim Halpert" },
+        { "id": "q98o4", "label": "Kevin Malone" }
+      ],
+      "answer": "q98o2"
+    },
+    {
+      "id": "q99",
+      "question": "Who won the Academy Award for Best Actor for his portrayal of Freddie Mercury in the 2018 film 'Bohemian Rhapsody'?",
+      "options": [
+        { "id": "q99o1", "label": "Bradley Cooper" },
+        { "id": "q99o2", "label": "Christian Bale" },
+        { "id": "q99o3", "label": "Rami Malek" },
+        { "id": "q99o4", "label": "Viggo Mortensen" }
+      ],
+      "answer": "q99o3"
+    },
+    {
+      "id": "q100",
+      "question": "What is the name of the annual fashion fundraising gala known for its extravagant and often thematic celebrity outfits, chaired by Anna Wintour?",
+      "options": [
+        { "id": "q100o1", "label": "The Vanity Fair Oscar Party" },
+        { "id": "q100o2", "label": "The Golden Globes" },
+        { "id": "q100o3", "label": "The Council of Fashion Designers of America Awards" },
+        { "id": "q100o4", "label": "The Met Gala" }
+      ],
+      "answer": "q100o4"
+    },
+    {
+      "id": "q101",
+      "question": "Which 2014 film, directed by Damien Chazelle, features a young jazz drummer's intense relationship with his abusive instructor?",
+      "options": [
+        { "id": "q101o1", "label": "La La Land" },
+        { "id": "q101o2", "label": "Birdman" },
+        { "id": "q101o3", "label": "Whiplash" },
+        { "id": "q101o4", "label": "Sound of Metal" }
+      ],
+      "answer": "q101o3"
+    },
+    {
+      "id": "q102",
+      "question": "Which Netflix show, based on a novel by Walter Tevis, follows the life of an orphan chess prodigy named Beth Harmon?",
+      "options": [
+        { "id": "q102o1", "label": "The Crown" },
+        { "id": "q102o2", "label": "The Queen's Gambit" },
+        { "id": "q102o3", "label": "Mindhunter" },
+        { "id": "q102o4", "label": "Unorthodox" }
+      ],
+      "answer": "q102o2"
+    },
+    {
+      "id": "q103",
+      "question": "Which pop star is known for directing her own music videos, including the 13-minute short film for 'All Too Well'?",
+      "options": [
+        { "id": "q103o1", "label": "Billie Eilish" },
+        { "id": "q103o2", "label": "Lady Gaga" },
+        { "id": "q103o3", "label": "Taylor Swift" },
+        { "id": "q103o4", "label": "Halsey" }
+      ],
+      "answer": "q103o3"
+    },
+    {
+      "id": "q104",
+      "question": "Which company is the primary developer behind the main series of 'Pokémon' video games?",
+      "options": [
+        { "id": "q104o1", "label": "Nintendo" },
+        { "id": "q104o2", "label": "The Pokémon Company" },
+        { "id": "q104o3", "label": "Creatures Inc." },
+        { "id": "q104o4", "label": "Game Freak" }
+      ],
+      "answer": "q104o4"
+    },
+    {
+      "id": "q105",
+      "question": "In the 'Harry Potter' films, what is the name of the acclaimed actor who portrays the villainous Lord Voldemort?",
+      "options": [
+        { "id": "q105o1", "label": "Alan Rickman" },
+        { "id": "q105o2", "label": "Gary Oldman" },
+        { "id": "q105o3", "label": "Ralph Fiennes" },
+        { "id": "q105o4", "label": "Jason Isaacs" }
+      ],
+      "answer": "q105o3"
+    },
+    {
+      "id": "q106",
+      "question": "What is the profession of the main character, Don Draper, in the AMC series 'Mad Men'?",
+      "options": [
+        { "id": "q106o1", "label": "Stockbroker" },
+        { "id": "q106o2", "label": "Lawyer" },
+        { "id": "q106o3", "label": "Journalist" },
+        { "id": "q106o4", "label": "Advertising Executive" }
+      ],
+      "answer": "q106o4"
+    },
+    {
+      "id": "q107",
+      "question": "The 2015 global hit 'Uptown Funk' was a collaboration between producer Mark Ronson and which American singer?",
+      "options": [
+        { "id": "q107o1", "label": "Pharrell Williams" },
+        { "id": "q107o2", "label": "Bruno Mars" },
+        { "id": "q107o3", "label": "Justin Timberlake" },
+        { "id": "q107o4", "label": "The Weeknd" }
+      ],
+      "answer": "q107o2"
+    },
+    {
+      "id": "q108",
+      "question": "What is the name of the fictional Middle Eastern country ruled by Ryan Reynolds' character in the Michael Bay film '6 Underground'?",
+      "options": [
+        { "id": "q108o1", "label": "Agrabah" },
+        { "id": "q108o2", "label": "Qumar" },
+        { "id": "q108o3", "label": "Turgistan" },
+        { "id": "q108o4", "label": "Sokovia" }
+      ],
+      "answer": "q108o3"
+    },
+    {
+      "id": "q109",
+      "question": "Which character in 'It's Always Sunny in Philadelphia' is the illiterate, cat-loving janitor who writes the musical 'The Nightman Cometh'?",
+      "options": [
+        { "id": "q109o1", "label": "Mac" },
+        { "id": "q109o2", "label": "Dennis Reynolds" },
+        { "id": "q109o3", "label": "Frank Reynolds" },
+        { "id": "q109o4", "label": "Charlie Kelly" }
+      ],
+      "answer": "q109o4"
+    },
+    {
+      "id": "q110",
+      "question": "What is the name of the iconic, adventurous archaeologist protagonist in the 'Tomb Raider' franchise?",
+      "options": [
+        { "id": "q110o1", "label": "Jill Valentine" },
+        { "id": "q110o2", "label": "Lara Croft" },
+        { "id": "q110o3", "label": "Samus Aran" },
+        { "id": "q110o4", "label": "Aloy" }
+      ],
+      "answer": "q110o2"
+    },
+    {
+      "id": "q111",
+      "question": "Which Frank Ocean album, released in 2016, is critically acclaimed and features songs like 'Nikes' and 'Pink + White'?",
+      "options": [
+        { "id": "q111o1", "label": "Channel Orange" },
+        { "id": "q111o2", "label": "Blonde" },
+        { "id": "q111o3", "label": "Endless" },
+        { "id": "q111o4", "label": "Nostalgia, Ultra" }
+      ],
+      "answer": "q111o2"
+    },
+    {
+      "id": "q112",
+      "question": "Who directed the South Korean film that became the first non-English language movie to win the Oscar for Best Picture?",
+      "options": [
+        { "id": "q112o1", "label": "Park Chan-wook" },
+        { "id": "q112o2", "label": "Lee Chang-dong" },
+        { "id": "q112o3", "label": "Bong Joon-ho" },
+        { "id": "q112o4", "label": "Kim Jee-woon" }
+      ],
+      "answer": "q112o3"
+    },
+    {
+      "id": "q113",
+      "question": "What US city serves as the gritty, realistic setting for the HBO drama 'The Wire'?",
+      "options": [
+        { "id": "q113o1", "label": "Philadelphia" },
+        { "id": "q113o2", "label": "Baltimore" },
+        { "id": "q113o3", "label": "Newark" },
+        { "id": "q113o4", "label": "Chicago" }
+      ],
+      "answer": "q113o2"
+    },
+    {
+      "id": "q114",
+      "question": "What is the name of the communication platform, popular with gamers, that allows users to create servers for voice, video, and text chats?",
+      "options": [
+        { "id": "q114o1", "label": "Slack" },
+        { "id": "q114o2", "label": "Twitch" },
+        { "id": "q114o3", "label": "Discord" },
+        { "id": "q114o4", "label": "TeamSpeak" }
+      ],
+      "answer": "q114o3"
+    },
+    {
+      "id": "q115",
+      "question": "Which actor won a Best Actor Oscar for his dark portrayal of the title character in the 2019 film 'Joker'?",
+      "options": [
+        { "id": "q115o1", "label": "Joaquin Phoenix" },
+        { "id": "q115o2", "label": "Heath Ledger" },
+        { "id": "q115o3", "label": "Jared Leto" },
+        { "id": "q115o4", "label": "Jack Nicholson" }
+      ],
+      "answer": "q115o1"
+    },
+    {
+      "id": "q116",
+      "question": "The hit Netflix period drama 'Bridgerton' is produced by which powerful television creator's company, Shondaland?",
+      "options": [
+        { "id": "q116o1", "label": "Ava DuVernay" },
+        { "id": "q116o2", "label": "Shonda Rhimes" },
+        { "id": "q116o3", "label": "Lena Dunham" },
+        { "id": "q116o4", "label": "Tina Fey" }
+      ],
+      "answer": "q116o2"
+    },
+    {
+      "id": "q117",
+      "question": "What is the title of the posthumous album released by rapper Mac Miller in January 2020?",
+      "options": [
+        { "id": "q117o1", "label": "Swimming" },
+        { "id": "q117o2", "label": "The Divine Feminine" },
+        { "id": "q117o3", "label": "Circles" },
+        { "id": "q117o4", "label": "Faces" }
+      ],
+      "answer": "q117o3"
+    },
+    {
+      "id": "q118",
+      "question": "The battle royale video game genre was popularized by games like 'PUBG: Battlegrounds' and which other massively successful title from Epic Games?",
+      "options": [
+        { "id": "q118o1", "label": "Apex Legends" },
+        { "id": "q118o2", "label": "Call of Duty: Warzone" },
+        { "id": "q118o3", "label": "Fortnite" },
+        { "id": "q118o4", "label": "Overwatch" }
+      ],
+      "answer": "q118o3"
+    },
+    {
+      "id": "q119",
+      "question": "In the 2017 film 'Lady Bird', what Northern California city does the titular character desperately want to escape?",
+      "options": [
+        { "id": "q119o1", "label": "San Francisco" },
+        { "id": "q119o2", "label": "Oakland" },
+        { "id": "q119o3", "label": "Sacramento" },
+        { "id": "q119o4", "label": "Fresno" }
+      ],
+      "answer": "q119o3"
+    },
+    {
+      "id": "q120",
+      "question": "The famous line 'I am the one who knocks' is delivered by which character in 'Breaking Bad'?",
+      "options": [
+        { "id": "q120o1", "label": "Jesse Pinkman" },
+        { "id": "q120o2", "label": "Gus Fring" },
+        { "id": "q120o3", "label": "Saul Goodman" },
+        { "id": "q120o4", "label": "Walter White" }
+      ],
+      "answer": "q120o4"
+    },
+    {
+      "id": "q121",
+      "question": "Which artist's 2016 'visual album' was released exclusively on HBO and Tidal, featuring poetry by Warsan Shire?",
+      "options": [
+        { "id": "q121o1", "label": "Frank Ocean's 'Endless'" },
+        { "id": "q121o2", "label": "Kanye West's 'My Beautiful Dark Twisted Fantasy'" },
+        { "id": "q121o3", "label": "Beyoncé's 'Lemonade'" },
+        { "id": "q121o4", "label": "Janelle Monáe's 'Dirty Computer'" }
+      ],
+      "answer": "q121o3"
+    },
+    {
+      "id": "q122",
+      "question": "In the 'Jurassic Park' franchise, what is the name of the bio-engineering company founded by John Hammond?",
+      "options": [
+        { "id": "q122o1", "label": "Masrani Global" },
+        { "id": "q122o2", "label": "Biosyn" },
+        { "id": "q122o3", "label": "InGen" },
+        { "id": "q122o4", "label": "Tyrell Corporation" }
+      ],
+      "answer": "q122o3"
+    },
+    {
+      "id": "q123",
+      "question": "The first season of the Netflix mockumentary 'American Vandal' is a satirical investigation into what high-school crime?",
+      "options": [
+        { "id": "q123o1", "label": "A stolen mascot costume" },
+        { "id": "q123o2", "label": "The cafeteria 'Turd Burglar'" },
+        { "id": "q123o3", "label": "27 spray-painted phalluses on cars" },
+        { "id": "q123o4", "label": "A widespread cheating scandal" }
+      ],
+      "answer": "q123o3"
+    },
+    {
+      "id": "q124",
+      "question": "Which actor from 'The Walking Dead' provides the voice and motion capture for the protagonist Sam Porter Bridges in the Hideo Kojima game 'Death Stranding'?",
+      "options": [
+        { "id": "q124o1", "label": "Andrew Lincoln" },
+        { "id": "q124o2", "label": "Norman Reedus" },
+        { "id": "q124o3", "label": "Jeffrey Dean Morgan" },
+        { "id": "q124o4", "label": "Jon Bernthal" }
+      ],
+      "answer": "q124o2"
+    },
+    {
+      "id": "q125",
+      "question": "In the film 'Knives Out', what is the profession of the eccentric detective Benoit Blanc, played by Daniel Craig?",
+      "options": [
+        { "id": "q125o1", "label": "Police Lieutenant" },
+        { "id": "q125o2", "label": "FBI Special Agent" },
+        { "id": "q125o3", "label": "Private Investigator" },
+        { "id": "q125o4", "label": "Forensic Scientist" }
+      ],
+      "answer": "q125o3"
     }
   ]
 }
