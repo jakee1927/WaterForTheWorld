@@ -271,18 +271,7 @@ export default function QuizzesPage() {
 
 
       <main className="flex-1 flex flex-col items-center w-full">
-        {/* Top Ad Placeholder */}
-        <div className="w-full md:w-3/4 lg:w-2/3 xl:w-1/2 my-4 p-4 h-24 bg-gray-200/50 border border-gray-300 flex items-center justify-center text-gray-500">
-          Top Google Ad Placeholder (e.g., 728x90)
-        </div>
-
         <div className="flex w-full justify-center px-4">
-          {/* Left Ad Placeholder */}
-          <div className="hidden lg:flex w-1/6 p-4 h-auto sticky top-20 self-start">
-            <div className="w-full h-[600px] bg-gray-200/50 border border-gray-300 flex items-center justify-center text-gray-500">
-              Left Ad (e.g., 160x600)
-            </div>
-          </div>
 
           {/* Quiz Content */}
           <div className="w-full lg:w-4/6 max-w-4xl py-8 md:py-12">
@@ -374,17 +363,6 @@ export default function QuizzesPage() {
             )}
           </div>
 
-          {/* Right Ad Placeholder */}
-          <div className="hidden lg:flex w-1/6 p-4 h-auto sticky top-20 self-start">
-            <div className="w-full h-[600px] bg-gray-200/50 border border-gray-300 flex items-center justify-center text-gray-500">
-              Right Ad (e.g., 160x600)
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Ad Placeholder */}
-        <div className="w-full md:w-3/4 lg:w-2/3 xl:w-1/2 my-4 p-4 h-24 bg-gray-200/50 border border-gray-300 flex items-center justify-center text-gray-500">
-          Bottom Google Ad Placeholder (e.g., 728x90)
         </div>
       </main>
 

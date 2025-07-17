@@ -143,14 +143,14 @@ export default function HomePage() {
               <p className="mx-auto max-w-2xl text-blue-100 text-lg">
                 You can help provide clean water to those in need. Every quiz completed makes an impact.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                <Link href="/donate" className="w-full sm:w-auto">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
+                <Link href="/donate" className="w-full sm:w-auto max-w-xs">
                   <Button size="lg" className="w-full bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 cursor-pointer">
                     <Heart className="mr-2 h-5 w-5" />
                     Donate Now
                   </Button>
                 </Link>
-                <Link href="/quizzes" className="w-full sm:w-auto">
+                <Link href="/quizzes" className="w-full sm:w-auto max-w-xs">
                   <Button
                     size="lg"
                     variant="outline"
