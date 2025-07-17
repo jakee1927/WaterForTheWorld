@@ -69,6 +69,8 @@ export default function QuizzesPage() {
   const [quizData, setQuizData] = useState<QuizData | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [questionOrder, setQuestionOrder] = useState<number[]>([]);
+  const [questionsCompleted, setQuestionsCompleted] = useState<number>(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
@@ -103,14 +105,23 @@ export default function QuizzesPage() {
       
       setIsLoading(true);
       try {
-        // Move the quiz data to the public directory for static serving
         const response = await fetch(`/quizzes/${selectedTopic}.json`);
         if (!response.ok) {
           throw new Error('Failed to load quiz data');
         }
         const data = await response.json();
         setQuizData(data);
+        
+        // Initialize question order as a random permutation of question indices
+        const indices = Array.from({ length: data.questions.length }, (_, i) => i);
+        for (let i = indices.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [indices[i], indices[j]] = [indices[j], indices[i]];
+        }
+        
+        setQuestionOrder(indices);
         setCurrentQuestionIndex(0);
+        setQuestionsCompleted(0);
         setSelectedOptionId(null);
         setShowFeedback(false);
       } catch (error) {
@@ -123,7 +134,7 @@ export default function QuizzesPage() {
     loadQuizData();
   }, [selectedTopic]);
 
-  const currentQuestion = quizData?.questions?.[currentQuestionIndex];
+  const currentQuestion = quizData?.questions?.[questionOrder[currentQuestionIndex]];
 
   const handleOptionChange = (value: string) => {
     setSelectedOptionId(value);
@@ -156,10 +167,24 @@ export default function QuizzesPage() {
       setShowFeedback(false);
       setSelectedOptionId(null);
       setIsCorrect(null);
-      // Move to next question, loop back to 0 if at the end
+      // Move to next question, reshuffle if we've shown all questions
+      setQuestionsCompleted(prev => prev + 1);
       setCurrentQuestionIndex(prevIndex => {
         const nextIndex = prevIndex + 1;
-        return nextIndex >= quizData.questions.length ? 0 : nextIndex;
+        
+        // If we've shown all questions, reshuffle for a new round
+        if (nextIndex >= quizData.questions.length) {
+          // Create a new random order for the next round
+          const indices = Array.from({ length: quizData.questions.length }, (_, i) => i);
+          for (let i = indices.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [indices[i], indices[j]] = [indices[j], indices[i]];
+          }
+          setQuestionOrder(indices);
+          return 0;
+        }
+        
+        return nextIndex;
       });
     }, 2000); // 2-second delay to show feedback
   };
@@ -301,7 +326,7 @@ export default function QuizzesPage() {
               <Card className="shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-xl text-blue-700">
-                    Question {currentQuestionIndex + 1}
+                    Question {questionsCompleted + 1}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
