@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { createContext, useContext, useEffect, useState, useRef, useCallback, ReactNode } from 'react';
 import { 
   User, 
   onAuthStateChanged, 
@@ -120,34 +120,115 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }));
   };
 
-  const updateQuizStats = async (isCorrect: boolean) => {
-    if (!auth.currentUser) return;
+  // Use a ref to track pending stats updates
+  const pendingStatsUpdates = useRef<{correct: number, incorrect: number}>({correct: 0, incorrect: 0});
+  const lastUpdateTime = useRef<number>(0);
+  const updateTimeout = useRef<NodeJS.Timeout | null>(null);
 
+  // Function to flush pending stats to Firestore
+  const flushQuizStats = useCallback(async () => {
+    if (!auth.currentUser || (pendingStatsUpdates.current.correct === 0 && pendingStatsUpdates.current.incorrect === 0)) {
+      return;
+    }
+
+    const updates = {...pendingStatsUpdates.current};
+    pendingStatsUpdates.current = {correct: 0, incorrect: 0};
+    lastUpdateTime.current = Date.now();
+
+    // Get current stats
     const currentStats = userData?.quizStats || {
       correctAnswers: 0,
       incorrectAnswers: 0,
       lastUpdated: new Date(),
     };
 
+    // Calculate new stats
     const updatedStats = {
-      correctAnswers: isCorrect 
-        ? (currentStats.correctAnswers || 0) + 1 
-        : (currentStats.correctAnswers || 0),
-      incorrectAnswers: !isCorrect 
-        ? (currentStats.incorrectAnswers || 0) + 1 
-        : (currentStats.incorrectAnswers || 0),
+      correctAnswers: (currentStats.correctAnswers || 0) + updates.correct,
+      incorrectAnswers: (currentStats.incorrectAnswers || 0) + updates.incorrect,
       lastUpdated: new Date(),
     };
 
-    await updateUserDoc(db, auth.currentUser.uid, {
-      quizStats: updatedStats,
+    // Update Firestore
+    try {
+      await updateUserDoc(db, auth.currentUser.uid, {
+        quizStats: updatedStats,
+      });
+      
+      // Update local state
+      setUserData(prev => ({
+        ...prev!,
+        quizStats: updatedStats,
+      }));
+    } catch (error) {
+      // If update fails, add the updates back to the queue
+      console.error('Failed to update quiz stats:', error);
+      pendingStatsUpdates.current.correct += updates.correct;
+      pendingStatsUpdates.current.incorrect += updates.incorrect;
+    }
+  }, [userData]);
+
+  // Schedule periodic flushes
+  useEffect(() => {
+    const flushInterval = setInterval(flushQuizStats, 30000); // Flush every 30 seconds
+    return () => clearInterval(flushInterval);
+  }, [flushQuizStats]);
+
+  // Flush on unmount
+  useEffect(() => {
+    return () => {
+      if (updateTimeout.current) {
+        clearTimeout(updateTimeout.current);
+      }
+      flushQuizStats();
+    };
+  }, [flushQuizStats]);
+
+  const updateQuizStats = useCallback(async (isCorrect: boolean) => {
+    if (!auth.currentUser) return;
+
+    // Update local refs immediately for responsive UI
+    if (isCorrect) {
+      pendingStatsUpdates.current.correct++;
+    } else {
+      pendingStatsUpdates.current.incorrect++;
+    }
+
+    // Update local state for immediate UI feedback
+    setUserData(prev => {
+      if (!prev) return prev;
+      const currentStats = prev.quizStats || { correctAnswers: 0, incorrectAnswers: 0 };
+      return {
+        ...prev,
+        quizStats: {
+          ...currentStats,
+          correctAnswers: isCorrect 
+            ? (currentStats.correctAnswers || 0) + 1 
+            : (currentStats.correctAnswers || 0),
+          incorrectAnswers: !isCorrect 
+            ? (currentStats.incorrectAnswers || 0) + 1 
+            : (currentStats.incorrectAnswers || 0),
+          lastUpdated: new Date(),
+        }
+      };
     });
-    
-    setUserData(prev => ({
-      ...prev!,
-      quizStats: updatedStats,
-    }));
-  };
+
+    // Schedule a delayed flush if not already scheduled
+    if (updateTimeout.current) {
+      clearTimeout(updateTimeout.current);
+    }
+
+    // Flush if we've reached a threshold or after 5 seconds of inactivity
+    const shouldFlushNow = 
+      pendingStatsUpdates.current.correct + pendingStatsUpdates.current.incorrect >= 10 ||
+      Date.now() - lastUpdateTime.current > 5000;
+
+    if (shouldFlushNow) {
+      flushQuizStats();
+    } else {
+      updateTimeout.current = setTimeout(flushQuizStats, 5000);
+    }
+  }, [flushQuizStats, userData]);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {

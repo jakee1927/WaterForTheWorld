@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, useCallback, memo } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -82,20 +82,35 @@ export default function QuizzesPage() {
 
   // Sync local droplet count with user data
   useEffect(() => {
-    if (userData) {
+    if (userData && userData.dropletCount !== localDropletCount) {
       setLocalDropletCount(userData.dropletCount || 0);
     }
-  }, [userData]);
+  }, [userData, localDropletCount]);
 
   // Trigger milestone popup every 100 drops
   useEffect(() => {
     if (localDropletCount > 0 && localDropletCount % 100 === 0) {
-      setShowMilestone(true);
+      // Only show if we haven't shown this milestone before
+      const lastMilestone = Math.floor(localDropletCount / 100) * 100;
+      const seenMilestones = JSON.parse(localStorage.getItem('seenMilestones') || '[]');
+      
+      if (!seenMilestones.includes(lastMilestone)) {
+        setShowMilestone(true);
+        // Mark this milestone as seen
+        localStorage.setItem('seenMilestones', JSON.stringify([...seenMilestones, lastMilestone]));
+      }
     }
   }, [localDropletCount]);
 
+  // Memoize the current question to prevent unnecessary re-renders
+  const currentQuestion = useMemo(() => {
+    return quizData?.questions?.[questionOrder[currentQuestionIndex]];
+  }, [quizData, questionOrder, currentQuestionIndex]);
+
   // Load quiz data when topic is selected
   useEffect(() => {
+    let isMounted = true;
+    
     const loadQuizData = async () => {
       if (!selectedTopic) return;
       
@@ -106,6 +121,9 @@ export default function QuizzesPage() {
           throw new Error('Failed to load quiz data');
         }
         const data = await response.json();
+        
+        if (!isMounted) return;
+        
         setQuizData(data);
         
         // Initialize question order as a random permutation of question indices
@@ -123,66 +141,78 @@ export default function QuizzesPage() {
       } catch (error) {
         console.error('Error loading quiz data:', error);
       } finally {
-        setIsLoading(false);
+        if (isMounted) {
+          setIsLoading(false);
+        }
       }
     };
 
     loadQuizData();
+    
+    return () => {
+      isMounted = false;
+    };
   }, [selectedTopic]);
 
-  const currentQuestion = quizData?.questions?.[questionOrder[currentQuestionIndex]];
+  // Memoized current question is now defined above
 
-  const handleOptionChange = (value: string) => {
-    setSelectedOptionId(value);
-    if (showFeedback) { // If feedback is already shown, selecting a new option should prepare for next check
+  const handleOptionChange = useCallback((value: string) => {
+    setSelectedOptionId(prev => {
+      // If selecting a different option while feedback is shown, reset feedback
+      if (showFeedback && prev !== value) {
         setShowFeedback(false);
         setIsCorrect(null);
-    }
-  };
+      }
+      return value;
+    });
+  }, [showFeedback]);
 
-  const handleSubmitAndNext = async () => {
-    if (!selectedOptionId || !quizData) {
-      // Consider a more user-friendly notification if needed
+  const handleSubmitAndNext = useCallback(async () => {
+    if (!selectedOptionId || !quizData || !currentQuestion) {
       return;
     }
 
-    const correctAnswer = currentQuestion?.answer === selectedOptionId;
+    const correctAnswer = currentQuestion.answer === selectedOptionId;
     setIsCorrect(correctAnswer);
     setShowFeedback(true);
     
-    // Update quiz stats and add water drops for correct answers
-    try {
-      await updateQuizStats(correctAnswer);
+    // Batch state updates
+    if (correctAnswer) {
+      const newDrops = (userData?.dropletCount || 0) + 10;
+      setLocalDropletCount(newDrops);
+      setShouldBounce(true);
       
-      if (correctAnswer) {
-        const newDrops = (userData?.dropletCount || 0) + 10;
-        setLocalDropletCount(newDrops);
-        setShouldBounce(true);
-        // Update in Firestore
-        try {
-          await updateDropletCount(newDrops);
-        } catch (error) {
+      // Don't wait for these to complete before continuing
+      Promise.all([
+        updateQuizStats(correctAnswer),
+        updateDropletCount(newDrops).catch(error => {
           console.error('Failed to update droplet count:', error);
           // Revert local state on error
           setLocalDropletCount(userData?.dropletCount || 0);
-        }
-        // Reset bounce after animation completes
-        setTimeout(() => setShouldBounce(false), 1000);
-      }
-    } catch (error) {
-      console.error('Error updating quiz stats:', error);
+        })
+      ]).catch(error => {
+        console.error('Error updating stats:', error);
+      });
+      
+      // Reset bounce after animation completes
+      const bounceTimer = setTimeout(() => setShouldBounce(false), 1000);
+      
+      return () => clearTimeout(bounceTimer);
+    } else {
+      updateQuizStats(correctAnswer).catch(console.error);
     }
 
-    setTimeout(() => {
+    const nextQuestionTimer = setTimeout(() => {
       setShowFeedback(false);
       setSelectedOptionId(null);
       setIsCorrect(null);
-      // Move to next question, reshuffle if we've shown all questions
+      
+      // Batch state updates
       setQuestionsCompleted(prev => prev + 1);
+      
       setCurrentQuestionIndex(prevIndex => {
         const nextIndex = prevIndex + 1;
         
-        // If we've shown all questions, reshuffle for a new round
         if (nextIndex >= quizData.questions.length) {
           // Create a new random order for the next round
           const indices = Array.from({ length: quizData.questions.length }, (_, i) => i);
@@ -197,7 +227,9 @@ export default function QuizzesPage() {
         return nextIndex;
       });
     }, 2000); // 2-second delay to show feedback
-  };
+    
+    return () => clearTimeout(nextQuestionTimer);
+  }, [selectedOptionId, quizData, currentQuestion, userData, updateQuizStats, updateDropletCount]);
 
   // Topic selection screen
   if (!selectedTopic) {
@@ -255,9 +287,9 @@ export default function QuizzesPage() {
       {/* Floating Water Drop Counter - Positioned below the navbar */}
       <div className="fixed top-16 right-4 z-50">
         <div className="flex items-center space-x-2 bg-white/90 backdrop-blur-sm border border-blue-100 rounded-full shadow-lg px-4 py-2 transition-all duration-300 hover:shadow-xl hover:scale-105">
-          <Droplets className="h-5 w-5 text-blue-500" />
-          <div className="flex flex-col items-center">
-            <span className="text-xs text-gray-500 font-medium">Water Drops</span>
+          <Droplets className={`h-5 w-5 text-blue-500 ${shouldBounce ? 'animate-bounce' : ''}`} />
+          <div className="flex flex-col items-center min-w-[60px]">
+            <span className="text-xs text-gray-500 font-medium whitespace-nowrap">Water Drops</span>
             <span className="text-lg font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
               {localDropletCount}
             </span>
@@ -265,8 +297,13 @@ export default function QuizzesPage() {
           <div className="h-8 w-0.5 bg-blue-100 mx-1"></div>
           <div className="w-16 h-2 bg-blue-100 rounded-full overflow-hidden">
             <div 
-              className="h-full bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-1000"
-              style={{ width: `${localDropletCount % 100}%` }}
+              className="h-full bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-1000 ease-out"
+              style={{ 
+                width: `${localDropletCount % 100}%`,
+                transitionProperty: 'width',
+                transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+                transitionDuration: '1000ms'
+              }}
             />
           </div>
         </div>
@@ -295,15 +332,13 @@ export default function QuizzesPage() {
             </div>
             <h2 className="text-3xl font-bold text-gray-800 mt-8 mb-2">Milestone Reached!</h2>
             <p className="text-5xl font-bold text-blue-600 my-4">{localDropletCount}</p>
-            <p className="text-lg text-gray-600 mb-6">You&apos;re making a real difference, drop by drop!</p>
+            <p className="text-lg text-gray-600 mb-6">You're making a real difference, drop by drop!</p>
             <Button onClick={() => setShowMilestone(false)} className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-6 rounded-full transition-transform hover:scale-105">
               Keep Going!
             </Button>
           </div>
         </div>
       )}
-
-
 
       <main className="flex-1 flex flex-col items-center w-full">
         <div className="flex w-full justify-center px-4">
@@ -320,14 +355,16 @@ export default function QuizzesPage() {
             </div>
 
             {isLoading ? (
-              <div className="flex flex-col items-center justify-center space-y-4 py-12">
-                <Loader2 className="h-12 w-12 animate-spin text-blue-500" />
+              <div className="flex flex-col items-center space-y-4 py-12">
+                <div className="relative h-12 w-12">
+                  <Loader2 className="h-full w-full animate-spin text-blue-500" style={{ animationDuration: '1.5s' }} />
+                </div>
                 <p className="text-gray-600">Loading your quiz...</p>
               </div>
             ) : !currentQuestion ? (
               <div className="text-center py-12">
                 <h2 className="text-2xl font-bold text-gray-800 mb-2">No questions available</h2>
-                <p className="text-gray-600 mb-4">We couldn&apos;t load any questions for this topic.</p>
+                <p className="text-gray-600 mb-4">We couldn't load any questions for this topic.</p>
                 <Button onClick={() => setSelectedTopic(null)} variant="outline">
                   Back to Topics
                 </Button>
