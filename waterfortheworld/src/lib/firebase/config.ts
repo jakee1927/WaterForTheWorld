@@ -3,14 +3,10 @@
 
 export * from './init';
 
-export interface UserData {
-  uid: string;
-  email: string;
-  displayName: string;
-  photoURL?: string;
-  dropletCount: number;
-  createdAt: Date;
-  updatedAt: Date;
+export interface QuizStats {
+  correctAnswers: number;
+  incorrectAnswers: number;
+  lastUpdated: Date;
 }
 
 export interface UserData {
@@ -19,6 +15,7 @@ export interface UserData {
   displayName: string;
   photoURL?: string;
   dropletCount: number;
+  quizStats?: QuizStats;
   createdAt: Date;
   updatedAt: Date;
 }

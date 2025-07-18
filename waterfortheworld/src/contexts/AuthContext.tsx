@@ -24,6 +24,7 @@ interface AuthContextType {
   resetPassword: (email: string) => Promise<void>;
   updateUserProfile: (updates: { displayName?: string; photoURL?: string }) => Promise<void>;
   updateDropletCount: (newCount: number) => Promise<void>;
+  updateQuizStats: (isCorrect: boolean) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
@@ -119,6 +120,35 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }));
   };
 
+  const updateQuizStats = async (isCorrect: boolean) => {
+    if (!auth.currentUser) return;
+
+    const currentStats = userData?.quizStats || {
+      correctAnswers: 0,
+      incorrectAnswers: 0,
+      lastUpdated: new Date(),
+    };
+
+    const updatedStats = {
+      correctAnswers: isCorrect 
+        ? (currentStats.correctAnswers || 0) + 1 
+        : (currentStats.correctAnswers || 0),
+      incorrectAnswers: !isCorrect 
+        ? (currentStats.incorrectAnswers || 0) + 1 
+        : (currentStats.incorrectAnswers || 0),
+      lastUpdated: new Date(),
+    };
+
+    await updateUserDoc(db, auth.currentUser.uid, {
+      quizStats: updatedStats,
+    });
+    
+    setUserData(prev => ({
+      ...prev!,
+      quizStats: updatedStats,
+    }));
+  };
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       setCurrentUser(user);
@@ -157,6 +187,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     resetPassword,
     updateUserProfile,
     updateDropletCount,
+    updateQuizStats,
   };
 
   return (

@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import { useAuth } from '@/contexts/AuthContext';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -74,29 +75,24 @@ export default function QuizzesPage() {
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
-  const [waterDrops, setWaterDrops] = useState(0);
+  const { userData, updateDropletCount, updateQuizStats } = useAuth();
   const [shouldBounce, setShouldBounce] = useState(false);
   const [showMilestone, setShowMilestone] = useState(false);
+  const [localDropletCount, setLocalDropletCount] = useState(0);
 
-  // Load water drops from localStorage on component mount
+  // Sync local droplet count with user data
   useEffect(() => {
-    const savedDrops = localStorage.getItem('waterDrops');
-    if (savedDrops) {
-      setWaterDrops(parseInt(savedDrops, 10));
+    if (userData) {
+      setLocalDropletCount(userData.dropletCount || 0);
     }
-  }, []);
-
-  // Save water drops to localStorage whenever they change
-  useEffect(() => {
-    localStorage.setItem('waterDrops', waterDrops.toString());
-  }, [waterDrops]);
+  }, [userData]);
 
   // Trigger milestone popup every 100 drops
   useEffect(() => {
-    if (waterDrops > 0 && waterDrops % 100 === 0) {
+    if (localDropletCount > 0 && localDropletCount % 100 === 0) {
       setShowMilestone(true);
     }
-  }, [waterDrops]);
+  }, [localDropletCount]);
 
   // Load quiz data when topic is selected
   useEffect(() => {
@@ -144,7 +140,7 @@ export default function QuizzesPage() {
     }
   };
 
-  const handleSubmitAndNext = () => {
+  const handleSubmitAndNext = async () => {
     if (!selectedOptionId || !quizData) {
       // Consider a more user-friendly notification if needed
       return;
@@ -154,13 +150,27 @@ export default function QuizzesPage() {
     setIsCorrect(correctAnswer);
     setShowFeedback(true);
     
-    // Add water drops for correct answers
-    if (correctAnswer) {
-      const newDrops = waterDrops + 10;
-      setWaterDrops(newDrops);
-      setShouldBounce(true);
-      // Reset bounce after animation completes
-      setTimeout(() => setShouldBounce(false), 1000);
+    // Update quiz stats and add water drops for correct answers
+    try {
+      await updateQuizStats(correctAnswer);
+      
+      if (correctAnswer) {
+        const newDrops = (userData?.dropletCount || 0) + 10;
+        setLocalDropletCount(newDrops);
+        setShouldBounce(true);
+        // Update in Firestore
+        try {
+          await updateDropletCount(newDrops);
+        } catch (error) {
+          console.error('Failed to update droplet count:', error);
+          // Revert local state on error
+          setLocalDropletCount(userData?.dropletCount || 0);
+        }
+        // Reset bounce after animation completes
+        setTimeout(() => setShouldBounce(false), 1000);
+      }
+    } catch (error) {
+      console.error('Error updating quiz stats:', error);
     }
 
     setTimeout(() => {
@@ -249,14 +259,14 @@ export default function QuizzesPage() {
           <div className="flex flex-col items-center">
             <span className="text-xs text-gray-500 font-medium">Water Drops</span>
             <span className="text-lg font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-              {waterDrops}
+              {localDropletCount}
             </span>
           </div>
           <div className="h-8 w-0.5 bg-blue-100 mx-1"></div>
           <div className="w-16 h-2 bg-blue-100 rounded-full overflow-hidden">
             <div 
               className="h-full bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-1000"
-              style={{ width: `${waterDrops % 100}%` }}
+              style={{ width: `${localDropletCount % 100}%` }}
             />
           </div>
         </div>
@@ -284,7 +294,7 @@ export default function QuizzesPage() {
               <Award className="h-10 w-10 text-white" />
             </div>
             <h2 className="text-3xl font-bold text-gray-800 mt-8 mb-2">Milestone Reached!</h2>
-            <p className="text-5xl font-bold text-blue-600 my-4">{waterDrops}</p>
+            <p className="text-5xl font-bold text-blue-600 my-4">{localDropletCount}</p>
             <p className="text-lg text-gray-600 mb-6">You&apos;re making a real difference, drop by drop!</p>
             <Button onClick={() => setShowMilestone(false)} className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-6 rounded-full transition-transform hover:scale-105">
               Keep Going!
