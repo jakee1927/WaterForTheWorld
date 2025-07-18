@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo, useCallback, memo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -332,7 +332,7 @@ export default function QuizzesPage() {
             </div>
             <h2 className="text-3xl font-bold text-gray-800 mt-8 mb-2">Milestone Reached!</h2>
             <p className="text-5xl font-bold text-blue-600 my-4">{localDropletCount}</p>
-            <p className="text-lg text-gray-600 mb-6">You're making a real difference, drop by drop!</p>
+            <p className="text-lg text-gray-600 mb-6">You&apos;re making a real difference, drop by drop!</p>
             <Button onClick={() => setShowMilestone(false)} className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-6 rounded-full transition-transform hover:scale-105">
               Keep Going!
             </Button>
@@ -364,7 +364,7 @@ export default function QuizzesPage() {
             ) : !currentQuestion ? (
               <div className="text-center py-12">
                 <h2 className="text-2xl font-bold text-gray-800 mb-2">No questions available</h2>
-                <p className="text-gray-600 mb-4">We couldn't load any questions for this topic.</p>
+                <p className="text-gray-600 mb-4">We couldn&apos;t load any questions for this topic.</p>
                 <Button onClick={() => setSelectedTopic(null)} variant="outline">
                   Back to Topics
                 </Button>
