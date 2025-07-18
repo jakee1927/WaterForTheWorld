@@ -3,15 +3,19 @@
 import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { Droplets, User, LogOut, CheckCircle, XCircle, BarChart2 } from 'lucide-react';
+import { Droplets, User, LogOut, CheckCircle, XCircle, BarChart2, Edit, X } from 'lucide-react';
 import ProtectedRoute from '@/components/auth/ProtectedRoute';
 import Head from 'next/head';
 
 export default function DashboardPage() {
-  const { userData, signOut } = useAuth();
+  const { userData, signOut, updateUserProfile } = useAuth();
   const router = useRouter();
   const [isClient, setIsClient] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
+  const [displayName, setDisplayName] = useState(userData?.displayName || '');
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(userData?.photoURL || null);
 
   // Set up all hooks at the top level
   useEffect(() => {
@@ -50,6 +54,54 @@ export default function DashboardPage() {
       router.push('/');
     } catch (error) {
       console.error('Failed to sign out:', error);
+    }
+  };
+
+  // Handle profile picture change
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    // Validate file type
+    if (!file.type.startsWith('image/')) {
+      alert('Please upload an image file');
+      return;
+    }
+
+    // Validate file size (max 2MB)
+    if (file.size > 2 * 1024 * 1024) {
+      alert('File size should be less than 2MB');
+      return;
+    }
+
+    setSelectedFile(file);
+    setPreviewUrl(URL.createObjectURL(file));
+  };
+
+  const handleSaveProfile = async () => {
+    try {
+      const updates: { displayName?: string; photoURL?: string } = {};
+      
+      if (displayName && displayName !== userData?.displayName) {
+        updates.displayName = displayName;
+      }
+
+      if (selectedFile) {
+        // In a real app, you would upload the file to a storage service here
+        // For now, we'll just use a placeholder URL
+        updates.photoURL = previewUrl || '';
+      }
+
+      if (Object.keys(updates).length > 0) {
+        await updateUserProfile(updates);
+        alert('Profile updated successfully');
+      }
+      
+      setIsEditing(false);
+      setSelectedFile(null);
+    } catch (error) {
+      console.error('Error updating profile:', error);
+      alert('Failed to update profile');
     }
   };
 
@@ -96,13 +148,75 @@ export default function DashboardPage() {
 
           {/* User Info */}
           <div className="bg-white shadow overflow-hidden sm:rounded-lg mb-8">
-            <div className="px-4 py-5 sm:px-6 flex items-center">
-              <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center">
-                <User className="h-6 w-6 text-blue-600" />
-              </div>
-              <div className="ml-4">
-                <h2 className="text-lg leading-6 font-medium text-gray-900">{userData.displayName}</h2>
-                <p className="mt-1 max-w-2xl text-sm text-gray-500">{userData.email}</p>
+            <div className="px-4 py-5 sm:px-6">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center">
+                  <div className="relative group">
+                    {previewUrl ? (
+                      <img 
+                        src={previewUrl} 
+                        alt={userData.displayName}
+                        className="h-16 w-16 rounded-full object-cover"
+                      />
+                    ) : (
+                      <div className="h-16 w-16 rounded-full bg-blue-100 flex items-center justify-center">
+                        <User className="h-8 w-8 text-blue-600" />
+                      </div>
+                    )}
+                    {isEditing && (
+                      <label className="absolute bottom-0 right-0 bg-blue-600 text-white p-1.5 rounded-full hover:bg-blue-700 cursor-pointer">
+                        <Edit className="h-3 w-3" />
+                        <input
+                          type="file"
+                          onChange={handleFileChange}
+                          accept="image/*"
+                          className="hidden"
+                        />
+                      </label>
+                    )}
+                  </div>
+                  <div className="ml-4">
+                    {isEditing ? (
+                      <input
+                        type="text"
+                        value={displayName}
+                        onChange={(e) => setDisplayName(e.target.value)}
+                        className="text-lg font-medium text-gray-900 border-b border-gray-300 focus:outline-none focus:border-blue-500"
+                      />
+                    ) : (
+                      <h2 className="text-lg leading-6 font-medium text-gray-900">{userData.displayName}</h2>
+                    )}
+                    <p className="mt-1 text-sm text-gray-500">{userData.email}</p>
+                  </div>
+                </div>
+                {!isEditing ? (
+                  <button
+                    onClick={() => setIsEditing(true)}
+                    className="inline-flex items-center px-3 py-1.5 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  >
+                    <Edit className="h-3.5 w-3.5 mr-1.5" />
+                    Edit Profile
+                  </button>
+                ) : (
+                  <div className="space-x-2">
+                    <button
+                      onClick={() => {
+                        setIsEditing(false);
+                        setPreviewUrl(userData.photoURL || null);
+                        setDisplayName(userData.displayName || '');
+                      }}
+                      className="inline-flex items-center px-3 py-1.5 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      onClick={handleSaveProfile}
+                      className="inline-flex items-center px-3 py-1.5 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    >
+                      Save Changes
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -185,20 +299,7 @@ export default function DashboardPage() {
                   </div>
                 </div>
                 
-                {/* Quiz Stats for Print Only */}
-                <div className="mt-6 pt-6 border-t border-gray-200 print:block">
-                  <h4 className="text-sm font-medium text-gray-900 mb-2">Quiz Performance</h4>
-                  <div className="flex justify-center space-x-6">
-                    <div>
-                      <p className="text-sm text-gray-500">Correct Answers</p>
-                      <p className="font-medium text-green-600">{userData.quizStats?.correctAnswers || 0}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-500">Accuracy</p>
-                      <p className="font-medium">{correctPercentage}%</p>
-                    </div>
-                  </div>
-                </div>
+
               </div>
               
               <div className="mt-8">
