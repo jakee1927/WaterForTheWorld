@@ -3,7 +3,8 @@
 import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { Droplets, User, LogOut, CheckCircle, XCircle, BarChart2, Edit, X } from 'lucide-react';
+import { Droplets, User, LogOut, CheckCircle, XCircle, BarChart2, Edit } from 'lucide-react';
+import Image from 'next/image';
 import ProtectedRoute from '@/components/auth/ProtectedRoute';
 import Head from 'next/head';
 
@@ -11,7 +12,7 @@ export default function DashboardPage() {
   const { userData, signOut, updateUserProfile } = useAuth();
   const router = useRouter();
   const [isClient, setIsClient] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
+  const [, setIsMounted] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [displayName, setDisplayName] = useState(userData?.displayName || '');
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -153,11 +154,14 @@ export default function DashboardPage() {
                 <div className="flex items-center">
                   <div className="relative group">
                     {previewUrl ? (
-                      <img 
-                        src={previewUrl} 
-                        alt={userData.displayName}
-                        className="h-16 w-16 rounded-full object-cover"
-                      />
+                      <div className="relative h-16 w-16">
+                        <Image
+                          src={previewUrl}
+                          alt={userData.displayName}
+                          fill
+                          className="rounded-full object-cover"
+                        />
+                      </div>
                     ) : (
                       <div className="h-16 w-16 rounded-full bg-blue-100 flex items-center justify-center">
                         <User className="h-8 w-8 text-blue-600" />
