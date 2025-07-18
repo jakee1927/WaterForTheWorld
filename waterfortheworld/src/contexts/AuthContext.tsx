@@ -52,7 +52,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       userData = await createUserDoc(db, user.uid, {
         email: user.email || '',
         displayName: displayName || user.displayName || '',
-        photoURL: user.photoURL || '',
+        photoURL: user.photoURL || null,
         dropletCount: 0,
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -83,20 +83,72 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return sendPasswordResetEmail(auth, email);
   };
 
-  const updateUserProfile = async (updates: { displayName?: string; photoURL?: string }) => {
+  const updateUserProfile = async (updates: { displayName?: string; photoURL?: string | File | null }) => {
     if (!auth.currentUser) return;
 
     try {
-      // Update Firebase Auth profile
-      await updateProfile(auth.currentUser, updates);
+      // Create a copy of updates to avoid mutation
+      const updatesToSave: { displayName?: string; photoURL?: string | null } = {};
       
-      // Update Firestore user document
-      await updateUserDoc(db, auth.currentUser.uid, updates);
+      // Copy displayName if provided
+      if ('displayName' in updates) {
+        updatesToSave.displayName = updates.displayName;
+      }
       
-      // Update local state
+      // Handle profile picture update if provided
+      if ('photoURL' in updates) {
+        if (updates.photoURL === null) {
+          // Handle photo removal
+          updatesToSave.photoURL = null;
+        } else if (updates.photoURL instanceof File) {
+          // If it's a File object, upload it to Firebase Storage
+          try {
+            // Import storage functions only when needed
+            const { getStorage, ref, uploadBytes, getDownloadURL } = await import('firebase/storage');
+            const storage = getStorage();
+            
+            // Create a reference to the file in Firebase Storage
+            const fileRef = ref(storage, `profilePictures/${auth.currentUser.uid}`);
+            
+            // Upload the file
+            await uploadBytes(fileRef, updates.photoURL);
+            
+            // Get the download URL
+            const downloadURL = await getDownloadURL(fileRef);
+            
+            // Update the photoURL with the download URL
+            updatesToSave.photoURL = downloadURL;
+          } catch (error) {
+            console.error('Error uploading profile picture:', error);
+            throw new Error('Failed to upload profile picture');
+          }
+        } else if (typeof updates.photoURL === 'string') {
+          if (updates.photoURL.startsWith('http') || updates.photoURL === '') {
+            // If it's already a URL or empty string, use it as is
+            updatesToSave.photoURL = updates.photoURL || null;
+          } else {
+            // If it's a base64 string or data URL, log a warning
+            console.warn('Base64 or data URL detected. Consider using file upload for better performance.');
+            updatesToSave.photoURL = updates.photoURL;
+          }
+        }
+      }
+
+      // Update Firebase Auth profile with the processed updates
+      await updateProfile(auth.currentUser, {
+        displayName: updatesToSave.displayName || null,
+        photoURL: updatesToSave.photoURL || null
+      });
+      
+      // Update Firestore user document with the processed updates
+      if (Object.keys(updatesToSave).length > 0) {
+        await updateUserDoc(db, auth.currentUser.uid, updatesToSave);
+      }
+      
+      // Update local state with the processed updates
       setUserData(prev => ({
         ...prev!,
-        ...updates,
+        ...updatesToSave,
       }));
       
       // Refresh current user
