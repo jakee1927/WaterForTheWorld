@@ -195,9 +195,7 @@ export default function QuizzesPage() {
       });
       
       // Reset bounce after animation completes
-      const bounceTimer = setTimeout(() => setShouldBounce(false), 1000);
-      
-      return () => clearTimeout(bounceTimer);
+      setTimeout(() => setShouldBounce(false), 1000);
     } else {
       updateQuizStats(correctAnswer).catch(console.error);
     }
