@@ -10,7 +10,7 @@ import {
   sendPasswordResetEmail,
   updateProfile
 } from 'firebase/auth';
-import { auth, db, storage } from '@/lib/firebase/init';
+import { auth, db } from '@/lib/firebase/init';
 import { getUserDoc, createUserDoc, updateUserDoc } from '@/lib/firebase/utils';
 import type { UserData } from '@/lib/firebase/config';
 
@@ -83,9 +83,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return sendPasswordResetEmail(auth, email);
   };
 
-  const getUserInitial = (name?: string | null) => {
-    return name ? name.charAt(0).toUpperCase() : 'U';
-  };
 
   const updateUserProfile = async (updates: { displayName?: string }) => {
     if (!auth.currentUser) {
