@@ -175,29 +175,24 @@ export default function QuizzesPage() {
     setIsCorrect(correctAnswer);
     setShowFeedback(true);
     
-    // Batch state updates
+    // Update UI feedback immediately
     if (correctAnswer) {
       const newDrops = (userData?.dropletCount || 0) + 10;
       setLocalDropletCount(newDrops);
       setShouldBounce(true);
       
-      // Don't wait for these to complete before continuing
-      Promise.all([
-        updateQuizStats(correctAnswer),
-        updateDropletCount(newDrops).catch(error => {
-          console.error('Failed to update droplet count:', error);
-          // Revert local state on error
-          setLocalDropletCount(userData?.dropletCount || 0);
-        })
-      ]).catch(error => {
-        console.error('Error updating stats:', error);
-      });
-      
       // Reset bounce after animation completes
       setTimeout(() => setShouldBounce(false), 1000);
-    } else {
-      updateQuizStats(correctAnswer).catch(console.error);
     }
+    
+    // Update quiz stats (including droplet count for correct answers)
+    updateQuizStats(correctAnswer).catch(error => {
+      console.error('Error updating quiz stats:', error);
+      // Revert local state on error if it was a correct answer
+      if (correctAnswer) {
+        setLocalDropletCount(userData?.dropletCount || 0);
+      }
+    });
 
     const nextQuestionTimer = setTimeout(() => {
       setShowFeedback(false);
