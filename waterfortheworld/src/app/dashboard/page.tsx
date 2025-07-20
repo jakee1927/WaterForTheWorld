@@ -82,11 +82,11 @@ export default function DashboardPage() {
 
   // Calculate derived state
   const peopleHelped = userData ? Math.floor(userData.dropletCount / 100) : 0;
-  const totalAnswers = userData 
-    ? (userData.quizStats?.correctAnswers || 0) + (userData.quizStats?.incorrectAnswers || 0) 
-    : 0;
+  const correctAnswers = userData?.quizStats?.correctAnswers || 0;
+  const incorrectAnswers = userData?.quizStats?.incorrectAnswers || 0;
+  const totalAnswers = correctAnswers + incorrectAnswers;
   const correctPercentage = totalAnswers > 0 
-    ? Math.round(((userData?.quizStats?.correctAnswers || 0) / totalAnswers) * 100)
+    ? Math.round((correctAnswers / totalAnswers) * 100)
     : 0;
 
   const handlePrint = () => {
