@@ -54,9 +54,26 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         displayName: displayName || user.displayName || '',
         photoURL: user.photoURL || null,
         dropletCount: 0,
+        quizStats: {
+          correctAnswers: 0,
+          incorrectAnswers: 0,
+          lastUpdated: new Date()
+        },
         createdAt: new Date(),
         updatedAt: new Date(),
       });
+    } else if (!userData.quizStats) {
+      // If quizStats doesn't exist, initialize it
+      await updateUserDoc(db, user.uid, {
+        quizStats: {
+          correctAnswers: 0,
+          incorrectAnswers: 0,
+          lastUpdated: new Date()
+        },
+        updatedAt: new Date()
+      });
+      // Fetch the updated document
+      userData = await getUserDoc(db, user.uid) || userData;
     }
     
     if (userData) {
@@ -168,34 +185,46 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
 
     const updates = {...pendingStatsUpdates.current};
-    pendingStatsUpdates.current = {correct: 0, incorrect: 0};
+    
+    // Don't clear the pending updates yet, we'll do that after successful update
     lastUpdateTime.current = Date.now();
 
-    // Get current stats
-    const currentStats = userData?.quizStats || {
-      correctAnswers: 0,
-      incorrectAnswers: 0,
-      lastUpdated: new Date(),
-    };
-
-    // Calculate new stats
-    const updatedStats = {
-      correctAnswers: (currentStats.correctAnswers || 0) + updates.correct,
-      incorrectAnswers: (currentStats.incorrectAnswers || 0) + updates.incorrect,
-      lastUpdated: new Date(),
-    };
-
-    // Update Firestore
     try {
+      // Get the latest stats from the database
+      const currentUserData = await getUserDoc(db, auth.currentUser.uid);
+      const currentStats = currentUserData?.quizStats || {
+        correctAnswers: 0,
+        incorrectAnswers: 0,
+        lastUpdated: new Date(),
+      };
+
+      // Calculate new stats
+      const updatedStats = {
+        correctAnswers: currentStats.correctAnswers + updates.correct,
+        incorrectAnswers: currentStats.incorrectAnswers + updates.incorrect,
+        lastUpdated: new Date(),
+      };
+
+      // Update Firestore
       await updateUserDoc(db, auth.currentUser.uid, {
         quizStats: updatedStats,
+        updatedAt: new Date(),
       });
       
+      // Only clear pending updates after successful update
+      pendingStatsUpdates.current = {
+        correct: pendingStatsUpdates.current.correct - updates.correct,
+        incorrect: pendingStatsUpdates.current.incorrect - updates.incorrect,
+      };
+      
       // Update local state
-      setUserData(prev => ({
-        ...prev!,
-        quizStats: updatedStats,
-      }));
+      setUserData(prev => {
+        if (!prev) return null;
+        return {
+          ...prev,
+          quizStats: updatedStats,
+        };
+      });
     } catch (error) {
       // If update fails, add the updates back to the queue
       console.error('Failed to update quiz stats:', error);
@@ -233,17 +262,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // Update local state for immediate UI feedback
     setUserData(prev => {
       if (!prev) return prev;
-      const currentStats = prev.quizStats || { correctAnswers: 0, incorrectAnswers: 0 };
+      
+      // Initialize quizStats if it doesn't exist
+      const currentStats = prev.quizStats || { 
+        correctAnswers: 0, 
+        incorrectAnswers: 0, 
+        lastUpdated: new Date() 
+      };
+      
       return {
         ...prev,
         quizStats: {
           ...currentStats,
-          correctAnswers: isCorrect 
-            ? (currentStats.correctAnswers || 0) + 1 
-            : (currentStats.correctAnswers || 0),
-          incorrectAnswers: !isCorrect 
-            ? (currentStats.incorrectAnswers || 0) + 1 
-            : (currentStats.incorrectAnswers || 0),
+          correctAnswers: currentStats.correctAnswers + (isCorrect ? 1 : 0),
+          incorrectAnswers: currentStats.incorrectAnswers + (isCorrect ? 0 : 1),
           lastUpdated: new Date(),
         }
       };
@@ -260,7 +292,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       Date.now() - lastUpdateTime.current > 5000;
 
     if (shouldFlushNow) {
-      flushQuizStats();
+      await flushQuizStats();
     } else {
       updateTimeout.current = setTimeout(flushQuizStats, 5000);
     }
