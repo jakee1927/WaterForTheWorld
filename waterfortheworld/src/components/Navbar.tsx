@@ -8,15 +8,12 @@ import { Droplets, User, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const { currentUser, userData } = useAuth();
   const pathname = usePathname();
-
-  useEffect(() => {
-    if (userData?.photoURL) {
-      setPreviewUrl(userData.photoURL);
-    }
-  }, [userData]);
+  
+  const getUserInitial = (name?: string | null) => {
+    return name ? name.charAt(0).toUpperCase() : 'U';
+  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -90,17 +87,9 @@ export default function Navbar() {
                 href="/dashboard"
                 className="flex items-center hover:bg-gray-100 rounded-full p-1"
               >
-                {previewUrl ? (
-                  <img 
-                    src={previewUrl} 
-                    alt={userData?.displayName || 'User'}
-                    className="h-8 w-8 rounded-full object-cover"
-                  />
-                ) : (
-                  <div className="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center">
-                    <User className="h-4 w-4 text-blue-600" />
-                  </div>
-                )}
+                <div className="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-semibold">
+                  {getUserInitial(userData?.displayName || currentUser?.displayName)}
+                </div>
                 <span className="ml-2 text-sm font-medium text-gray-700 hover:text-blue-600">
                   {userData?.displayName || 'User'}
                 </span>
@@ -219,54 +208,7 @@ export default function Navbar() {
             </div>
           )}
         </div>
-        <div className="pt-4 pb-3 border-t border-gray-200">
-          {currentUser ? (
-            <div className="flex items-center px-4">
-              <div className="flex-shrink-0">
-                <div className="h-10 w-10 rounded-full bg-gray-100 overflow-hidden">
-                  {previewUrl ? (
-                    <img 
-                      src={previewUrl} 
-                      alt="Profile preview"
-                      className="h-full w-full object-cover"
-                    />
-                  ) : (
-                    <div className="h-full w-full flex items-center justify-center bg-blue-100">
-                      <User className="h-5 w-5 text-blue-600" />
-                    </div>
-                  )}
-                  <User className="h-5 w-5 text-blue-600" />
-                </div>
-              </div>
-              <div className="ml-3">
-                <div className="text-base font-medium text-gray-800">
-                  {userData?.displayName || 'User'}
-                </div>
-                <div className="text-sm font-medium text-gray-500">
-                  {userData?.email}
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="mt-3 space-y-1">
-              <Link
-                href="/auth/signin"
-                className="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100"
-              >
-                Sign in
-              </Link>
-              <Link
-                href="/auth/signup"
-                className="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100"
-              >
-                Sign up
-              </Link>
-            </div>
-          )}
-        </div>
       </div>
-
-
     </nav>
   );
 }

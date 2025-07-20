@@ -83,98 +83,65 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return sendPasswordResetEmail(auth, email);
   };
 
-  const updateUserProfile = async (updates: { displayName?: string; photoURL?: string | File | null }) => {
-    if (!auth.currentUser) return;
+  const getUserInitial = (name?: string | null) => {
+    return name ? name.charAt(0).toUpperCase() : 'U';
+  };
+
+  const updateUserProfile = async (updates: { displayName?: string }) => {
+    if (!auth.currentUser) {
+      console.error('No authenticated user');
+      return;
+    }
 
     try {
-      // Create a copy of updates to avoid mutation
-      const updatesToSave: { displayName?: string; photoURL?: string | null } = {};
+      console.log('Starting profile update with:', updates);
+      const updatesToSave: { displayName?: string } = {};
       
-      // Copy displayName if provided
+      // Handle display name update
       if ('displayName' in updates) {
         updatesToSave.displayName = updates.displayName;
-      }
-      
-      // Handle profile picture update if provided
-      if ('photoURL' in updates) {
-        if (updates.photoURL === null) {
-          // Handle photo removal
-          updatesToSave.photoURL = null;
-          
-          // Also remove from storage if it exists
-          try {
-            const { ref, deleteObject } = await import('firebase/storage');
-            const fileRef = ref(storage, `profilePictures/${auth.currentUser.uid}`);
-            await deleteObject(fileRef).catch(() => {}); // Ignore if file doesn't exist
-          } catch (error) {
-            console.error('Error removing profile picture from storage:', error);
-          }
-        } else if (updates.photoURL instanceof File) {
-          // If it's a File object, upload it to Firebase Storage
-          try {
-            const { ref, uploadBytes, getDownloadURL } = await import('firebase/storage');
-            
-            // Create a reference to the file in Firebase Storage
-            const fileRef = ref(storage, `profilePictures/${auth.currentUser.uid}`);
-            
-            // Upload the file
-            await uploadBytes(fileRef, updates.photoURL);
-            
-            // Get the download URL
-            const downloadURL = await getDownloadURL(fileRef);
-            
-            // Update the photoURL with the download URL
-            updatesToSave.photoURL = downloadURL;
-          } catch (error) {
-            console.error('Error uploading profile picture:', error);
-            throw new Error('Failed to upload profile picture');
-          }
-        } else if (typeof updates.photoURL === 'string') {
-          if (updates.photoURL.startsWith('http') || updates.photoURL === '') {
-            // If it's already a URL or empty string, use it as is
-            updatesToSave.photoURL = updates.photoURL || null;
-          } else {
-            // If it's a base64 string or data URL, log a warning
-            console.warn('Base64 or data URL detected. Consider using file upload for better performance.');
-            updatesToSave.photoURL = updates.photoURL;
-          }
-        }
+        console.log('Display name update prepared:', updatesToSave.displayName);
       }
 
       // Update Firebase Auth profile
-      const profileUpdates: { displayName?: string | null; photoURL?: string | null } = {};
-      
-      if ('displayName' in updatesToSave) {
-        profileUpdates.displayName = updatesToSave.displayName || null;
+      if (updatesToSave.displayName) {
+        await updateProfile(auth.currentUser, {
+          displayName: updatesToSave.displayName
+        });
+        console.log('Firebase Auth profile updated');
       }
       
-      if ('photoURL' in updatesToSave) {
-        profileUpdates.photoURL = updatesToSave.photoURL || null;
-      }
-      
-      if (Object.keys(profileUpdates).length > 0) {
-        await updateProfile(auth.currentUser, profileUpdates);
-      }
-      
-      // Update Firestore user document with the processed updates
+      // Update Firestore
       if (Object.keys(updatesToSave).length > 0) {
-        await updateUserDoc(db, auth.currentUser.uid, {
+        const userUpdate = {
           ...updatesToSave,
           updatedAt: new Date()
-        });
+        };
+        console.log('Updating Firestore with:', userUpdate);
+        await updateUserDoc(db, auth.currentUser.uid, userUpdate);
+        console.log('Firestore updated');
       }
       
-      // Update local state with the processed updates
-      setUserData(prev => ({
-        ...prev!,
-        ...updatesToSave,
-        updatedAt: new Date()
-      }));
+      // Update local state
+      if (Object.keys(updatesToSave).length > 0 && userData) {
+        const newUserData: UserData = {
+          ...userData,
+          ...updatesToSave,
+          uid: userData.uid,
+          email: userData.email,
+          displayName: updatesToSave.displayName || userData.displayName,
+          dropletCount: userData.dropletCount,
+          createdAt: userData.createdAt,
+          updatedAt: new Date()
+        };
+        console.log('Updating local state with:', newUserData);
+        setUserData(newUserData);
+        setCurrentUser({ ...auth.currentUser });
+      }
       
-      // Refresh current user
-      setCurrentUser({ ...auth.currentUser });
+      console.log('Profile update completed successfully');
     } catch (error) {
-      console.error('Error updating profile:', error);
+      console.error('Error in updateUserProfile:', error);
       throw error;
     }
   };

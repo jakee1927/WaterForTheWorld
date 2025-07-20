@@ -3,8 +3,7 @@
 import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { Droplets, User, LogOut, CheckCircle, XCircle, BarChart2, Edit } from 'lucide-react';
-import Image from 'next/image';
+import { Droplets, LogOut, CheckCircle, XCircle, BarChart2, Edit } from 'lucide-react';
 import ProtectedRoute from '@/components/auth/ProtectedRoute';
 import Head from 'next/head';
 
@@ -15,8 +14,9 @@ export default function DashboardPage() {
   const [, setIsMounted] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [displayName, setDisplayName] = useState(userData?.displayName || '');
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [previewUrl, setPreviewUrl] = useState<string | null>(userData?.photoURL || null);
+  const getUserInitial = (name?: string | null) => {
+    return name ? name.charAt(0).toUpperCase() : 'U';
+  };
 
   // Set up all hooks at the top level
   useEffect(() => {
@@ -58,39 +58,14 @@ export default function DashboardPage() {
     }
   };
 
-  // Handle profile picture change
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
 
-    // Validate file type
-    if (!file.type.startsWith('image/')) {
-      alert('Please upload an image file');
-      return;
-    }
-
-    // Validate file size (max 2MB)
-    if (file.size > 2 * 1024 * 1024) {
-      alert('File size should be less than 2MB');
-      return;
-    }
-
-    setSelectedFile(file);
-    setPreviewUrl(URL.createObjectURL(file));
-  };
 
   const handleSaveProfile = async () => {
     try {
-      const updates: { displayName?: string; photoURL?: string } = {};
+      const updates: { displayName?: string } = {};
       
       if (displayName && displayName !== userData?.displayName) {
         updates.displayName = displayName;
-      }
-
-      if (selectedFile) {
-        // In a real app, you would upload the file to a storage service here
-        // For now, we'll just use a placeholder URL
-        updates.photoURL = previewUrl || '';
       }
 
       if (Object.keys(updates).length > 0) {
@@ -99,7 +74,6 @@ export default function DashboardPage() {
       }
       
       setIsEditing(false);
-      setSelectedFile(null);
     } catch (error) {
       console.error('Error updating profile:', error);
       alert('Failed to update profile');
@@ -153,31 +127,9 @@ export default function DashboardPage() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <div className="relative group">
-                    {previewUrl ? (
-                      <div className="relative h-16 w-16">
-                        <Image
-                          src={previewUrl}
-                          alt={userData.displayName}
-                          fill
-                          className="rounded-full object-cover"
-                        />
-                      </div>
-                    ) : (
-                      <div className="h-16 w-16 rounded-full bg-blue-100 flex items-center justify-center">
-                        <User className="h-8 w-8 text-blue-600" />
-                      </div>
-                    )}
-                    {isEditing && (
-                      <label className="absolute bottom-0 right-0 bg-blue-600 text-white p-1.5 rounded-full hover:bg-blue-700 cursor-pointer">
-                        <Edit className="h-3 w-3" />
-                        <input
-                          type="file"
-                          onChange={handleFileChange}
-                          accept="image/*"
-                          className="hidden"
-                        />
-                      </label>
-                    )}
+                    <div className="h-16 w-16 rounded-full bg-blue-100 flex items-center justify-center text-2xl font-semibold text-blue-600">
+                      {getUserInitial(userData.displayName)}
+                    </div>
                   </div>
                   <div className="ml-4">
                     {isEditing ? (
@@ -206,7 +158,6 @@ export default function DashboardPage() {
                     <button
                       onClick={() => {
                         setIsEditing(false);
-                        setPreviewUrl(userData.photoURL || null);
                         setDisplayName(userData.displayName || '');
                       }}
                       className="inline-flex items-center px-3 py-1.5 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
