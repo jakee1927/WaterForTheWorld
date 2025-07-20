@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { ArrowRight, Droplets, CheckCircle, XCircle, Award, Globe, Zap, Loader2 } from "lucide-react";
+import Link from "next/link";
 
 type QuizTopic = 'water' | 'sat' | 'pop' | 'general';
 
@@ -175,24 +176,29 @@ export default function QuizzesPage() {
     setIsCorrect(correctAnswer);
     setShowFeedback(true);
     
-    // Update UI feedback immediately
+    // Batch state updates
     if (correctAnswer) {
       const newDrops = (userData?.dropletCount || 0) + 10;
       setLocalDropletCount(newDrops);
       setShouldBounce(true);
       
+      // Don't wait for these to complete before continuing
+      Promise.all([
+        updateQuizStats(correctAnswer),
+        updateDropletCount(newDrops).catch(error => {
+          console.error('Failed to update droplet count:', error);
+          // Revert local state on error
+          setLocalDropletCount(userData?.dropletCount || 0);
+        })
+      ]).catch(error => {
+        console.error('Error updating stats:', error);
+      });
+      
       // Reset bounce after animation completes
       setTimeout(() => setShouldBounce(false), 1000);
+    } else {
+      updateQuizStats(correctAnswer).catch(console.error);
     }
-    
-    // Update quiz stats (including droplet count for correct answers)
-    updateQuizStats(correctAnswer).catch(error => {
-      console.error('Error updating quiz stats:', error);
-      // Revert local state on error if it was a correct answer
-      if (correctAnswer) {
-        setLocalDropletCount(userData?.dropletCount || 0);
-      }
-    });
 
     const nextQuestionTimer = setTimeout(() => {
       setShowFeedback(false);
@@ -439,12 +445,15 @@ export default function QuizzesPage() {
               <span className="text-lg font-semibold">WaterForTheWorld</span>
             </div>
             <div className="flex space-x-6">
-              <a href="https://inspire-edu.org/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                About Us
-              </a>
-              <a href="https://inspire-edu.org/contact" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                Contact Us
-              </a>
+              <Link href="/#about" className="text-gray-400 hover:text-white transition-colors">
+                About
+              </Link>
+              <Link href="/#privacy" className="text-gray-400 hover:text-white transition-colors">
+                Privacy
+              </Link>
+              <Link href="/#contact" className="text-gray-400 hover:text-white transition-colors">
+                Contact
+              </Link>
             </div>
           </div>
           <div className="mt-6 pt-6 border-t border-gray-800 text-center text-gray-400">
