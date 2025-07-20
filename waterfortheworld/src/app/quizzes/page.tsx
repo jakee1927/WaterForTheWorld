@@ -7,7 +7,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { ArrowRight, Droplets, CheckCircle, XCircle, Award, Globe, Zap, Loader2 } from "lucide-react";
-import Link from "next/link";
 
 type QuizTopic = 'water' | 'sat' | 'pop' | 'general';
 
@@ -445,15 +444,22 @@ export default function QuizzesPage() {
               <span className="text-lg font-semibold">WaterForTheWorld</span>
             </div>
             <div className="flex space-x-6">
-              <Link href="/#about" className="text-gray-400 hover:text-white transition-colors">
-                About
-              </Link>
-              <Link href="/#privacy" className="text-gray-400 hover:text-white transition-colors">
-                Privacy
-              </Link>
-              <Link href="/#contact" className="text-gray-400 hover:text-white transition-colors">
-                Contact
-              </Link>
+              <a 
+                href="https://inspire-edu.org/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                About Us
+              </a>
+              <a 
+                href="https://inspire-edu.org/contact" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Contact Us
+              </a>
             </div>
           </div>
           <div className="mt-6 pt-6 border-t border-gray-800 text-center text-gray-400">
