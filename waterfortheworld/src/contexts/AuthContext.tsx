@@ -10,7 +10,7 @@ import {
   sendPasswordResetEmail,
   updateProfile
 } from 'firebase/auth';
-import { auth, db } from '@/lib/firebase/init';
+import { auth, db, storage } from '@/lib/firebase/init';
 import { getUserDoc, createUserDoc, updateUserDoc } from '@/lib/firebase/utils';
 import type { UserData } from '@/lib/firebase/config';
 
@@ -100,12 +100,19 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         if (updates.photoURL === null) {
           // Handle photo removal
           updatesToSave.photoURL = null;
+          
+          // Also remove from storage if it exists
+          try {
+            const { ref, deleteObject } = await import('firebase/storage');
+            const fileRef = ref(storage, `profilePictures/${auth.currentUser.uid}`);
+            await deleteObject(fileRef).catch(() => {}); // Ignore if file doesn't exist
+          } catch (error) {
+            console.error('Error removing profile picture from storage:', error);
+          }
         } else if (updates.photoURL instanceof File) {
           // If it's a File object, upload it to Firebase Storage
           try {
-            // Import storage functions only when needed
-            const { getStorage, ref, uploadBytes, getDownloadURL } = await import('firebase/storage');
-            const storage = getStorage();
+            const { ref, uploadBytes, getDownloadURL } = await import('firebase/storage');
             
             // Create a reference to the file in Firebase Storage
             const fileRef = ref(storage, `profilePictures/${auth.currentUser.uid}`);
@@ -134,21 +141,34 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         }
       }
 
-      // Update Firebase Auth profile with the processed updates
-      await updateProfile(auth.currentUser, {
-        displayName: updatesToSave.displayName || null,
-        photoURL: updatesToSave.photoURL || null
-      });
+      // Update Firebase Auth profile
+      const profileUpdates: { displayName?: string | null; photoURL?: string | null } = {};
+      
+      if ('displayName' in updatesToSave) {
+        profileUpdates.displayName = updatesToSave.displayName || null;
+      }
+      
+      if ('photoURL' in updatesToSave) {
+        profileUpdates.photoURL = updatesToSave.photoURL || null;
+      }
+      
+      if (Object.keys(profileUpdates).length > 0) {
+        await updateProfile(auth.currentUser, profileUpdates);
+      }
       
       // Update Firestore user document with the processed updates
       if (Object.keys(updatesToSave).length > 0) {
-        await updateUserDoc(db, auth.currentUser.uid, updatesToSave);
+        await updateUserDoc(db, auth.currentUser.uid, {
+          ...updatesToSave,
+          updatedAt: new Date()
+        });
       }
       
       // Update local state with the processed updates
       setUserData(prev => ({
         ...prev!,
         ...updatesToSave,
+        updatedAt: new Date()
       }));
       
       // Refresh current user
@@ -280,34 +300,67 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     } else {
       updateTimeout.current = setTimeout(flushQuizStats, 5000);
     }
-  }, [flushQuizStats, userData]);
+  }, []);
 
   useEffect(() => {
+    let isMounted = true;
+    
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      setCurrentUser(user);
+      if (!isMounted) return;
       
       if (user) {
         try {
-          // Try to get user data
-          const userData = await getUserDoc(db, user.uid);
+          // Get user data from Firestore
+          const userDoc = await getUserDoc(db, user.uid);
           
-          if (userData) {
-            setUserData(userData);
+          if (userDoc) {
+            // Ensure we have the latest photoURL from Auth
+            if (user.photoURL && userDoc.photoURL !== user.photoURL) {
+              // Update Firestore with the latest photoURL from Auth
+              await updateUserDoc(db, user.uid, { 
+                photoURL: user.photoURL,
+                updatedAt: new Date()
+              });
+              
+              if (isMounted) {
+                setUserData({
+                  ...userDoc,
+                  photoURL: user.photoURL,
+                  updatedAt: new Date()
+                });
+              }
+            } else if (isMounted) {
+              setUserData(userDoc);
+            }
+            
+            // Ensure Auth has the latest photoURL from Firestore if it's more recent
+            if (userDoc.photoURL && user.photoURL !== userDoc.photoURL) {
+              await updateProfile(user, { photoURL: userDoc.photoURL });
+              if (isMounted) {
+                setCurrentUser({ ...user, photoURL: userDoc.photoURL });
+              }
+            }
           } else if (user.displayName || user.email) {
             // Create user document if it doesn't exist
             await createUserDocument(user, user.displayName || '');
           }
         } catch (error) {
-          console.error('Error fetching user data:', error);
+          console.error('Error in auth state change:', error);
         }
-      } else {
+      } else if (isMounted) {
         setUserData(null);
       }
       
-      setLoading(false);
+      if (isMounted) {
+        setCurrentUser(user);
+        setLoading(false);
+      }
     });
 
-    return () => unsubscribe();
+    return () => {
+      isMounted = false;
+      unsubscribe();
+    };
   }, []);
 
   const value = {
