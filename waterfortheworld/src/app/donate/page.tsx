@@ -1,7 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Droplet, Droplets, Heart, Zap, Globe, Shield, Users, BookOpen } from "lucide-react"
+import { Heart, Droplet, Users, Globe, Shield, Droplets, BookOpen } from "lucide-react"
 import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export default function DonatePage() {
   return (
@@ -30,49 +29,28 @@ export default function DonatePage() {
           <div className="container px-4 md:px-6 mx-auto">
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8 items-start">
-                <div className="space-y-6">
+                <div className="space-y-6 w-full">
                   <h2 className="text-3xl font-bold tracking-tight">Donate Now</h2>
                   <p className="text-gray-600">
                     Every dollar you donate goes directly to funding clean water projects in communities that need it most. 
                     Your support changes lives.
                   </p>
                   
-                  <div className="space-y-4">
-                    <Card>
-                      <CardHeader className="pb-2">
-                        <CardTitle className="text-lg flex items-center">
-                          <Zap className="h-5 w-5 mr-2 text-blue-600" />
-                          Quick Donation
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="grid grid-cols-2 gap-4 mb-4">
-                          {[25, 50, 100, 250].map((amount) => (
-                            <Button key={amount} variant="outline" className="h-14 text-lg">
-                              ${amount}
-                            </Button>
-                          ))}
-                        </div>
-                        <div className="relative">
-                          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">$</span>
-                          <input 
-                            type="number" 
-                            placeholder="Custom amount" 
-                            className="w-full pl-8 pr-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          />
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    <div className="space-y-4">
-                      <Button className="w-full bg-blue-600 hover:bg-blue-700 h-14 text-lg">
-                        Donate Now
-                      </Button>
-                      <p className="text-sm text-gray-500 text-center">
-                        Secure payment processing powered by Givebutter
-                      </p>
+                  {/* Zeffy Donation Form */}
+                  <div className="w-full rounded-lg overflow-hidden shadow-md" style={{ minHeight: '800px' }}>
+                    <div className="w-full h-full">
+                      <iframe 
+                        title='Donation form powered by Zeffy' 
+                        style={{ width: '100%', height: '100%', minHeight: '800px', border: 'none' }} 
+                        src='https://www.zeffy.com/embed/donation-form/donate-to-inspire-edu'
+                        loading="lazy"
+                      />
                     </div>
                   </div>
+                  
+                  <p className="text-sm text-gray-500 text-center">
+                    Secure payment processing powered by Zeffy
+                  </p>
                 </div>
 
                 <div className="space-y-8">
@@ -133,26 +111,6 @@ export default function DonatePage() {
                     </Link>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Givebutter Integration Section */}
-        <section className="py-4 md:py-16 bg-gray-50">
-          <div className="container px-4 md:px-6 mx-auto">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold tracking-tight mb-8">Make a Recurring Impact</h2>
-              <div className="bg-white p-6 rounded-lg border shadow-sm">
-                <div className="aspect-w-16 aspect-h-9 mb-6 rounded-lg overflow-hidden">
-                  {/* This is where the Givebutter embed code will go */}
-                  <div className="bg-gray-100 h-64 flex items-center justify-center rounded-lg">
-                    <p className="text-gray-500">Givebutter Donation Widget Will Appear Here</p>
-                  </div>
-                </div>
-                <p className="text-gray-600 mt-4">
-                  Set up a monthly donation to provide sustainable support for clean water initiatives worldwide.
-                </p>
               </div>
             </div>
           </div>
