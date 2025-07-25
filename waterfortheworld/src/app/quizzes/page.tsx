@@ -173,8 +173,12 @@ export default function QuizzesPage() {
 
   const handleTutorClose = useCallback(() => {
     setShowTutor(false);
-    // Remove goToNextQuestion() call to prevent auto-advancing
-  }, []);
+    // After tutor is closed, clear feedback and advance to next question
+    setShowFeedback(false);
+    setSelectedOptionId(null);
+    setIsCorrect(null);
+    goToNextQuestion();
+  }, [goToNextQuestion]);
 
   // Memoized current question is now defined above
 
@@ -199,6 +203,9 @@ export default function QuizzesPage() {
     setShowFeedback(true);
     
     // Batch state updates
+    // Clear any existing timer when answer is submitted
+    let nextQuestionTimer: NodeJS.Timeout;
+
     if (correctAnswer) {
       const newDrops = (userData?.dropletCount || 0) + 10;
       setLocalDropletCount(newDrops);
@@ -218,6 +225,14 @@ export default function QuizzesPage() {
       
       // Reset bounce after animation completes
       setTimeout(() => setShouldBounce(false), 1000);
+      
+      // Only set timer for correct answers (no tutor shown)
+      nextQuestionTimer = setTimeout(() => {
+        setShowFeedback(false);
+        setSelectedOptionId(null);
+        setIsCorrect(null);
+        goToNextQuestion();
+      }, 2000);
     } else {
       updateQuizStats(correctAnswer).catch(console.error);
       
@@ -232,19 +247,23 @@ export default function QuizzesPage() {
           correctAnswer: correctAnswerText
         });
         setShowTutor(true);
+        // Don't set the timer when showing tutor - question will advance after tutor is closed
+      } else {
+        // For non-SAT questions, still advance after feedback
+        nextQuestionTimer = setTimeout(() => {
+          setShowFeedback(false);
+          setSelectedOptionId(null);
+          setIsCorrect(null);
+          goToNextQuestion();
+        }, 2000);
       }
     }
-
-    const nextQuestionTimer = setTimeout(() => {
-      setShowFeedback(false);
-      setSelectedOptionId(null);
-      setIsCorrect(null);
-      
-      // Always proceed to next question after feedback
-      goToNextQuestion();
-    }, 2000); // 2-second delay to show feedback
     
-    return () => clearTimeout(nextQuestionTimer);
+    return () => {
+      if (nextQuestionTimer) {
+        clearTimeout(nextQuestionTimer);
+      }
+    };
   }, [selectedOptionId, quizData, currentQuestion, userData, updateQuizStats, updateDropletCount]);
 
   // Topic selection screen
