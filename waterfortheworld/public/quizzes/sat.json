@@ -2,47 +2,2206 @@
   "questions": [
     {
       "id": "q1",
-      "question": "If x + 5 = 10, what is the value of x?",
+      "question": "As used in line 12 of the following passage, the word 'tenuous' most nearly means:\n\nPassage Excerpt: 'The tenuous connection between the two scientists' theories was evident only upon close inspection, as the underlying principles appeared, at first glance, almost diametrically opposed.'",
       "options": [
-        { "id": "q1o1", "label": "2" },
-        { "id": "q1o2", "label": "5" },
-        { "id": "q1o3", "label": "10" },
-        { "id": "q1o4", "label": "15" }
+        { "id": "q1o1", "label": "Fragile" },
+        { "id": "q1o2", "label": "Obvious" },
+        { "id": "q1o3", "label": "Beneficial" },
+        { "id": "q1o4", "label": "Complex" }
       ],
-      "answer": "q1o2"
+      "answer": "q1o1"
     },
     {
       "id": "q2",
-      "question": "Which of the following is the best synonym for 'ephemeral'?",
+      "question": "Which choice best maintains the tone and style of the passage?\n\n'After months of deliberation, the committee finally ______ a decision, though not everyone was in agreement.'",
       "options": [
-        { "id": "q2o1", "label": "Eternal" },
-        { "id": "q2o2", "label": "Temporary" },
-        { "id": "q2o3", "label": "Difficult" },
-        { "id": "q2o4", "label": "Beautiful" }
+        { "id": "q2o1", "label": "came to" },
+        { "id": "q2o2", "label": "arrived at" },
+        { "id": "q2o3", "label": "reached" },
+        { "id": "q2o4", "label": "hammered out" }
       ],
-      "answer": "q2o2"
+      "answer": "q2o3"
     },
     {
       "id": "q3",
-      "question": "If a train travels 300 miles in 5 hours, what is its average speed?",
+      "question": "In context, which of the following best describes the author's attitude toward industrialization as expressed in the passage?\n\nPassage Excerpt: 'While industrialization fueled unprecedented economic growth, its unbridled expansion also engendered profound social and environmental costs that were largely ignored by contemporary policymakers.'",
       "options": [
-        { "id": "q3o1", "label": "45 mph" },
-        { "id": "q3o2", "label": "55 mph" },
-        { "id": "q3o3", "label": "60 mph" },
-        { "id": "q3o4", "label": "65 mph" }
+        { "id": "q3o1", "label": "Unquestioningly enthusiastic" },
+        { "id": "q3o2", "label": "Critically balanced" },
+        { "id": "q3o3", "label": "Wholly dismissive" },
+        { "id": "q3o4", "label": "Indifferent" }
       ],
-      "answer": "q3o3"
+      "answer": "q3o2"
     },
     {
       "id": "q4",
-      "question": "Which word is NOT a synonym for 'happy'?",
+      "question": "Which sentence most effectively combines the two sentences at the bracketed portion below?\n\n'Jamal loves to hike. He always brings his camera.' [Combine these sentences.]",
       "options": [
-        { "id": "q4o1", "label": "Jubilant" },
-        { "id": "q4o2", "label": "Elated" },
-        { "id": "q4o3", "label": "Miserable" },
-        { "id": "q4o4", "label": "Content" }
+        { "id": "q4o1", "label": "Jamal loves to hike, and he always brings his camera." },
+        { "id": "q4o2", "label": "Jamal, who loves to hike, always brings his camera." },
+        { "id": "q4o3", "label": "Jamal loves to hike because he always brings his camera." },
+        { "id": "q4o4", "label": "Jamal loves to hike; always bringing his camera." }
       ],
-      "answer": "q4o3"
+      "answer": "q4o2"
+    },
+    {
+      "id": "q5",
+      "question": "The author's use of the phrase 'a cacophony of voices' in the passage serves primarily to:",
+      "options": [
+        { "id": "q5o1", "label": "Emphasize the harmonious nature of the discussion" },
+        { "id": "q5o2", "label": "Highlight the confusion and discord present" },
+        { "id": "q5o3", "label": "Suggest the conversation was musical" },
+        { "id": "q5o4", "label": "Indicate the group was small" }
+      ],
+      "answer": "q5o2"
+    },
+    {
+      "id": "q6",
+      "question": "Choose the most logical transition for the blank in the sentence below:\n\n'Maria's presentation was compelling; ______, it failed to address the most pressing concerns of the audience.'",
+      "options": [
+        { "id": "q6o1", "label": "consequently" },
+        { "id": "q6o2", "label": "nevertheless" },
+        { "id": "q6o3", "label": "similarly" },
+        { "id": "q6o4", "label": "additionally" }
+      ],
+      "answer": "q6o2"
+    },
+    {
+      "id": "q7",
+      "question": "Which of the following is the best synonym for 'intransigent' as used in the sentence below?\n\n'Despite repeated negotiations, the union leaders remained intransigent in their demands.'",
+      "options": [
+        { "id": "q7o1", "label": "Unyielding" },
+        { "id": "q7o2", "label": "Worried" },
+        { "id": "q7o3", "label": "Unsure" },
+        { "id": "q7o4", "label": "Flexible" }
+      ],
+      "answer": "q7o1"
+    },
+    {
+      "id": "q8",
+      "question": "Which revision most improves the sentence below?\n\n'By the time the play began, the audience was restless, the seats were uncomfortable.'",
+      "options": [
+        { "id": "q8o1", "label": "By the time the play began, the audience was restless because the seats were uncomfortable." },
+        { "id": "q8o2", "label": "By the time the play began, the audience was restless, and the seats were uncomfortable." },
+        { "id": "q8o3", "label": "By the time the play began, the audience was restless; the seats were uncomfortable." },
+        { "id": "q8o4", "label": "By the time the play began, the audience, restless and the seats uncomfortable." }
+      ],
+      "answer": "q8o1"
+    },
+    {
+      "id": "q9",
+      "question": "Which of the following best describes the structure of the passage?\n\nPassage Excerpt: 'The essay first recounts a historical event, analyzes its immediate impacts, and then explores its modern implications.'",
+      "options": [
+        { "id": "q9o1", "label": "Chronological and analytical" },
+        { "id": "q9o2", "label": "Purely narrative" },
+        { "id": "q9o3", "label": "Comparative" },
+        { "id": "q9o4", "label": "Cause and effect only" }
+      ],
+      "answer": "q9o1"
+    },
+    {
+      "id": "q10",
+      "question": "In the context of the passage, the primary purpose of the third paragraph is to:",
+      "options": [
+        { "id": "q10o1", "label": "Introduce a new character" },
+        { "id": "q10o2", "label": "Present a counterargument to the author's thesis" },
+        { "id": "q10o3", "label": "Summarize previous events" },
+        { "id": "q10o4", "label": "Describe the setting in detail" }
+      ],
+      "answer": "q10o2"
+    },
+    {
+      "id": "q11",
+      "question": "Which choice best completes the sentence with the correct idiom?\n\n'The scientist was able to shed new light ______ an old mystery.'",
+      "options": [
+        { "id": "q11o1", "label": "about" },
+        { "id": "q11o2", "label": "in" },
+        { "id": "q11o3", "label": "on" },
+        { "id": "q11o4", "label": "with" }
+      ],
+      "answer": "q11o3"
+    },
+    {
+      "id": "q12",
+      "question": "Which of the following best replaces the underlined portion to eliminate the redundancy?\n\n'Each and every one of the students in the class individually presented their own projects.'",
+      "options": [
+        { "id": "q12o1", "label": "Each of the students presented their projects." },
+        { "id": "q12o2", "label": "Every student presented their projects." },
+        { "id": "q12o3", "label": "Each student individually presented their own projects." },
+        { "id": "q12o4", "label": "All the students individually presented their own projects." }
+      ],
+      "answer": "q12o1"
+    },
+    {
+      "id": "q13",
+      "question": "The phrase 'painted themselves into a corner' as used in the passage is best interpreted to mean:",
+      "options": [
+        { "id": "q13o1", "label": "Created a difficult situation with no easy escape" },
+        { "id": "q13o2", "label": "Succeeded unexpectedly" },
+        { "id": "q13o3", "label": "Decorated a room artistically" },
+        { "id": "q13o4", "label": "Moved to a new place" }
+      ],
+      "answer": "q13o1"
+    },
+    {
+      "id": "q14",
+      "question": "Which of the following sentences is free of errors?",
+      "options": [
+        { "id": "q14o1", "label": "Neither the mayor nor her advisors has responded to the allegations." },
+        { "id": "q14o2", "label": "Neither the mayor nor her advisors has respond to the allegations." },
+        { "id": "q14o3", "label": "Neither the mayor or her advisors has responded to the allegations." },
+        { "id": "q14o4", "label": "Neither the mayor nor her advisors have responded to the allegations." }
+      ],
+      "answer": "q14o1"
+    },
+    {
+      "id": "q15",
+      "question": "Which version best maintains clarity and conciseness?\n\n'While the proposal does present several innovative ideas, it does, however, lack a clear plan for implementation.'",
+      "options": [
+        { "id": "q15o1", "label": "While the proposal presents several innovative ideas, it lacks a clear plan for implementation." },
+        { "id": "q15o2", "label": "The proposal presents several innovative ideas, however, it does lack a clear plan for implementation." },
+        { "id": "q15o3", "label": "While the proposal presents several innovative ideas, however, it lacks a clear plan for implementation." },
+        { "id": "q15o4", "label": "While the proposal does present several innovative ideas, it, however, lacks a clear plan for implementation." }
+      ],
+      "answer": "q15o1"
+    },
+    {
+      "id": "q16",
+      "question": "Which choice best maintains parallel structure in the sentence below?\n\n'Megan likes reading, to jog, and cooking.'",
+      "options": [
+        { "id": "q16o1", "label": "Megan likes reading, jogging, and cooking." },
+        { "id": "q16o2", "label": "Megan likes reading, jogging, and to cook." },
+        { "id": "q16o3", "label": "Megan likes to read, jog, and cooking." },
+        { "id": "q16o4", "label": "Megan likes to read, jog, and cook." }
+      ],
+      "answer": "q16o4"
+    },
+    {
+      "id": "q17",
+      "question": "In the sentence, which word should be replaced to avoid a redundancy?\n\n'He personally delivered the message himself to the director.'",
+      "options": [
+        { "id": "q17o1", "label": "personally" },
+        { "id": "q17o2", "label": "delivered" },
+        { "id": "q17o3", "label": "message" },
+        { "id": "q17o4", "label": "himself" }
+      ],
+      "answer": "q17o4"
+    },
+    {
+      "id": "q18",
+      "question": "What does the underlined word most nearly mean in the following sentence?\n\n'The council's decision was met with widespread approbation.'",
+      "options": [
+        { "id": "q18o1", "label": "Approval" },
+        { "id": "q18o2", "label": "Confusion" },
+        { "id": "q18o3", "label": "Irritation" },
+        { "id": "q18o4", "label": "Ambivalence" }
+      ],
+      "answer": "q18o1"
+    },
+    {
+      "id": "q19",
+      "question": "Which of the following sentences contains a subject-verb agreement error?",
+      "options": [
+        { "id": "q19o1", "label": "The collection of rare books are on display at the museum." },
+        { "id": "q19o2", "label": "Neither the teacher nor the students were late." },
+        { "id": "q19o3", "label": "Every one of the cars in the lot has been inspected." },
+        { "id": "q19o4", "label": "The data suggest a new approach is needed." }
+      ],
+      "answer": "q19o1"
+    },
+    {
+      "id": "q20",
+      "question": "Which choice most effectively introduces the paragraph?\n\n[1] ____. [2] Many new entrepreneurs struggle to secure sufficient funding, especially in highly competitive industries. [3] As a result, only a small fraction of startups succeed in their first five years.",
+      "options": [
+        { "id": "q20o1", "label": "Securing financial resources is a significant challenge for most startups." },
+        { "id": "q20o2", "label": "Entrepreneurs often have creative ideas." },
+        { "id": "q20o3", "label": "Marketing is important for any business." },
+        { "id": "q20o4", "label": "Many entrepreneurs fail because of laziness." }
+      ],
+      "answer": "q20o1"
+    },
+    {
+      "id": "q21",
+      "question": "Which revision most improves the sentence below?\n\n'The professor, along with his students, are attending the conference.'",
+      "options": [
+        { "id": "q21o1", "label": "The professor, along with his students, is attending the conference." },
+        { "id": "q21o2", "label": "The professor and his students, is attending the conference." },
+        { "id": "q21o3", "label": "The professor along with his students are attending the conference." },
+        { "id": "q21o4", "label": "The professor, and his students, is attending the conference." }
+      ],
+      "answer": "q21o1"
+    },
+    {
+      "id": "q22",
+      "question": "Which sentence uses the word 'infer' correctly?",
+      "options": [
+        { "id": "q22o1", "label": "From his silence, I inferred he was upset." },
+        { "id": "q22o2", "label": "She inferred her essay for the teacher." },
+        { "id": "q22o3", "label": "The speaker inferred the audience's approval." },
+        { "id": "q22o4", "label": "He inferred the letter to the editor." }
+      ],
+      "answer": "q22o1"
+    },
+    {
+      "id": "q23",
+      "question": "In the context of the passage, the word 'candid' most nearly means:\n\nPassage Excerpt: 'His candid responses surprised the panel, as they expected more evasive answers.'",
+      "options": [
+        { "id": "q23o1", "label": "Honest" },
+        { "id": "q23o2", "label": "Formal" },
+        { "id": "q23o3", "label": "Careless" },
+        { "id": "q23o4", "label": "Brief" }
+      ],
+      "answer": "q23o1"
+    },
+    {
+      "id": "q24",
+      "question": "Which of the following sentences contains a punctuation error?",
+      "options": [
+        { "id": "q24o1", "label": "Although it was raining, we decided to go for a walk." },
+        { "id": "q24o2", "label": "My friend, who loves mystery novels went to the library." },
+        { "id": "q24o3", "label": "She finished her project early and submitted it." },
+        { "id": "q24o4", "label": "The scientist presented her findings at the conference." }
+      ],
+      "answer": "q24o2"
+    },
+    {
+      "id": "q25",
+      "question": "Which option provides the best evidence for the answer to the previous question?\n\nPassage Excerpt: 'My friend, who loves mystery novels went to the library.'",
+      "options": [
+        { "id": "q25o1", "label": "There should be a comma after 'novels'." },
+        { "id": "q25o2", "label": "There should be a period after 'friend'." },
+        { "id": "q25o3", "label": "There should be a semicolon after 'library'." },
+        { "id": "q25o4", "label": "There should be a colon after 'who'." }
+      ],
+      "answer": "q25o1"
+    },
+    {
+      "id": "q26",
+      "question": "Which of the following best replaces the underlined portion to correct the error?\n\n'Neither the volunteers nor the coordinator were prepared for the event.'",
+      "options": [
+        { "id": "q26o1", "label": "was" },
+        { "id": "q26o2", "label": "were" },
+        { "id": "q26o3", "label": "are" },
+        { "id": "q26o4", "label": "is" }
+      ],
+      "answer": "q26o1"
+    },
+    {
+      "id": "q27",
+      "question": "As used in the passage, 'equanimity' most nearly means:\n\nPassage Excerpt: 'Throughout the ordeal, her equanimity never faltered, impressing all who witnessed her composure.'",
+      "options": [
+        { "id": "q27o1", "label": "Calmness" },
+        { "id": "q27o2", "label": "Indifference" },
+        { "id": "q27o3", "label": "Excitement" },
+        { "id": "q27o4", "label": "Confusion" }
+      ],
+      "answer": "q27o1"
+    },
+    {
+      "id": "q28",
+      "question": "Which of the following best describes the function of the second paragraph in the passage?\n\nPassage Excerpt: 'After outlining the experiment’s methodology, the author proceeds to evaluate its unexpected results.'",
+      "options": [
+        { "id": "q28o1", "label": "It interprets data after establishing procedure." },
+        { "id": "q28o2", "label": "It describes the experiment’s background." },
+        { "id": "q28o3", "label": "It states the author’s hypothesis." },
+        { "id": "q28o4", "label": "It summarizes the experiment’s conclusion." }
+      ],
+      "answer": "q28o1"
+    },
+    {
+      "id": "q29",
+      "question": "Which revision most improves the clarity of the sentence below?\n\n'It was the writer, who, after much thought, realized that the main character’s arc was incomplete.'",
+      "options": [
+        { "id": "q29o1", "label": "It was the writer who, after much thought, realized that the main character’s arc was incomplete." },
+        { "id": "q29o2", "label": "It was the writer, who after much thought, realized that the main character’s arc was incomplete." },
+        { "id": "q29o3", "label": "It was the writer who after much thought realized, that the main character’s arc was incomplete." },
+        { "id": "q29o4", "label": "It was the writer, after much thought, who realized that the main character’s arc was incomplete." }
+      ],
+      "answer": "q29o1"
+    },
+    {
+      "id": "q30",
+      "question": "Which sentence uses the word 'who' correctly?",
+      "options": [
+        { "id": "q30o1", "label": "Anyone who wants to join should sign up online." },
+        { "id": "q30o2", "label": "The teacher who we spoke to was kind." },
+        { "id": "q30o3", "label": "The books who are on the shelf belong to John." },
+        { "id": "q30o4", "label": "The car who was parked outside is blue." }
+      ],
+      "answer": "q30o1"
+    },
+    {
+      "id": "q31",
+      "question": "Which sentence is most precise?",
+      "options": [
+        { "id": "q31o1", "label": "He gave the speech and it was good." },
+        { "id": "q31o2", "label": "He gave an articulate and persuasive speech." },
+        { "id": "q31o3", "label": "He gave a speech, and people liked it." },
+        { "id": "q31o4", "label": "He did a thing at the event." }
+      ],
+      "answer": "q31o2"
+    },
+    {
+      "id": "q32",
+      "question": "Which word most nearly means 'deceitful' as used in the following sentence?\n\n'His duplicity in business dealings eventually led to his downfall.'",
+      "options": [
+        { "id": "q32o1", "label": "Deceit" },
+        { "id": "q32o2", "label": "Generosity" },
+        { "id": "q32o3", "label": "Fortitude" },
+        { "id": "q32o4", "label": "Diligence" }
+      ],
+      "answer": "q32o1"
+    },
+    {
+      "id": "q33",
+      "question": "Which revision best eliminates the wordiness in the following sentence?\n\n'Due to the fact that the city council voted unanimously, the proposal passed very easily.'",
+      "options": [
+        { "id": "q33o1", "label": "Because the city council voted unanimously, the proposal passed easily." },
+        { "id": "q33o2", "label": "Due to the fact that the council voted unanimously, the proposal was passed." },
+        { "id": "q33o3", "label": "Because the council, who all voted, passed the proposal easily." },
+        { "id": "q33o4", "label": "Due to unanimous votes, the council, the proposal passed very easily." }
+      ],
+      "answer": "q33o1"
+    },
+    {
+      "id": "q34",
+      "question": "Which of the following is the best replacement for the underlined phrase to correct the error?\n\n'Most people enjoys going to the new art exhibit.'",
+      "options": [
+        { "id": "q34o1", "label": "enjoy" },
+        { "id": "q34o2", "label": "enjoys" },
+        { "id": "q34o3", "label": "are enjoying" },
+        { "id": "q34o4", "label": "is enjoying" }
+      ],
+      "answer": "q34o1"
+    },
+    {
+      "id": "q35",
+      "question": "As used in the passage, 'tacit' most nearly means:\n\nPassage Excerpt: 'Her tacit approval was conveyed by a simple nod, rather than any explicit words.'",
+      "options": [
+        { "id": "q35o1", "label": "Implied" },
+        { "id": "q35o2", "label": "Loud" },
+        { "id": "q35o3", "label": "Boastful" },
+        { "id": "q35o4", "label": "Dismissive" }
+      ],
+      "answer": "q35o1"
+    },
+    {
+      "id": "q36",
+      "question": "Which of the following sentences contains a misplaced modifier?",
+      "options": [
+        { "id": "q36o1", "label": "Running quickly, the finish line came into view." },
+        { "id": "q36o2", "label": "After school, Maria went to the library to study." },
+        { "id": "q36o3", "label": "The teacher gave the test to the class." },
+        { "id": "q36o4", "label": "The sun set behind the mountains." }
+      ],
+      "answer": "q36o1"
+    },
+    {
+      "id": "q37",
+      "question": "Which choice best maintains formal tone?\n\n'Kids these days totally rely on their phones.'",
+      "options": [
+        { "id": "q37o1", "label": "Young people today rely heavily on their phones." },
+        { "id": "q37o2", "label": "People nowadays use their phones, like, a lot." },
+        { "id": "q37o3", "label": "Kids always use their phones all the time." },
+        { "id": "q37o4", "label": "Phones are the thing everyone uses." }
+      ],
+      "answer": "q37o1"
+    },
+    {
+      "id": "q38",
+      "question": "Which is the best transition for the blank in the following paragraph?\n\n[1] The team won their first two games. [2] _______, they were eliminated in the next round.",
+      "options": [
+        { "id": "q38o1", "label": "However" },
+        { "id": "q38o2", "label": "Similarly" },
+        { "id": "q38o3", "label": "For example" },
+        { "id": "q38o4", "label": "In other words" }
+      ],
+      "answer": "q38o1"
+    },
+    {
+      "id": "q39",
+      "question": "Which word most nearly means 'obscure' as used in the following sentence?\n\n'His references were so arcane that few in the audience understood their meaning.'",
+      "options": [
+        { "id": "q39o1", "label": "Unclear" },
+        { "id": "q39o2", "label": "Enlightening" },
+        { "id": "q39o3", "label": "Widespread" },
+        { "id": "q39o4", "label": "Humorous" }
+      ],
+      "answer": "q39o1"
+    },
+    {
+      "id": "q40",
+      "question": "Which choice best maintains parallelism in the sentence below?\n\n'He is responsible for managing the team, writing reports, and to organize meetings.'",
+      "options": [
+        { "id": "q40o1", "label": "organizing meetings" },
+        { "id": "q40o2", "label": "to organize meetings" },
+        { "id": "q40o3", "label": "organization of meetings" },
+        { "id": "q40o4", "label": "with meetings" }
+      ],
+      "answer": "q40o1"
+    },
+    {
+      "id": "q41",
+      "question": "Which of the following sentences is free from error?",
+      "options": [
+        { "id": "q41o1", "label": "Each of the students is responsible for his or her homework." },
+        { "id": "q41o2", "label": "Each of the students are responsible for their homework." },
+        { "id": "q41o3", "label": "Each of the student is responsible for his homework." },
+        { "id": "q41o4", "label": "Each students are responsible for their homework." }
+      ],
+      "answer": "q41o1"
+    },
+    {
+      "id": "q42",
+      "question": "What is the function of the phrase 'in contrast' in the passage?\n\nPassage Excerpt: 'In contrast, the new theory offers a radically different explanation.'",
+      "options": [
+        { "id": "q42o1", "label": "To highlight a difference" },
+        { "id": "q42o2", "label": "To summarize a previous point" },
+        { "id": "q42o3", "label": "To present an example" },
+        { "id": "q42o4", "label": "To introduce a consequence" }
+      ],
+      "answer": "q42o1"
+    },
+    {
+      "id": "q43",
+      "question": "Which sentence uses the word 'imply' correctly?",
+      "options": [
+        { "id": "q43o1", "label": "Her tone implied she was dissatisfied." },
+        { "id": "q43o2", "label": "He implied the essay to his teacher." },
+        { "id": "q43o3", "label": "They implied their conclusion in the letter." },
+        { "id": "q43o4", "label": "I implied the audience’s approval." }
+      ],
+      "answer": "q43o1"
+    },
+    {
+      "id": "q44",
+      "question": "What does the underlined word most nearly mean?\n\n'His actions were considered reprehensible by the community.'",
+      "options": [
+        { "id": "q44o1", "label": "Deserving condemnation" },
+        { "id": "q44o2", "label": "Difficult to explain" },
+        { "id": "q44o3", "label": "Inspirational" },
+        { "id": "q44o4", "label": "Reasonable" }
+      ],
+      "answer": "q44o1"
+    },
+    {
+      "id": "q45",
+      "question": "Which of the following is the best synonym for 'lucid' as used in the following sentence?\n\n'Her explanation was lucid and easy to follow.'",
+      "options": [
+        { "id": "q45o1", "label": "Clear" },
+        { "id": "q45o2", "label": "Short" },
+        { "id": "q45o3", "label": "Angry" },
+        { "id": "q45o4", "label": "Vague" }
+      ],
+      "answer": "q45o1"
+    },
+    {
+      "id": "q46",
+      "question": "Which of the following sentences contains a pronoun-antecedent agreement error?",
+      "options": [
+        { "id": "q46o1", "label": "Each member of the club must bring their own lunch." },
+        { "id": "q46o2", "label": "All the students forgot their textbooks." },
+        { "id": "q46o3", "label": "None of the books has lost its cover." },
+        { "id": "q46o4", "label": "Every student must sign his or her name." }
+      ],
+      "answer": "q46o1"
+    },
+    {
+      "id": "q47",
+      "question": "Which choice best replaces the underlined portion to eliminate ambiguity?\n\n'Maria gave her friend her notes.'",
+      "options": [
+        { "id": "q47o1", "label": "Maria gave her notes to her friend." },
+        { "id": "q47o2", "label": "Maria’s notes were given to her friend by Maria." },
+        { "id": "q47o3", "label": "Her notes were given by Maria to her friend." },
+        { "id": "q47o4", "label": "To her friend, Maria gave her notes." }
+      ],
+      "answer": "q47o1"
+    },
+    {
+      "id": "q48",
+      "question": "Which of the following sentences is written in the active voice?",
+      "options": [
+        { "id": "q48o1", "label": "The chef prepared the meal." },
+        { "id": "q48o2", "label": "The meal was prepared by the chef." },
+        { "id": "q48o3", "label": "The food was eaten by the guests." },
+        { "id": "q48o4", "label": "The presentation was given by the student." }
+      ],
+      "answer": "q48o1"
+    },
+    {
+      "id": "q49",
+      "question": "Which transition best fits in the blank?\n\n[1] Many people believe exercise is only for athletes. [2] _______, it offers health benefits for everyone.",
+      "options": [
+        { "id": "q49o1", "label": "In reality" },
+        { "id": "q49o2", "label": "Similarly" },
+        { "id": "q49o3", "label": "Consequently" },
+        { "id": "q49o4", "label": "For instance" }
+      ],
+      "answer": "q49o1"
+    },
+    {
+      "id": "q50",
+      "question": "Which word most nearly means 'harsh' as used in the following sentence?\n\n'His scathing critique left the artist in tears.'",
+      "options": [
+        { "id": "q50o1", "label": "Harsh" },
+        { "id": "q50o2", "label": "Incomplete" },
+        { "id": "q50o3", "label": "Generous" },
+        { "id": "q50o4", "label": "Superficial" }
+      ],
+      "answer": "q50o1"
+    },
+    {
+      "id": "q51",
+      "question": "Which of the following sentences is most concise and maintains the intended meaning?\n\n'At this point in time, the company is currently reviewing its policies.'",
+      "options": [
+        { "id": "q51o1", "label": "The company is reviewing its policies." },
+        { "id": "q51o2", "label": "At the present time, the company reviews its policies." },
+        { "id": "q51o3", "label": "The company is currently reviewing its policies at this time." },
+        { "id": "q51o4", "label": "The company at this time is reviewing its policies currently." }
+      ],
+      "answer": "q51o1"
+    },
+    {
+      "id": "q52",
+      "question": "Which choice best describes the function of the last sentence of the passage?\n\nPassage Excerpt: 'In summary, only by considering multiple perspectives can we arrive at a truly informed decision.'",
+      "options": [
+        { "id": "q52o1", "label": "It restates the central claim." },
+        { "id": "q52o2", "label": "It provides a contradictory view." },
+        { "id": "q52o3", "label": "It introduces new evidence." },
+        { "id": "q52o4", "label": "It summarizes the results of an experiment." }
+      ],
+      "answer": "q52o1"
+    },
+    {
+      "id": "q53",
+      "question": "As used in the passage, 'parsimonious' most nearly means:\n\nPassage Excerpt: 'His parsimonious nature made him reluctant to spend even on necessities.'",
+      "options": [
+        { "id": "q53o1", "label": "Stingy" },
+        { "id": "q53o2", "label": "Optimistic" },
+        { "id": "q53o3", "label": "Generous" },
+        { "id": "q53o4", "label": "Joyful" }
+      ],
+      "answer": "q53o1"
+    },
+    {
+      "id": "q54",
+      "question": "Which of the following sentences contains a misplaced modifier?\n\n'Walking down the street, the flowers looked beautiful.'",
+      "options": [
+        { "id": "q54o1", "label": "The flowers looked beautiful walking down the street." },
+        { "id": "q54o2", "label": "Walking down the street, I noticed the beautiful flowers." },
+        { "id": "q54o3", "label": "Walking down the street, the beautiful flowers caught my eye." },
+        { "id": "q54o4", "label": "The flowers caught my eye as I walked down the street." }
+      ],
+      "answer": "q54o2"
+    },
+    {
+      "id": "q55",
+      "question": "Which of the following best maintains subject-verb agreement?\n\n'Neither of the answers ______ correct.'",
+      "options": [
+        { "id": "q55o1", "label": "is" },
+        { "id": "q55o2", "label": "are" },
+        { "id": "q55o3", "label": "were" },
+        { "id": "q55o4", "label": "being" }
+      ],
+      "answer": "q55o1"
+    },
+    {
+      "id": "q56",
+      "question": "Which word or phrase most clearly signals a contrast?\n\n'_______, the author takes a very different approach.'",
+      "options": [
+        { "id": "q56o1", "label": "However" },
+        { "id": "q56o2", "label": "Additionally" },
+        { "id": "q56o3", "label": "Furthermore" },
+        { "id": "q56o4", "label": "For example" }
+      ],
+      "answer": "q56o1"
+    },
+    {
+      "id": "q57",
+      "question": "Which of the following best replaces the underlined word to clarify the meaning of the sentence?\n\n'Megan put it on the table, but it rolled off.'",
+      "options": [
+        { "id": "q57o1", "label": "the apple" },
+        { "id": "q57o2", "label": "her pencil" },
+        { "id": "q57o3", "label": "the object" },
+        { "id": "q57o4", "label": "her bag" }
+      ],
+      "answer": "q57o1"
+    },
+    {
+      "id": "q58",
+      "question": "Which of the following is most precise?\n\n'He is good at things.'",
+      "options": [
+        { "id": "q58o1", "label": "He excels at solving complex mathematical problems." },
+        { "id": "q58o2", "label": "He is talented at something." },
+        { "id": "q58o3", "label": "He likes activities." },
+        { "id": "q58o4", "label": "He does stuff well." }
+      ],
+      "answer": "q58o1"
+    },
+    {
+      "id": "q59",
+      "question": "Which version is grammatically correct?\n\n'If I ______ you, I would not make that decision.'",
+      "options": [
+        { "id": "q59o1", "label": "were" },
+        { "id": "q59o2", "label": "was" },
+        { "id": "q59o3", "label": "am" },
+        { "id": "q59o4", "label": "be" }
+      ],
+      "answer": "q59o1"
+    },
+    {
+      "id": "q60",
+      "question": "As used in the passage, 'ephemeral' most nearly means:\n\nPassage Excerpt: 'The beauty of the sunset was ephemeral, fading within moments.'",
+      "options": [
+        { "id": "q60o1", "label": "Short-lived" },
+        { "id": "q60o2", "label": "Eternal" },
+        { "id": "q60o3", "label": "Colorful" },
+        { "id": "q60o4", "label": "Unexpected" }
+      ],
+      "answer": "q60o1"
+    },
+    {
+      "id": "q61",
+      "question": "Which choice best completes the sentence with the correct idiom?\n\n'The report calls attention ______ the need for further research.'",
+      "options": [
+        { "id": "q61o1", "label": "to" },
+        { "id": "q61o2", "label": "about" },
+        { "id": "q61o3", "label": "on" },
+        { "id": "q61o4", "label": "for" }
+      ],
+      "answer": "q61o1"
+    },
+    {
+      "id": "q62",
+      "question": "Which of the following sentences is written correctly?\n\n'Each of the girls ______ going to the festival.'",
+      "options": [
+        { "id": "q62o1", "label": "is" },
+        { "id": "q62o2", "label": "are" },
+        { "id": "q62o3", "label": "have" },
+        { "id": "q62o4", "label": "were" }
+      ],
+      "answer": "q62o1"
+    },
+    {
+      "id": "q63",
+      "question": "Which sentence contains a dangling modifier?",
+      "options": [
+        { "id": "q63o1", "label": "After studying for hours, the test was much easier." },
+        { "id": "q63o2", "label": "After studying for hours, she found the test much easier." },
+        { "id": "q63o3", "label": "She found the test much easier after studying for hours." },
+        { "id": "q63o4", "label": "The test, after hours of study, was much easier for her." }
+      ],
+      "answer": "q63o1"
+    },
+    {
+      "id": "q64",
+      "question": "Which is the best synonym for 'enervate' as used in the following sentence?\n\n'Hours of intense debate enervated the committee.'",
+      "options": [
+        { "id": "q64o1", "label": "Weakened" },
+        { "id": "q64o2", "label": "Inspired" },
+        { "id": "q64o3", "label": "Enraged" },
+        { "id": "q64o4", "label": "Relieved" }
+      ],
+      "answer": "q64o1"
+    },
+    {
+      "id": "q65",
+      "question": "Which transition best fits in the blank?\n\n[1] Some people prefer city life. [2] _______, others enjoy the tranquility of the countryside.",
+      "options": [
+        { "id": "q65o1", "label": "In contrast" },
+        { "id": "q65o2", "label": "Moreover" },
+        { "id": "q65o3", "label": "For instance" },
+        { "id": "q65o4", "label": "In addition" }
+      ],
+      "answer": "q65o1"
+    },
+    {
+      "id": "q66",
+      "question": "Which of the following sentences is clearest and most direct?\n\n'Because of the fact that she was late, she missed the bus.'",
+      "options": [
+        { "id": "q66o1", "label": "Because she was late, she missed the bus." },
+        { "id": "q66o2", "label": "Due to her lateness, the bus was missed." },
+        { "id": "q66o3", "label": "Because of being late, the bus was missed by her." },
+        { "id": "q66o4", "label": "Due to the fact she was late, she missed the bus." }
+      ],
+      "answer": "q66o1"
+    },
+    {
+      "id": "q67",
+      "question": "Which of the following best maintains formal academic tone?\n\n'Lots of people freaked out about the new policy.'",
+      "options": [
+        { "id": "q67o1", "label": "Many individuals expressed concern about the new policy." },
+        { "id": "q67o2", "label": "People were super upset about the new policy." },
+        { "id": "q67o3", "label": "The new policy freaked everyone out." },
+        { "id": "q67o4", "label": "Lots of folks got worked up over the new policy." }
+      ],
+      "answer": "q67o1"
+    },
+    {
+      "id": "q68",
+      "question": "Which word most nearly means 'secretive' as used in the following sentence?\n\n'Her furtive glance went unnoticed by the others.'",
+      "options": [
+        { "id": "q68o1", "label": "Secretive" },
+        { "id": "q68o2", "label": "Happy" },
+        { "id": "q68o3", "label": "Destructive" },
+        { "id": "q68o4", "label": "Open" }
+      ],
+      "answer": "q68o1"
+    },
+    {
+      "id": "q69",
+      "question": "Which of the following sentences is correct?\n\n'Each of the reports ______ to be reviewed.'",
+      "options": [
+        { "id": "q69o1", "label": "needs" },
+        { "id": "q69o2", "label": "need" },
+        { "id": "q69o3", "label": "were needing" },
+        { "id": "q69o4", "label": "are needed" }
+      ],
+      "answer": "q69o1"
+    },
+    {
+      "id": "q70",
+      "question": "Which choice best improves the clarity of the sentence below?\n\n'Sam told Alex that he should finish the project.'",
+      "options": [
+        { "id": "q70o1", "label": "Sam told Alex to finish the project." },
+        { "id": "q70o2", "label": "Sam, Alex should finish the project, he said." },
+        { "id": "q70o3", "label": "Alex should finish the project, Sam told him." },
+        { "id": "q70o4", "label": "Sam told to finish the project Alex." }
+      ],
+      "answer": "q70o1"
+    },
+    {
+      "id": "q71",
+      "question": "Which of the following words is closest in meaning to 'aberration' as used in the following sentence?\n\n'His sudden outburst was considered an aberration by his peers.'",
+      "options": [
+        { "id": "q71o1", "label": "Anomaly" },
+        { "id": "q71o2", "label": "Norm" },
+        { "id": "q71o3", "label": "Tradition" },
+        { "id": "q71o4", "label": "Pattern" }
+      ],
+      "answer": "q71o1"
+    },
+    {
+      "id": "q72",
+      "question": "Which sentence is the most logical conclusion for the paragraph?\n\n[1] The study tracked dietary habits for a decade. [2] Participants who ate more vegetables had lower rates of disease. [3] ________",
+      "options": [
+        { "id": "q72o1", "label": "Thus, increasing vegetable intake may benefit long-term health." },
+        { "id": "q72o2", "label": "Many people enjoy eating vegetables." },
+        { "id": "q72o3", "label": "Vegetables come in many colors." },
+        { "id": "q72o4", "label": "Fruits are also important." }
+      ],
+      "answer": "q72o1"
+    },
+    {
+      "id": "q73",
+      "question": "Which choice best completes the sentence with the correct idiom?\n\n'After years of research, the scientist succeeded ______ isolating the compound.'",
+      "options": [
+        { "id": "q73o1", "label": "in" },
+        { "id": "q73o2", "label": "to" },
+        { "id": "q73o3", "label": "on" },
+        { "id": "q73o4", "label": "about" }
+      ],
+      "answer": "q73o1"
+    },
+    {
+      "id": "q74",
+      "question": "Which word is most nearly opposite in meaning to 'laudable' as used in the sentence below?\n\n'Her dedication to community service was laudable.'",
+      "options": [
+        { "id": "q74o1", "label": "Reprehensible" },
+        { "id": "q74o2", "label": "Praiseworthy" },
+        { "id": "q74o3", "label": "Admirable" },
+        { "id": "q74o4", "label": "Notable" }
+      ],
+      "answer": "q74o1"
+    },
+    {
+      "id": "q75",
+      "question": "Which sentence best maintains parallel structure?\n\n'She likes to swim, biking, and run.'",
+      "options": [
+        { "id": "q75o1", "label": "She likes swimming, biking, and running." },
+        { "id": "q75o2", "label": "She likes to swim, bike, and to run." },
+        { "id": "q75o3", "label": "She likes to swim, biking, and to run." },
+        { "id": "q75o4", "label": "She likes to swim, to bike, and running." }
+      ],
+      "answer": "q75o1"
+    },
+    {
+      "id": "q76",
+      "question": "Which of the following is the best synonym for 'magnanimous' as used in the following sentence?\n\n'After the heated debate, she was magnanimous in victory.'",
+      "options": [
+        { "id": "q76o1", "label": "Generous" },
+        { "id": "q76o2", "label": "Petty" },
+        { "id": "q76o3", "label": "Reluctant" },
+        { "id": "q76o4", "label": "Envious" }
+      ],
+      "answer": "q76o1"
+    },
+    {
+      "id": "q77",
+      "question": "Which of the following is most concise and maintains the intended meaning?\n\n'For the purpose of making a decision, the board will meet next week.'",
+      "options": [
+        { "id": "q77o1", "label": "The board will meet next week to make a decision." },
+        { "id": "q77o2", "label": "The board is meeting for the purpose of making a decision next week." },
+        { "id": "q77o3", "label": "Next week, the board, to make a decision, will meet." },
+        { "id": "q77o4", "label": "The board will, for the purpose of making a decision, meet next week." }
+      ],
+      "answer": "q77o1"
+    },
+    {
+      "id": "q78",
+      "question": "Which sentence uses the word 'less' correctly?",
+      "options": [
+        { "id": "q78o1", "label": "There is less traffic on Sundays than on weekdays." },
+        { "id": "q78o2", "label": "There are less students in the classroom today." },
+        { "id": "q78o3", "label": "Less cars are parked outside than usual." },
+        { "id": "q78o4", "label": "She made less mistakes than before." }
+      ],
+      "answer": "q78o1"
+    },
+    {
+      "id": "q79",
+      "question": "Which sentence is the most effective revision?\n\n'The city, which is known for its lively music scene, draws many tourists, which increases revenue.'",
+      "options": [
+        { "id": "q79o1", "label": "The city's lively music scene draws many tourists, increasing revenue." },
+        { "id": "q79o2", "label": "The city is known for its lively music scene, which draws many tourists and increases revenue." },
+        { "id": "q79o3", "label": "Known for its music, the city, which draws tourists, has increased revenue." },
+        { "id": "q79o4", "label": "Tourists are drawn to the city, which is known for its lively music scene, and revenue increases." }
+      ],
+      "answer": "q79o2"
+    },
+    {
+      "id": "q80",
+      "question": "Which of the following sentences contains an error in pronoun usage?",
+      "options": [
+        { "id": "q80o1", "label": "Each member of the team must do their best." },
+        { "id": "q80o2", "label": "She and I will finish the project together." },
+        { "id": "q80o3", "label": "He gave the book to me." },
+        { "id": "q80o4", "label": "All of the students finished their work." }
+      ],
+      "answer": "q80o1"
+    },
+    {
+      "id": "q81",
+      "question": "Which of the following best replaces the underlined portion to correct the sentence?\n\n'If anyone wants to attend the concert, they should buy tickets soon.'",
+      "options": [
+        { "id": "q81o1", "label": "he or she should" },
+        { "id": "q81o2", "label": "he should" },
+        { "id": "q81o3", "label": "one should" },
+        { "id": "q81o4", "label": "they should" }
+      ],
+      "answer": "q81o1"
+    },
+    {
+      "id": "q82",
+      "question": "As used in the passage, 'cursory' most nearly means:\n\nPassage Excerpt: 'Her cursory review of the report failed to identify the major errors.'",
+      "options": [
+        { "id": "q82o1", "label": "Superficial" },
+        { "id": "q82o2", "label": "Detailed" },
+        { "id": "q82o3", "label": "Exhaustive" },
+        { "id": "q82o4", "label": "Accurate" }
+      ],
+      "answer": "q82o1"
+    },
+    {
+      "id": "q83",
+      "question": "Which transition best completes the sentence?\n\n'He was exhausted; _______, he finished the race.'",
+      "options": [
+        { "id": "q83o1", "label": "nevertheless" },
+        { "id": "q83o2", "label": "because" },
+        { "id": "q83o3", "label": "for instance" },
+        { "id": "q83o4", "label": "similarly" }
+      ],
+      "answer": "q83o1"
+    },
+    {
+      "id": "q84",
+      "question": "Which of the following best maintains parallel structure?\n\n'He wanted to win, to celebrate, and be remembered.'",
+      "options": [
+        { "id": "q84o1", "label": "He wanted to win, to celebrate, and to be remembered." },
+        { "id": "q84o2", "label": "He wanted winning, celebrating, and remembering." },
+        { "id": "q84o3", "label": "He wanted to win, celebrate, and be remembered." },
+        { "id": "q84o4", "label": "He wanted to win, to celebrate, and remembered." }
+      ],
+      "answer": "q84o1"
+    },
+    {
+      "id": "q85",
+      "question": "Which sentence uses the word 'affect' correctly?",
+      "options": [
+        { "id": "q85o1", "label": "The weather can affect your mood." },
+        { "id": "q85o2", "label": "He wanted to affect a new outfit for the party." },
+        { "id": "q85o3", "label": "The affect of the movie was strong." },
+        { "id": "q85o4", "label": "Her affect on him was positive." }
+      ],
+      "answer": "q85o1"
+    },
+    {
+      "id": "q86",
+      "question": "Which word most nearly means 'to criticize severely' as used in the following sentence?\n\n'He was castigated by the editor for missing the deadline.'",
+      "options": [
+        { "id": "q86o1", "label": "Reprimanded" },
+        { "id": "q86o2", "label": "Congratulated" },
+        { "id": "q86o3", "label": "Promoted" },
+        { "id": "q86o4", "label": "Reassured" }
+      ],
+      "answer": "q86o1"
+    },
+    {
+      "id": "q87",
+      "question": "Which revision most improves the clarity and flow of the following sentence?\n\n'After the long meeting, tired and hungry, the decision was made to order pizza.'",
+      "options": [
+        { "id": "q87o1", "label": "After the long meeting, the group, tired and hungry, decided to order pizza." },
+        { "id": "q87o2", "label": "The decision was made, after the long meeting, to order pizza, tired and hungry." },
+        { "id": "q87o3", "label": "To order pizza was the decision after the long, tired and hungry meeting." },
+        { "id": "q87o4", "label": "Ordering pizza was the group's decision after the long, tired, and hungry meeting." }
+      ],
+      "answer": "q87o1"
+    },
+    {
+      "id": "q88",
+      "question": "Which transition best signals an example?\n\n'_______, the platypus is an example of a mammal that lays eggs.'",
+      "options": [
+        { "id": "q88o1", "label": "For instance" },
+        { "id": "q88o2", "label": "Nevertheless" },
+        { "id": "q88o3", "label": "On the other hand" },
+        { "id": "q88o4", "label": "Conversely" }
+      ],
+      "answer": "q88o1"
+    },
+    {
+      "id": "q89",
+      "question": "Which of the following is the best synonym for 'taciturn' as used in the following sentence?\n\n'Despite her accomplishments, she remained taciturn at the award ceremony.'",
+      "options": [
+        { "id": "q89o1", "label": "Reserved" },
+        { "id": "q89o2", "label": "Boastful" },
+        { "id": "q89o3", "label": "Curious" },
+        { "id": "q89o4", "label": "Confused" }
+      ],
+      "answer": "q89o1"
+    },
+    {
+      "id": "q90",
+      "question": "Which sentence contains an error in subject-verb agreement?",
+      "options": [
+        { "id": "q90o1", "label": "The team of researchers are working late tonight." },
+        { "id": "q90o2", "label": "The players on the team are practicing." },
+        { "id": "q90o3", "label": "The group of students is studying together." },
+        { "id": "q90o4", "label": "Each of the athletes is ready to compete." }
+      ],
+      "answer": "q90o1"
+    },
+    {
+      "id": "q91",
+      "question": "As used in the passage, 'alacrity' most nearly means:\n\nPassage Excerpt: 'She accepted the invitation with alacrity, eager to join her friends.'",
+      "options": [
+        { "id": "q91o1", "label": "Enthusiasm" },
+        { "id": "q91o2", "label": "Hesitation" },
+        { "id": "q91o3", "label": "Resentment" },
+        { "id": "q91o4", "label": "Doubt" }
+      ],
+      "answer": "q91o1"
+    },
+    {
+      "id": "q92",
+      "question": "Which choice best maintains a formal tone?\n\n'He messed up the experiment by accident.'",
+      "options": [
+        { "id": "q92o1", "label": "He inadvertently made an error during the experiment." },
+        { "id": "q92o2", "label": "He accidentally goofed the experiment." },
+        { "id": "q92o3", "label": "He totally messed up." },
+        { "id": "q92o4", "label": "He did the experiment wrong by mistake." }
+      ],
+      "answer": "q92o1"
+    },
+    {
+      "id": "q93",
+      "question": "Which word is the best synonym for 'obsolete' as used in the following sentence?\n\n'Technological advances have rendered some devices obsolete.'",
+      "options": [
+        { "id": "q93o1", "label": "Outdated" },
+        { "id": "q93o2", "label": "Expensive" },
+        { "id": "q93o3", "label": "Useful" },
+        { "id": "q93o4", "label": "Efficient" }
+      ],
+      "answer": "q93o1"
+    },
+    {
+      "id": "q94",
+      "question": "Which of the following best corrects the error in the sentence?\n\n'Me and him went to the conference.'",
+      "options": [
+        { "id": "q94o1", "label": "He and I went to the conference." },
+        { "id": "q94o2", "label": "Him and me went to the conference." },
+        { "id": "q94o3", "label": "Me and he went to the conference." },
+        { "id": "q94o4", "label": "I and him went to the conference." }
+      ],
+      "answer": "q94o1"
+    },
+    {
+      "id": "q95",
+      "question": "Which transition is most appropriate for the blank?\n\n[1] Many animals migrate seasonally. [2] _______, others remain in the same place all year.",
+      "options": [
+        { "id": "q95o1", "label": "By contrast" },
+        { "id": "q95o2", "label": "Similarly" },
+        { "id": "q95o3", "label": "Because" },
+        { "id": "q95o4", "label": "Consequently" }
+      ],
+      "answer": "q95o1"
+    },
+    {
+      "id": "q96",
+      "question": "Which is the best revision?\n\n'Working late at night, the report was completed by the manager.'",
+      "options": [
+        { "id": "q96o1", "label": "Working late at night, the manager completed the report." },
+        { "id": "q96o2", "label": "The manager completed the report, working late at night." },
+        { "id": "q96o3", "label": "Working late, the report completed the manager." },
+        { "id": "q96o4", "label": "The report, completed by the manager, was worked late at night." }
+      ],
+      "answer": "q96o1"
+    },
+    {
+      "id": "q97",
+      "question": "Which of the following is closest in meaning to 'placate'?\n\n'He tried to placate the angry customer.'",
+      "options": [
+        { "id": "q97o1", "label": "Calm" },
+        { "id": "q97o2", "label": "Ignore" },
+        { "id": "q97o3", "label": "Excite" },
+        { "id": "q97o4", "label": "Criticize" }
+      ],
+      "answer": "q97o1"
+    },
+    {
+      "id": "q98",
+      "question": "Which of the following sentences contains a redundancy?",
+      "options": [
+        { "id": "q98o1", "label": "He returned back to the house after work." },
+        { "id": "q98o2", "label": "She drove to the store." },
+        { "id": "q98o3", "label": "The team celebrated the victory." },
+        { "id": "q98o4", "label": "They wrote an essay for class." }
+      ],
+      "answer": "q98o1"
+    },
+    {
+      "id": "q99",
+      "question": "Which word is closest in meaning to 'copious' as used in the following sentence?\n\n'He took copious notes during the seminar.'",
+      "options": [
+        { "id": "q99o1", "label": "Abundant" },
+        { "id": "q99o2", "label": "Brief" },
+        { "id": "q99o3", "label": "Scattered" },
+        { "id": "q99o4", "label": "Illegible" }
+      ],
+      "answer": "q99o1"
+    },
+    {
+      "id": "q100",
+      "question": "Which transition best completes the sentence?\n\n'He practiced for months; _______, he performed flawlessly.'",
+      "options": [
+        { "id": "q100o1", "label": "consequently" },
+        { "id": "q100o2", "label": "however" },
+        { "id": "q100o3", "label": "otherwise" },
+        { "id": "q100o4", "label": "for example" }
+      ],
+      "answer": "q100o1"
+    },
+    {
+      "id": "q101",
+      "question": "Which sentence best maintains a formal and objective tone?\n\n'I just can't believe how awesome the experiment was!'",
+      "options": [
+        { "id": "q101o1", "label": "The results of the experiment were impressive." },
+        { "id": "q101o2", "label": "I can't believe how awesome the results were." },
+        { "id": "q101o3", "label": "The experiment was, like, really cool." },
+        { "id": "q101o4", "label": "The experiment was totally awesome." }
+      ],
+      "answer": "q101o1"
+    },
+    {
+      "id": "q102",
+      "question": "Which sentence uses the word 'comprise' correctly?",
+      "options": [
+        { "id": "q102o1", "label": "The United States comprises fifty states." },
+        { "id": "q102o2", "label": "Fifty states comprise the United States." },
+        { "id": "q102o3", "label": "The team is comprised with five players." },
+        { "id": "q102o4", "label": "The team comprise five players." }
+      ],
+      "answer": "q102o1"
+    },
+    {
+      "id": "q103",
+      "question": "Which word most nearly means 'confused' as used in the following sentence?\n\n'He was nonplussed by the strange question.'",
+      "options": [
+        { "id": "q103o1", "label": "Baffled" },
+        { "id": "q103o2", "label": "Annoyed" },
+        { "id": "q103o3", "label": "Prepared" },
+        { "id": "q103o4", "label": "Relaxed" }
+      ],
+      "answer": "q103o1"
+    },
+    {
+      "id": "q104",
+      "question": "Which of the following best corrects the sentence?\n\n'Every student must hand in their homework by Friday.'",
+      "options": [
+        { "id": "q104o1", "label": "Every student must hand in his or her homework by Friday." },
+        { "id": "q104o2", "label": "Every students must hand in their homework by Friday." },
+        { "id": "q104o3", "label": "Each student must hand in their homework by Friday." },
+        { "id": "q104o4", "label": "Student must hand in their homework by Friday." }
+      ],
+      "answer": "q104o1"
+    },
+    {
+      "id": "q105",
+      "question": "Which of the following is the best synonym for 'mitigate' as used in the sentence below?\n\n'The new policy was intended to mitigate the effects of climate change.'",
+      "options": [
+        { "id": "q105o1", "label": "Lessen" },
+        { "id": "q105o2", "label": "Increase" },
+        { "id": "q105o3", "label": "Ignore" },
+        { "id": "q105o4", "label": "Emphasize" }
+      ],
+      "answer": "q105o1"
+    },
+    {
+      "id": "q106",
+      "question": "Which transition best introduces a contrasting idea?\n\n'Many people believe the solution is simple. _______, it is actually quite complex.'",
+      "options": [
+        { "id": "q106o1", "label": "However" },
+        { "id": "q106o2", "label": "For example" },
+        { "id": "q106o3", "label": "Moreover" },
+        { "id": "q106o4", "label": "In addition" }
+      ],
+      "answer": "q106o1"
+    },
+    {
+      "id": "q107",
+      "question": "Which of the following sentences contains a misplaced modifier?\n\n'While jogging through the park, a squirrel startled Mia.'",
+      "options": [
+        { "id": "q107o1", "label": "While jogging through the park, Mia was startled by a squirrel." },
+        { "id": "q107o2", "label": "A squirrel startled Mia while she was jogging through the park." },
+        { "id": "q107o3", "label": "While jogging through the park, a squirrel startled Mia." },
+        { "id": "q107o4", "label": "Mia was startled by a squirrel while jogging through the park." }
+      ],
+      "answer": "q107o3"
+    },
+    {
+      "id": "q108",
+      "question": "Which of the following best maintains parallel structure?\n\n'He enjoys playing basketball, to swim, and riding his bike.'",
+      "options": [
+        { "id": "q108o1", "label": "He enjoys playing basketball, swimming, and riding his bike." },
+        { "id": "q108o2", "label": "He enjoys to play basketball, swim, and to ride his bike." },
+        { "id": "q108o3", "label": "He enjoys playing basketball, swim, and riding his bike." },
+        { "id": "q108o4", "label": "He enjoys basketball, swim, and to ride his bike." }
+      ],
+      "answer": "q108o1"
+    },
+    {
+      "id": "q109",
+      "question": "Which word is the best synonym for 'mollify' as used in the sentence below?\n\n'He tried to mollify the angry protesters.'",
+      "options": [
+        { "id": "q109o1", "label": "Appease" },
+        { "id": "q109o2", "label": "Anger" },
+        { "id": "q109o3", "label": "Provoke" },
+        { "id": "q109o4", "label": "Distract" }
+      ],
+      "answer": "q109o1"
+    },
+    {
+      "id": "q110",
+      "question": "Which of the following is the best revision?\n\n'He ran quickly down the hall, and he hurried to class.'",
+      "options": [
+        { "id": "q110o1", "label": "He ran quickly down the hall to class." },
+        { "id": "q110o2", "label": "Quickly running, he hurried to class." },
+        { "id": "q110o3", "label": "He hurriedly ran and went to class." },
+        { "id": "q110o4", "label": "He ran quickly, he hurried to class." }
+      ],
+      "answer": "q110o1"
+    },
+    {
+      "id": "q111",
+      "question": "Which transition best fits in the blank?\n\n[1] The data showed a decline in sales. [2] _______, management implemented a new strategy.",
+      "options": [
+        { "id": "q111o1", "label": "As a result" },
+        { "id": "q111o2", "label": "Nevertheless" },
+        { "id": "q111o3", "label": "For instance" },
+        { "id": "q111o4", "label": "In contrast" }
+      ],
+      "answer": "q111o1"
+    },
+    {
+      "id": "q112",
+      "question": "Which of the following words most nearly means 'brief'?\n\n'Her speech was concise and effective.'",
+      "options": [
+        { "id": "q112o1", "label": "Short" },
+        { "id": "q112o2", "label": "Complicated" },
+        { "id": "q112o3", "label": "Detailed" },
+        { "id": "q112o4", "label": "Formal" }
+      ],
+      "answer": "q112o1"
+    },
+    {
+      "id": "q113",
+      "question": "Which sentence contains a dangling modifier?",
+      "options": [
+        { "id": "q113o1", "label": "While typing the report, the power went out." },
+        { "id": "q113o2", "label": "While typing the report, I lost my place." },
+        { "id": "q113o3", "label": "The power went out while I was typing the report." },
+        { "id": "q113o4", "label": "I lost my place while typing the report." }
+      ],
+      "answer": "q113o1"
+    },
+    {
+      "id": "q114",
+      "question": "Which is the best synonym for 'ubiquitous' as used in the following sentence?\n\n'Cell phones have become ubiquitous in modern society.'",
+      "options": [
+        { "id": "q114o1", "label": "Widespread" },
+        { "id": "q114o2", "label": "Rare" },
+        { "id": "q114o3", "label": "Fragile" },
+        { "id": "q114o4", "label": "Outdated" }
+      ],
+      "answer": "q114o1"
+    },
+    {
+      "id": "q115",
+      "question": "Which revision best improves the clarity of the sentence below?\n\n'After reviewing the proposal, the main issues were obvious.'",
+      "options": [
+        { "id": "q115o1", "label": "After reviewing the proposal, I found the main issues obvious." },
+        { "id": "q115o2", "label": "The main issues were obvious after the proposal was reviewed by me." },
+        { "id": "q115o3", "label": "The main issues were obviously found after reviewing the proposal." },
+        { "id": "q115o4", "label": "The proposal was reviewed and issues were obvious." }
+      ],
+      "answer": "q115o1"
+    },
+    {
+      "id": "q116",
+      "question": "Which of the following best signals a cause-and-effect relationship?\n\n'Sales increased. _______, profits rose as well.'",
+      "options": [
+        { "id": "q116o1", "label": "Consequently" },
+        { "id": "q116o2", "label": "However" },
+        { "id": "q116o3", "label": "In contrast" },
+        { "id": "q116o4", "label": "For example" }
+      ],
+      "answer": "q116o1"
+    },
+    {
+      "id": "q117",
+      "question": "Which word is the best synonym for 'zealous' as used in the following sentence?\n\n'Her zealous support for the cause inspired others.'",
+      "options": [
+        { "id": "q117o1", "label": "Enthusiastic" },
+        { "id": "q117o2", "label": "Lazy" },
+        { "id": "q117o3", "label": "Careful" },
+        { "id": "q117o4", "label": "Cautious" }
+      ],
+      "answer": "q117o1"
+    },
+    {
+      "id": "q118",
+      "question": "Which transition best signals an additional point?\n\n'The plan would save money. _______, it would reduce waste.'",
+      "options": [
+        { "id": "q118o1", "label": "Furthermore" },
+        { "id": "q118o2", "label": "However" },
+        { "id": "q118o3", "label": "On the other hand" },
+        { "id": "q118o4", "label": "For instance" }
+      ],
+      "answer": "q118o1"
+    },
+    {
+      "id": "q119",
+      "question": "Which sentence is written in the passive voice?",
+      "options": [
+        { "id": "q119o1", "label": "The test was administered by the teacher." },
+        { "id": "q119o2", "label": "The teacher administered the test." },
+        { "id": "q119o3", "label": "The students completed the test." },
+        { "id": "q119o4", "label": "They finished the exam quickly." }
+      ],
+      "answer": "q119o1"
+    },
+    {
+      "id": "q120",
+      "question": "Which word is most nearly opposite in meaning to 'verbose'?\n\n'His explanation was so verbose that the audience lost interest.'",
+      "options": [
+        { "id": "q120o1", "label": "Concise" },
+        { "id": "q120o2", "label": "Wordy" },
+        { "id": "q120o3", "label": "Complicated" },
+        { "id": "q120o4", "label": "Lengthy" }
+      ],
+      "answer": "q120o1"
+    },
+    {
+      "id": "q121",
+      "question": "Which of the following best corrects the sentence?\n\n'Him and I went to the seminar.'",
+      "options": [
+        { "id": "q121o1", "label": "He and I went to the seminar." },
+        { "id": "q121o2", "label": "Me and him went to the seminar." },
+        { "id": "q121o3", "label": "Him and me went to the seminar." },
+        { "id": "q121o4", "label": "I and him went to the seminar." }
+      ],
+      "answer": "q121o1"
+    },
+    {
+      "id": "q122",
+      "question": "Which sentence uses the word 'imply' correctly?",
+      "options": [
+        { "id": "q122o1", "label": "Her silence implied agreement." },
+        { "id": "q122o2", "label": "He implied his essay to the teacher." },
+        { "id": "q122o3", "label": "She implied her happiness by a smile to me." },
+        { "id": "q122o4", "label": "He implied the letter to the editor." }
+      ],
+      "answer": "q122o1"
+    },
+    {
+      "id": "q123",
+      "question": "Which sentence contains a redundancy?",
+      "options": [
+        { "id": "q123o1", "label": "They returned back to the office after lunch." },
+        { "id": "q123o2", "label": "They returned to the office after lunch." },
+        { "id": "q123o3", "label": "After lunch, they went back to the office." },
+        { "id": "q123o4", "label": "The office was visited after lunch." }
+      ],
+      "answer": "q123o1"
+    },
+    {
+      "id": "q124",
+      "question": "Which of the following is closest in meaning to 'concur'?\n\n'The scientists concurred on the findings.'",
+      "options": [
+        { "id": "q124o1", "label": "Agreed" },
+        { "id": "q124o2", "label": "Argued" },
+        { "id": "q124o3", "label": "Disproved" },
+        { "id": "q124o4", "label": "Rejected" }
+      ],
+      "answer": "q124o1"
+    },
+    {
+      "id": "q125",
+      "question": "Which word most nearly means 'contradict' as used in the following sentence?\n\n'The evidence belied his claim of innocence.'",
+      "options": [
+        { "id": "q125o1", "label": "Contradicted" },
+        { "id": "q125o2", "label": "Supported" },
+        { "id": "q125o3", "label": "Implied" },
+        { "id": "q125o4", "label": "Ignored" }
+      ],
+      "answer": "q125o1"
+    },
+    {
+      "id": "q126",
+      "question": "Which transition best fits in the blank?\n\n[1] The weather was beautiful. [2] _______, we decided to have a picnic.",
+      "options": [
+        { "id": "q126o1", "label": "As a result" },
+        { "id": "q126o2", "label": "However" },
+        { "id": "q126o3", "label": "Nevertheless" },
+        { "id": "q126o4", "label": "On the contrary" }
+      ],
+      "answer": "q126o1"
+    },
+    {
+      "id": "q127",
+      "question": "Which of the following sentences is clearest and most concise?\n\n'At this point in time, the team is currently evaluating its progress.'",
+      "options": [
+        { "id": "q127o1", "label": "The team is evaluating its progress." },
+        { "id": "q127o2", "label": "At this time, the team currently is evaluating progress." },
+        { "id": "q127o3", "label": "Currently, the team is evaluating its progress at this time." },
+        { "id": "q127o4", "label": "The team is at this point in time currently evaluating progress." }
+      ],
+      "answer": "q127o1"
+    },
+    {
+      "id": "q128",
+      "question": "Which word is the best synonym for 'pensive' as used in the following sentence?\n\n'She became pensive as she reflected on her childhood.'",
+      "options": [
+        { "id": "q128o1", "label": "Thoughtful" },
+        { "id": "q128o2", "label": "Carefree" },
+        { "id": "q128o3", "label": "Eccentric" },
+        { "id": "q128o4", "label": "Oblivious" }
+      ],
+      "answer": "q128o1"
+    },
+    {
+      "id": "q129",
+      "question": "Which sentence is most effective at eliminating ambiguity?\n\n'When Anna met Julia, she was nervous.'",
+      "options": [
+        { "id": "q129o1", "label": "Anna was nervous when she met Julia." },
+        { "id": "q129o2", "label": "When she met Julia, Anna was nervous." },
+        { "id": "q129o3", "label": "Julia made Anna nervous when they met." },
+        { "id": "q129o4", "label": "She was nervous when she met Julia." }
+      ],
+      "answer": "q129o1"
+    },
+    {
+      "id": "q130",
+      "question": "Which of the following best maintains a formal and academic tone?\n\n'Science is, like, really important for everyone.'",
+      "options": [
+        { "id": "q130o1", "label": "Science is essential for all individuals." },
+        { "id": "q130o2", "label": "Science is a big deal for everyone." },
+        { "id": "q130o3", "label": "Everyone should do science because it's cool." },
+        { "id": "q130o4", "label": "Science is, like, for everyone." }
+      ],
+      "answer": "q130o1"
+    },
+    {
+      "id": "q131",
+      "question": "Which is the most precise revision of the following sentence?\n\n'She did well in the competition.'",
+      "options": [
+        { "id": "q131o1", "label": "She won first place in the competition." },
+        { "id": "q131o2", "label": "She performed and got a prize." },
+        { "id": "q131o3", "label": "She was in the competition and did well." },
+        { "id": "q131o4", "label": "She did a good job at the event." }
+      ],
+      "answer": "q131o1"
+    },
+    {
+      "id": "q132",
+      "question": "Which of the following sentences is written in the passive voice?",
+      "options": [
+        { "id": "q132o1", "label": "The cake was eaten by the children." },
+        { "id": "q132o2", "label": "The children ate the cake." },
+        { "id": "q132o3", "label": "The children enjoyed the cake." },
+        { "id": "q132o4", "label": "They finished the cake quickly." }
+      ],
+      "answer": "q132o1"
+    },
+    {
+      "id": "q133",
+      "question": "Which of the following best maintains parallel structure?\n\n'The speaker inspired the audience, encouraged questions, and was motivating participants.'",
+      "options": [
+        { "id": "q133o1", "label": "The speaker inspired the audience, encouraged questions, and motivated participants." },
+        { "id": "q133o2", "label": "The speaker, inspiring the audience, encouraged questions, and was motivating participants." },
+        { "id": "q133o3", "label": "The speaker inspired the audience, questions were encouraged, and motivated participants." },
+        { "id": "q133o4", "label": "The speaker, inspired the audience, encouraged questions, and motivated participants." }
+      ],
+      "answer": "q133o1"
+    },
+    {
+      "id": "q134",
+      "question": "Which word is the best synonym for 'loquacious' as used in the following sentence?\n\n'He was so loquacious that meetings lasted hours.'",
+      "options": [
+        { "id": "q134o1", "label": "Talkative" },
+        { "id": "q134o2", "label": "Silent" },
+        { "id": "q134o3", "label": "Efficient" },
+        { "id": "q134o4", "label": "Shy" }
+      ],
+      "answer": "q134o1"
+    },
+    {
+      "id": "q135",
+      "question": "Which of the following sentences contains an error in pronoun-antecedent agreement?",
+      "options": [
+        { "id": "q135o1", "label": "Each member of the committee shared their opinion." },
+        { "id": "q135o2", "label": "Each member of the committee shared his or her opinion." },
+        { "id": "q135o3", "label": "All the members of the committee shared their opinions." },
+        { "id": "q135o4", "label": "The committee members shared their views." }
+      ],
+      "answer": "q135o1"
+    },
+    {
+      "id": "q136",
+      "question": "Which transition best signals a contrast?\n\n'_______, some critics disagree with this perspective.'",
+      "options": [
+        { "id": "q136o1", "label": "However" },
+        { "id": "q136o2", "label": "Furthermore" },
+        { "id": "q136o3", "label": "For example" },
+        { "id": "q136o4", "label": "Moreover" }
+      ],
+      "answer": "q136o1"
+    },
+    {
+      "id": "q137",
+      "question": "Which word most nearly means 'concise' as used in the following sentence?\n\n'His summary was succinct and informative.'",
+      "options": [
+        { "id": "q137o1", "label": "Brief" },
+        { "id": "q137o2", "label": "Long-winded" },
+        { "id": "q137o3", "label": "Complicated" },
+        { "id": "q137o4", "label": "Vague" }
+      ],
+      "answer": "q137o1"
+    },
+    {
+      "id": "q138",
+      "question": "Which revision best eliminates the misplaced modifier?\n\n'After reading the book, the movie was disappointing.'",
+      "options": [
+        { "id": "q138o1", "label": "After reading the book, I found the movie disappointing." },
+        { "id": "q138o2", "label": "Reading the book, the movie was disappointing after." },
+        { "id": "q138o3", "label": "After reading the book, disappointing was the movie." },
+        { "id": "q138o4", "label": "The book, after reading, was disappointing for the movie." }
+      ],
+      "answer": "q138o1"
+    },
+    {
+      "id": "q139",
+      "question": "Which word is most nearly opposite in meaning to 'benevolent'?\n\n'His benevolent nature made him popular among his peers.'",
+      "options": [
+        { "id": "q139o1", "label": "Malevolent" },
+        { "id": "q139o2", "label": "Generous" },
+        { "id": "q139o3", "label": "Kind" },
+        { "id": "q139o4", "label": "Friendly" }
+      ],
+      "answer": "q139o1"
+    },
+    {
+      "id": "q140",
+      "question": "Which transition is most appropriate for the blank?\n\n[1] The experiment yielded unexpected results. [2] _______, the researchers re-examined their methodology.",
+      "options": [
+        { "id": "q140o1", "label": "Consequently" },
+        { "id": "q140o2", "label": "For example" },
+        { "id": "q140o3", "label": "In contrast" },
+        { "id": "q140o4", "label": "However" }
+      ],
+      "answer": "q140o1"
+    },
+    {
+      "id": "q141",
+      "question": "Which word is the best synonym for 'elucidate' as used in the following sentence?\n\n'The professor tried to elucidate the complex theory.'",
+      "options": [
+        { "id": "q141o1", "label": "Clarify" },
+        { "id": "q141o2", "label": "Ignore" },
+        { "id": "q141o3", "label": "Confuse" },
+        { "id": "q141o4", "label": "Complicate" }
+      ],
+      "answer": "q141o1"
+    },
+    {
+      "id": "q142",
+      "question": "Which sentence is the most logical conclusion for the paragraph?\n\n[1] The museum’s new exhibit attracted record crowds. [2] Attendance increased by 30% over last year. [3] ________",
+      "options": [
+        { "id": "q142o1", "label": "The exhibit was a clear success." },
+        { "id": "q142o2", "label": "People like museums." },
+        { "id": "q142o3", "label": "Exhibits are sometimes interesting." },
+        { "id": "q142o4", "label": "Museum hours were extended." }
+      ],
+      "answer": "q142o1"
+    },
+    {
+      "id": "q143",
+      "question": "Which revision is most concise?\n\n'In the event that you are late, you will not be admitted.'",
+      "options": [
+        { "id": "q143o1", "label": "If you are late, you will not be admitted." },
+        { "id": "q143o2", "label": "If late, you will not be admitted in the event." },
+        { "id": "q143o3", "label": "When you are late, admittance is not allowed." },
+        { "id": "q143o4", "label": "In the case that you are late, no admittance." }
+      ],
+      "answer": "q143o1"
+    },
+    {
+      "id": "q144",
+      "question": "Which word is the best synonym for 'quandary' as used in the sentence below?\n\n'He was in a quandary about which college to choose.'",
+      "options": [
+        { "id": "q144o1", "label": "Dilemma" },
+        { "id": "q144o2", "label": "Plan" },
+        { "id": "q144o3", "label": "Celebration" },
+        { "id": "q144o4", "label": "Success" }
+      ],
+      "answer": "q144o1"
+    },
+    {
+      "id": "q145",
+      "question": "Which sentence is most formal and precise?\n\n'We all freaked out when the data was lost.'",
+      "options": [
+        { "id": "q145o1", "label": "The loss of data caused significant concern." },
+        { "id": "q145o2", "label": "Everyone was upset when the data disappeared." },
+        { "id": "q145o3", "label": "We all got really mad about the lost data." },
+        { "id": "q145o4", "label": "Data loss made everyone go crazy." }
+      ],
+      "answer": "q145o1"
+    },
+    {
+      "id": "q146",
+      "question": "Which of the following is closest in meaning to 'vindicate'?\n\n'The new evidence served to vindicate her claims.'",
+      "options": [
+        { "id": "q146o1", "label": "Justify" },
+        { "id": "q146o2", "label": "Condemn" },
+        { "id": "q146o3", "label": "Dismiss" },
+        { "id": "q146o4", "label": "Delay" }
+      ],
+      "answer": "q146o1"
+    },
+    {
+      "id": "q147",
+      "question": "Which of the following sentences contains a misplaced modifier?",
+      "options": [
+        { "id": "q147o1", "label": "Driving to the store, the rain started to fall." },
+        { "id": "q147o2", "label": "While I was driving to the store, the rain started to fall." },
+        { "id": "q147o3", "label": "The rain started to fall as I drove to the store." },
+        { "id": "q147o4", "label": "I was driving to the store when the rain started to fall." }
+      ],
+      "answer": "q147o1"
+    },
+    {
+      "id": "q148",
+      "question": "Which transition is most appropriate for the blank?\n\n[1] The study revealed several flaws. [2] _______, the researchers were able to draw important conclusions.",
+      "options": [
+        { "id": "q148o1", "label": "Nevertheless" },
+        { "id": "q148o2", "label": "For instance" },
+        { "id": "q148o3", "label": "Consequently" },
+        { "id": "q148o4", "label": "In contrast" }
+      ],
+      "answer": "q148o1"
+    },
+    {
+      "id": "q149",
+      "question": "Which of the following best replaces the underlined portion for conciseness?\n\n'Due to the fact that it rained, the event was postponed.'",
+      "options": [
+        { "id": "q149o1", "label": "Because it rained, the event was postponed." },
+        { "id": "q149o2", "label": "Due to it raining, the event was postponed." },
+        { "id": "q149o3", "label": "Owing to the fact it rained, the event was postponed." },
+        { "id": "q149o4", "label": "The event was postponed because of the rain." }
+      ],
+      "answer": "q149o1"
+    },
+    {
+      "id": "q150",
+      "question": "Which word is most nearly opposite in meaning to 'arduous'?\n\n'Climbing the mountain was an arduous task.'",
+      "options": [
+        { "id": "q150o1", "label": "Easy" },
+        { "id": "q150o2", "label": "Grueling" },
+        { "id": "q150o3", "label": "Demanding" },
+        { "id": "q150o4", "label": "Tiring" }
+      ],
+      "answer": "q150o1"
+    },
+    {
+      "id": "q151",
+      "question": "Which sentence maintains parallel structure?\n\n'To succeed, you must work hard, be persistent, and showing initiative.'",
+      "options": [
+        { "id": "q151o1", "label": "To succeed, you must work hard, be persistent, and show initiative." },
+        { "id": "q151o2", "label": "To succeed, you must work hard, be persistent, and showing initiative." },
+        { "id": "q151o3", "label": "To succeed, you must work hard, being persistent, and show initiative." },
+        { "id": "q151o4", "label": "To succeed, you must working hard, be persistent, and show initiative." }
+      ],
+      "answer": "q151o1"
+    },
+    {
+      "id": "q152",
+      "question": "Which of the following is the best synonym for 'ameliorate' as used in the following sentence?\n\n'The measures were intended to ameliorate the economic crisis.'",
+      "options": [
+        { "id": "q152o1", "label": "Improve" },
+        { "id": "q152o2", "label": "Worsen" },
+        { "id": "q152o3", "label": "Ignore" },
+        { "id": "q152o4", "label": "Begin" }
+      ],
+      "answer": "q152o1"
+    },
+    {
+      "id": "q153",
+      "question": "Which word is closest in meaning to 'obdurate' as used in the following sentence?\n\n'Despite appeals for leniency, the judge remained obdurate.'",
+      "options": [
+        { "id": "q153o1", "label": "Stubborn" },
+        { "id": "q153o2", "label": "Lenient" },
+        { "id": "q153o3", "label": "Flexible" },
+        { "id": "q153o4", "label": "Careful" }
+      ],
+      "answer": "q153o1"
+    },
+    {
+      "id": "q154",
+      "question": "Which sentence is the most logical conclusion for the paragraph?\n\n[1] Renewable energy sources are becoming more affordable. [2] Their adoption is accelerating worldwide. [3] ________",
+      "options": [
+        { "id": "q154o1", "label": "This trend may lead to a significant reduction in global carbon emissions." },
+        { "id": "q154o2", "label": "Solar panels are sometimes blue." },
+        { "id": "q154o3", "label": "Many countries use wind energy." },
+        { "id": "q154o4", "label": "Energy is important." }
+      ],
+      "answer": "q154o1"
+    },
+    {
+      "id": "q155",
+      "question": "Which of the following best replaces the underlined portion for conciseness?\n\n'He made a decision that was final in nature.'",
+      "options": [
+        { "id": "q155o1", "label": "He made a final decision." },
+        { "id": "q155o2", "label": "He made a decision that was final." },
+        { "id": "q155o3", "label": "His decision was of a final nature." },
+        { "id": "q155o4", "label": "A final decision was made by him." }
+      ],
+      "answer": "q155o1"
+    },
+    {
+      "id": "q156",
+      "question": "Which word is most nearly opposite in meaning to 'prolific' as used in the sentence below?\n\n'The prolific writer published three novels a year.'",
+      "options": [
+        { "id": "q156o1", "label": "Unproductive" },
+        { "id": "q156o2", "label": "Creative" },
+        { "id": "q156o3", "label": "Popular" },
+        { "id": "q156o4", "label": "Talented" }
+      ],
+      "answer": "q156o1"
+    },
+    {
+      "id": "q157",
+      "question": "Which transition is most appropriate for the blank?\n\n[1] The study had several limitations. [2] _______, its findings remain valuable.",
+      "options": [
+        { "id": "q157o1", "label": "Nevertheless" },
+        { "id": "q157o2", "label": "Therefore" },
+        { "id": "q157o3", "label": "Consequently" },
+        { "id": "q157o4", "label": "Similarly" }
+      ],
+      "answer": "q157o1"
+    },
+    {
+      "id": "q158",
+      "question": "Which word is the best synonym for 'transient' as used in the following sentence?\n\n'The transient storm lasted only an hour.'",
+      "options": [
+        { "id": "q158o1", "label": "Temporary" },
+        { "id": "q158o2", "label": "Intense" },
+        { "id": "q158o3", "label": "Violent" },
+        { "id": "q158o4", "label": "Predictable" }
+      ],
+      "answer": "q158o1"
+    },
+    {
+      "id": "q159",
+      "question": "Which of the following sentences contains a subject-verb agreement error?",
+      "options": [
+        { "id": "q159o1", "label": "Neither of the proposals are satisfactory." },
+        { "id": "q159o2", "label": "Neither of the proposals is satisfactory." },
+        { "id": "q159o3", "label": "The proposals are satisfactory." },
+        { "id": "q159o4", "label": "Each proposal is satisfactory." }
+      ],
+      "answer": "q159o1"
+    },
+    {
+      "id": "q160",
+      "question": "Which of the following best replaces the underlined portion for clarity?\n\n'She gave the book to Emily after she finished reading it.'",
+      "options": [
+        { "id": "q160o1", "label": "After finishing the book, she gave it to Emily." },
+        { "id": "q160o2", "label": "She gave it to Emily after reading." },
+        { "id": "q160o3", "label": "She finished and gave it to Emily after reading." },
+        { "id": "q160o4", "label": "She read the book and gave it to Emily after finishing." }
+      ],
+      "answer": "q160o1"
+    },
+    {
+      "id": "q161",
+      "question": "Which word is the best synonym for 'candor' as used in the following sentence?\n\n'Her candor during the interview was refreshing.'",
+      "options": [
+        { "id": "q161o1", "label": "Honesty" },
+        { "id": "q161o2", "label": "Anxiety" },
+        { "id": "q161o3", "label": "Interest" },
+        { "id": "q161o4", "label": "Nervousness" }
+      ],
+      "answer": "q161o1"
+    },
+    {
+      "id": "q162",
+      "question": "Which revision best eliminates the wordiness?\n\n'At this point in time, we are currently conducting an evaluation of the program.'",
+      "options": [
+        { "id": "q162o1", "label": "We are evaluating the program." },
+        { "id": "q162o2", "label": "We are currently evaluating the program at this point in time." },
+        { "id": "q162o3", "label": "At this point, an evaluation is being conducted by us." },
+        { "id": "q162o4", "label": "Currently, we are conducting an evaluation of the program at this time." }
+      ],
+      "answer": "q162o1"
+    },
+    {
+      "id": "q163",
+      "question": "Which transition best signals an additional point?\n\n'The new procedure reduced costs. _______, it improved safety.'",
+      "options": [
+        { "id": "q163o1", "label": "In addition" },
+        { "id": "q163o2", "label": "However" },
+        { "id": "q163o3", "label": "Nevertheless" },
+        { "id": "q163o4", "label": "For instance" }
+      ],
+      "answer": "q163o1"
+    },
+    {
+      "id": "q164",
+      "question": "Which of the following is closest in meaning to 'innate' as used in the following sentence?\n\n'Her innate sense of justice guided her actions.'",
+      "options": [
+        { "id": "q164o1", "label": "Inborn" },
+        { "id": "q164o2", "label": "Learned" },
+        { "id": "q164o3", "label": "Gradual" },
+        { "id": "q164o4", "label": "Exaggerated" }
+      ],
+      "answer": "q164o1"
+    },
+    {
+      "id": "q165",
+      "question": "Which revision best eliminates ambiguity?\n\n'When Sarah met Lisa, she was overjoyed.'",
+      "options": [
+        { "id": "q165o1", "label": "Sarah was overjoyed when she met Lisa." },
+        { "id": "q165o2", "label": "She was overjoyed, Sarah, when she met Lisa." },
+        { "id": "q165o3", "label": "Lisa was overjoyed when Sarah met her." },
+        { "id": "q165o4", "label": "When Sarah met Lisa, it was overjoying." }
+      ],
+      "answer": "q165o1"
+    },
+    {
+      "id": "q166",
+      "question": "Which word is the best synonym for 'gregarious' as used in the following sentence?\n\n'He is so gregarious that he makes friends everywhere he goes.'",
+      "options": [
+        { "id": "q166o1", "label": "Sociable" },
+        { "id": "q166o2", "label": "Reserved" },
+        { "id": "q166o3", "label": "Suspicious" },
+        { "id": "q166o4", "label": "Solitary" }
+      ],
+      "answer": "q166o1"
+    },
+    {
+      "id": "q167",
+      "question": "Which of the following best replaces the underlined portion for clarity?\n\n'He put the keys on the table, but they fell off.'",
+      "options": [
+        { "id": "q167o1", "label": "He put the keys on the table, but the keys fell off." },
+        { "id": "q167o2", "label": "He put the keys on the table, but they slipped off the surface." },
+        { "id": "q167o3", "label": "After he put the keys on the table, the keys fell." },
+        { "id": "q167o4", "label": "He put the keys on the table, but the table fell." }
+      ],
+      "answer": "q167o1"
+    },
+    {
+      "id": "q168",
+      "question": "Which of the following is the best synonym for 'languid' as used in the following sentence?\n\n'After the long hike, he moved in a languid manner.'",
+      "options": [
+        { "id": "q168o1", "label": "Sluggish" },
+        { "id": "q168o2", "label": "Energetic" },
+        { "id": "q168o3", "label": "Aggressive" },
+        { "id": "q168o4", "label": "Brisk" }
+      ],
+      "answer": "q168o1"
+    },
+    {
+      "id": "q169",
+      "question": "Which transition best signals a result?\n\n'He neglected to water the plants. _______, they died.'",
+      "options": [
+        { "id": "q169o1", "label": "As a result" },
+        { "id": "q169o2", "label": "Nevertheless" },
+        { "id": "q169o3", "label": "For instance" },
+        { "id": "q169o4", "label": "In contrast" }
+      ],
+      "answer": "q169o1"
+    },
+    {
+      "id": "q170",
+      "question": "Which word is most nearly opposite in meaning to 'mitigate' as used in the following sentence?\n\n'The new policy helped mitigate the effects of pollution.'",
+      "options": [
+        { "id": "q170o1", "label": "Aggravate" },
+        { "id": "q170o2", "label": "Relieve" },
+        { "id": "q170o3", "label": "Repair" },
+        { "id": "q170o4", "label": "Solve" }
+      ],
+      "answer": "q170o1"
+    },
+    {
+      "id": "q171",
+      "question": "Which of the following is closest in meaning to 'cogent' as used in the sentence below?\n\n'Her argument was cogent and persuasive.'",
+      "options": [
+        { "id": "q171o1", "label": "Compelling" },
+        { "id": "q171o2", "label": "Confusing" },
+        { "id": "q171o3", "label": "Dull" },
+        { "id": "q171o4", "label": "Weak" }
+      ],
+      "answer": "q171o1"
+    },
+    {
+      "id": "q172",
+      "question": "Which revision is most concise?\n\n'In spite of the fact that the results were inconclusive, the researchers continued their work.'",
+      "options": [
+        { "id": "q172o1", "label": "Although the results were inconclusive, the researchers continued their work." },
+        { "id": "q172o2", "label": "The researchers continued their work in spite of the results being inconclusive." },
+        { "id": "q172o3", "label": "Although the results, in spite of the facts, were inconclusive, the researchers worked." },
+        { "id": "q172o4", "label": "Work continued, even with inconclusive results." }
+      ],
+      "answer": "q172o1"
+    },
+    {
+      "id": "q173",
+      "question": "Which word is most nearly opposite in meaning to 'lucid' as used in the following sentence?\n\n'Her explanation was lucid and easy to follow.'",
+      "options": [
+        { "id": "q173o1", "label": "Obscure" },
+        { "id": "q173o2", "label": "Clear" },
+        { "id": "q173o3", "label": "Detailed" },
+        { "id": "q173o4", "label": "Brief" }
+      ],
+      "answer": "q173o1"
+    },
+    {
+      "id": "q174",
+      "question": "Which of the following sentences is most precise?\n\n'He worked on the project.'",
+      "options": [
+        { "id": "q174o1", "label": "He designed and implemented the software project." },
+        { "id": "q174o2", "label": "He did work on it." },
+        { "id": "q174o3", "label": "He was involved with the project." },
+        { "id": "q174o4", "label": "He did some project work." }
+      ],
+      "answer": "q174o1"
+    },
+    {
+      "id": "q175",
+      "question": "Which transition best signals a contrast?\n\n'Many students like group projects. _______, others prefer to work alone.'",
+      "options": [
+        { "id": "q175o1", "label": "In contrast" },
+        { "id": "q175o2", "label": "Furthermore" },
+        { "id": "q175o3", "label": "For example" },
+        { "id": "q175o4", "label": "Likewise" }
+      ],
+      "answer": "q175o1"
+    },
+    {
+      "id": "q176",
+      "question": "Which of the following best maintains parallel structure?\n\n'He likes playing chess, to read, and swimming.'",
+      "options": [
+        { "id": "q176o1", "label": "He likes playing chess, reading, and swimming." },
+        { "id": "q176o2", "label": "He likes to play chess, to read, and to swim." },
+        { "id": "q176o3", "label": "He likes chess, reading, and to swim." },
+        { "id": "q176o4", "label": "He likes playing chess, to read, and swimming." }
+      ],
+      "answer": "q176o1"
+    },
+    {
+      "id": "q177",
+      "question": "Which word is the best synonym for 'epitome' as used in the following sentence?\n\n'He was the epitome of professionalism.'",
+      "options": [
+        { "id": "q177o1", "label": "Embodiment" },
+        { "id": "q177o2", "label": "Beginning" },
+        { "id": "q177o3", "label": "Impression" },
+        { "id": "q177o4", "label": "Opponent" }
+      ],
+      "answer": "q177o1"
+    },
+    {
+      "id": "q178",
+      "question": "Which of the following sentences contains a dangling modifier?",
+      "options": [
+        { "id": "q178o1", "label": "Walking into the room, the aroma of fresh bread filled my senses." },
+        { "id": "q178o2", "label": "As I walked into the room, the aroma of fresh bread filled my senses." },
+        { "id": "q178o3", "label": "The aroma of fresh bread filled the room as I walked in." },
+        { "id": "q178o4", "label": "When I entered the room, I smelled fresh bread." }
+      ],
+      "answer": "q178o1"
+    },
+    {
+      "id": "q179",
+      "question": "Which of the following best corrects the pronoun usage?\n\n'Neither Alex nor Sam brought their book.'",
+      "options": [
+        { "id": "q179o1", "label": "Neither Alex nor Sam brought his book." },
+        { "id": "q179o2", "label": "Neither Alex nor Sam brought their books." },
+        { "id": "q179o3", "label": "Neither Alex nor Sam brought his or her book." },
+        { "id": "q179o4", "label": "Neither Alex nor Sam brought the book." }
+      ],
+      "answer": "q179o1"
+    },
+    {
+      "id": "q180",
+      "question": "Which transition best introduces an example?\n\n'Many mammals exhibit complex social behavior. _______, elephants mourn their dead.'",
+      "options": [
+        { "id": "q180o1", "label": "For instance" },
+        { "id": "q180o2", "label": "Consequently" },
+        { "id": "q180o3", "label": "However" },
+        { "id": "q180o4", "label": "Furthermore" }
+      ],
+      "answer": "q180o1"
+    },
+    {
+      "id": "q181",
+      "question": "Which word is the best synonym for 'pragmatic' as used in the following sentence?\n\n'Her pragmatic approach solved the problem quickly.'",
+      "options": [
+        { "id": "q181o1", "label": "Practical" },
+        { "id": "q181o2", "label": "Idealistic" },
+        { "id": "q181o3", "label": "Mysterious" },
+        { "id": "q181o4", "label": "Cautious" }
+      ],
+      "answer": "q181o1"
+    },
+    {
+      "id": "q182",
+      "question": "Which revision best eliminates redundancy?\n\n'He made a new innovation that had never been seen before.'",
+      "options": [
+        { "id": "q182o1", "label": "He introduced a new innovation." },
+        { "id": "q182o2", "label": "He made an innovation that was new." },
+        { "id": "q182o3", "label": "He made an innovation never seen before." },
+        { "id": "q182o4", "label": "He innovated something new." }
+      ],
+      "answer": "q182o1"
+    },
+    {
+      "id": "q183",
+      "question": "Which of the following is closest in meaning to 'inundate' as used in the following sentence?\n\n'The office was inundated with calls after the commercial aired.'",
+      "options": [
+        { "id": "q183o1", "label": "Overwhelm" },
+        { "id": "q183o2", "label": "Ignore" },
+        { "id": "q183o3", "label": "Repair" },
+        { "id": "q183o4", "label": "Reduce" }
+      ],
+      "answer": "q183o1"
+    },
+    {
+      "id": "q184",
+      "question": "Which sentence is most formal and concise?\n\n'We had to wait a really long time at the airport.'",
+      "options": [
+        { "id": "q184o1", "label": "We experienced an extended delay at the airport." },
+        { "id": "q184o2", "label": "We waited for a super long time at the airport." },
+        { "id": "q184o3", "label": "The airport wait was crazy long." },
+        { "id": "q184o4", "label": "There was a really long airport wait." }
+      ],
+      "answer": "q184o1"
+    },
+    {
+      "id": "q185",
+      "question": "Which of the following best replaces the underlined portion for conciseness?\n\n'Due to the fact that they disagreed, the discussion continued for hours.'",
+      "options": [
+        { "id": "q185o1", "label": "Because they disagreed, the discussion continued for hours." },
+        { "id": "q185o2", "label": "Due to disagreement, the discussion continued for hours." },
+        { "id": "q185o3", "label": "Since there was disagreement, the discussion continued for hours." },
+        { "id": "q185o4", "label": "Owing to the disagreement, the discussion continued for hours." }
+      ],
+      "answer": "q185o1"
+    },
+    {
+      "id": "q186",
+      "question": "Which word is most nearly opposite in meaning to 'placid' as used in the following sentence?\n\n'The placid lake reflected the sky.'",
+      "options": [
+        { "id": "q186o1", "label": "Turbulent" },
+        { "id": "q186o2", "label": "Calm" },
+        { "id": "q186o3", "label": "Flat" },
+        { "id": "q186o4", "label": "Peaceful" }
+      ],
+      "answer": "q186o1"
+    },
+    {
+      "id": "q187",
+      "question": "Which of the following sentences is free of errors?",
+      "options": [
+        { "id": "q187o1", "label": "Each of the committee members was present." },
+        { "id": "q187o2", "label": "Each of the committee members were present." },
+        { "id": "q187o3", "label": "The committee members was present." },
+        { "id": "q187o4", "label": "Committee members was present." }
+      ],
+      "answer": "q187o1"
+    },
+    {
+      "id": "q188",
+      "question": "Which word is the best synonym for 'sagacious' as used in the following sentence?\n\n'His sagacious advice helped her succeed.'",
+      "options": [
+        { "id": "q188o1", "label": "Wise" },
+        { "id": "q188o2", "label": "Excitable" },
+        { "id": "q188o3", "label": "Clumsy" },
+        { "id": "q188o4", "label": "Lazy" }
+      ],
+      "answer": "q188o1"
+    },
+    {
+      "id": "q189",
+      "question": "Which of the following sentences contains a misplaced modifier?",
+      "options": [
+        { "id": "q189o1", "label": "While walking through the museum, the paintings fascinated Maria." },
+        { "id": "q189o2", "label": "While Maria walked through the museum, the paintings fascinated her." },
+        { "id": "q189o3", "label": "Maria was fascinated by the paintings as she walked through the museum." },
+        { "id": "q189o4", "label": "The museum was full of fascinating paintings." }
+      ],
+      "answer": "q189o1"
+    },
+    {
+      "id": "q190",
+      "question": "Which transition best signals a conclusion?\n\n'The data support the hypothesis. _______, further research is warranted.'",
+      "options": [
+        { "id": "q190o1", "label": "In conclusion" },
+        { "id": "q190o2", "label": "For example" },
+        { "id": "q190o3", "label": "On the other hand" },
+        { "id": "q190o4", "label": "Nevertheless" }
+      ],
+      "answer": "q190o1"
+    },
+    {
+      "id": "q191",
+      "question": "Which word is the best synonym for 'spurious' as used in the following sentence?\n\n'The theory was dismissed as spurious by most experts.'",
+      "options": [
+        { "id": "q191o1", "label": "False" },
+        { "id": "q191o2", "label": "Innovative" },
+        { "id": "q191o3", "label": "Exciting" },
+        { "id": "q191o4", "label": "Complex" }
+      ],
+      "answer": "q191o1"
+    },
+    {
+      "id": "q192",
+      "question": "Which of the following is the most logical conclusion for the paragraph?\n\n[1] The vaccine underwent rigorous testing. [2] Results showed it was safe and effective. [3] ________",
+      "options": [
+        { "id": "q192o1", "label": "The vaccine was approved for public use." },
+        { "id": "q192o2", "label": "People debated vaccines." },
+        { "id": "q192o3", "label": "Some vaccines are controversial." },
+        { "id": "q192o4", "label": "Testing is important for vaccines." }
+      ],
+      "answer": "q192o1"
+    },
+    {
+      "id": "q193",
+      "question": "Which word is most nearly opposite in meaning to 'indolent' as used in the following sentence?\n\n'His indolent attitude concerned his coach.'",
+      "options": [
+        { "id": "q193o1", "label": "Diligent" },
+        { "id": "q193o2", "label": "Lazy" },
+        { "id": "q193o3", "label": "Careless" },
+        { "id": "q193o4", "label": "Critical" }
+      ],
+      "answer": "q193o1"
+    },
+    {
+      "id": "q194",
+      "question": "Which revision best eliminates wordiness?\n\n'It is necessary for all applicants to submit an application form.'",
+      "options": [
+        { "id": "q194o1", "label": "All applicants must submit an application form." },
+        { "id": "q194o2", "label": "Applicants are required to submit an application form that is necessary." },
+        { "id": "q194o3", "label": "It is required that applicants submit an application." },
+        { "id": "q194o4", "label": "For all applicants, the application form is necessary to be submitted." }
+      ],
+      "answer": "q194o1"
+    },
+    {
+      "id": "q195",
+      "question": "Which transition best introduces a contrasting idea?\n\n'Some scientists support the theory. _______, others believe it is flawed.'",
+      "options": [
+        { "id": "q195o1", "label": "However" },
+        { "id": "q195o2", "label": "Consequently" },
+        { "id": "q195o3", "label": "Additionally" },
+        { "id": "q195o4", "label": "For instance" }
+      ],
+      "answer": "q195o1"
+    },
+    {
+      "id": "q196",
+      "question": "Which of the following is the best synonym for 'insipid' as used in the following sentence?\n\n'Her speech was insipid and failed to engage the audience.'",
+      "options": [
+        { "id": "q196o1", "label": "Bland" },
+        { "id": "q196o2", "label": "Exciting" },
+        { "id": "q196o3", "label": "Thorough" },
+        { "id": "q196o4", "label": "Inspiring" }
+      ],
+      "answer": "q196o1"
+    },
+    {
+      "id": "q197",
+      "question": "Which sentence contains a misplaced modifier?",
+      "options": [
+        { "id": "q197o1", "label": "While cooking dinner, the fire alarm went off." },
+        { "id": "q197o2", "label": "While she was cooking dinner, the fire alarm went off." },
+        { "id": "q197o3", "label": "The fire alarm went off as she cooked dinner." },
+        { "id": "q197o4", "label": "She heard the fire alarm while cooking dinner." }
+      ],
+      "answer": "q197o1"
+    },
+    {
+      "id": "q198",
+      "question": "Which word is the best synonym for 'precocious' as used in the following sentence?\n\n'The precocious child read at a college level.'",
+      "options": [
+        { "id": "q198o1", "label": "Advanced" },
+        { "id": "q198o2", "label": "Reckless" },
+        { "id": "q198o3", "label": "Difficult" },
+        { "id": "q198o4", "label": "Stubborn" }
+      ],
+      "answer": "q198o1"
+    },
+    {
+      "id": "q199",
+      "question": "Which transition best signals an additional point?\n\n'The program expanded to new cities. _______, it increased its online presence.'",
+      "options": [
+        { "id": "q199o1", "label": "Additionally" },
+        { "id": "q199o2", "label": "However" },
+        { "id": "q199o3", "label": "Nevertheless" },
+        { "id": "q199o4", "label": "For example" }
+      ],
+      "answer": "q199o1"
+    },
+    {
+      "id": "q200",
+      "question": "Which of the following is the best synonym for 'quell' as used in the following sentence?\n\n'The police tried to quell the unrest.'",
+      "options": [
+        { "id": "q200o1", "label": "Suppress" },
+        { "id": "q200o2", "label": "Provoke" },
+        { "id": "q200o3", "label": "Incite" },
+        { "id": "q200o4", "label": "Permit" }
+      ],
+      "answer": "q200o1"
     }
   ]
 }
+
+
+

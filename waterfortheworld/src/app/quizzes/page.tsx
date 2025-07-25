@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
-import { ArrowRight, Droplets, CheckCircle, XCircle, Award, Globe, Zap, Loader2 } from "lucide-react";
+import { ArrowRight, CheckCircle, XCircle, Book, Globe, Zap, Loader2, Droplets, Award } from "lucide-react";
 
 type QuizTopic = 'water' | 'sat' | 'pop' | 'general';
 
@@ -43,24 +43,14 @@ const TOPICS = [
     comingSoon: false
   },
   {
-    id: 'water',
-    name: 'Water Scarcity',
-    description: 'Test your knowledge about global water issues and conservation',
-    icon: Droplets,
-    color: 'text-blue-500',
-    bgColor: 'bg-blue-50',
-    hoverColor: 'hover:bg-blue-100',
-    comingSoon: true
-  },
-  {
     id: 'sat',
-    name: 'SAT Prep',
-    description: 'Practice questions to help with your SAT preparation',
-    icon: Award,
+    name: 'SAT Reading & Writing',
+    description: 'Practice questions for the SAT Reading and Writing sections',
+    icon: Book,
     color: 'text-purple-500',
     bgColor: 'bg-purple-50',
     hoverColor: 'hover:bg-purple-100',
-    comingSoon: true
+    comingSoon: false
   }
 ];
 
@@ -234,45 +224,39 @@ export default function QuizzesPage() {
       <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-white">
         
         <main className="flex-1 flex flex-col items-center justify-center p-4 md:p-8 w-full">
-          <div className="w-full max-w-4xl mx-auto text-center mb-12">
+          <div className="w-full max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Select a Quiz Topic</h1>
-            <p className="text-lg text-gray-600 mb-8">Choose a category to start your quiz journey</p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-              {TOPICS.map((topic) => {
-                const Icon = topic.icon;
-                return (
-                  <div key={topic.id} className="relative">
-                    <button
-                      onClick={() => !topic.comingSoon && setSelectedTopic(topic.id as QuizTopic)}
-                      disabled={topic.comingSoon}
-                      className={`${topic.bgColor} ${topic.hoverColor} p-6 rounded-xl transition-all duration-200 transform ${
-                        topic.comingSoon ? 'opacity-60' : 'hover:scale-105 hover:shadow-md'
-                      } flex flex-col items-center text-center border border-transparent ${
-                        !topic.comingSoon && `hover:border-${topic.color.split('-')[1]}-200`
-                      } w-full h-full`}
-                    >
-                      <div className={`${topic.color} mb-4 p-3 rounded-full ${topic.comingSoon ? 'bg-gray-100' : 'bg-white'}`}>
-                        <Icon className="h-8 w-8" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                        {topic.name}
-                        {topic.comingSoon}
-                      </h3>
-                      <p className="text-gray-600 text-sm">{topic.description}</p>
-                    </button>
-                    {topic.comingSoon && (
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="bg-black bg-opacity-70 text-white text-sm font-medium px-3 py-1 rounded-full">
-                          Coming Soon
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
+            <p className="text-lg text-gray-600">Choose a category to start your quiz journey</p>
           </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {TOPICS.map((topic) => (
+              <div key={topic.id} className="relative">
+                <button
+                  onClick={() => !topic.comingSoon && setSelectedTopic(topic.id as QuizTopic)}
+                  disabled={topic.comingSoon}
+                  className={`w-full h-full p-8 rounded-xl transition-all duration-200 ${topic.bgColor} ${topic.hoverColor} ${
+                    topic.comingSoon ? 'opacity-60' : 'hover:shadow-lg hover:-translate-y-1'
+                  } flex flex-col items-center text-center border border-gray-100 min-h-[220px]`}
+                >
+                  <div className={`${topic.color} mb-4 p-3 rounded-full bg-white/80`}>
+                    <topic.icon className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{topic.name}</h3>
+                  <p className="text-gray-600 text-sm">{topic.description}</p>
+                </button>
+                {topic.comingSoon && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="bg-black/80 text-white text-sm font-medium px-3 py-1 rounded-full">
+                      Coming Soon
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
         </main>
       </div>
     );
