@@ -14,7 +14,7 @@ const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({
   model: 'gemini-2.5-flash-lite', // requested model
   systemInstruction:
-    'You are an expert SAT tutor. You will be provided with an SAT R&W question, the correct answer, and the users answer. Using no more than 2 short sentences, clearly explain to the user why the correct answer is correct.',
+    'You are an expert SAT tutor. You will be provided with an SAT R&W question, the correct answer, and the users answer. Using no more than 2 short sentences, clearly explain to the user why the correct answer is correct. Use direct language such as You and Your.',
   generationConfig: {
     temperature: 0.3,          // lower for consistency
     maxOutputTokens: 120,       // plenty for 2 sentences
@@ -46,8 +46,6 @@ export async function POST(req: NextRequest) {
 Question: ${question}
 User's Answer: ${userAnswer}
 Correct Answer: ${correctAnswer}
-
-Explain (≤2 short sentences) why the correct answer is correct:
 `;
 
     const result = await model.generateContent(prompt);
