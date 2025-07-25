@@ -358,7 +358,12 @@ export default function QuizzesPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-lg text-gray-800 mb-6">{currentQuestion.question}</p>
+                  <p 
+                    className="text-lg text-gray-800 mb-6" 
+                    dangerouslySetInnerHTML={{ 
+                      __html: currentQuestion.question.replace(/\n/g, '<br/>') 
+                    }} 
+                  />
                   <RadioGroup value={selectedOptionId || ''} onValueChange={handleOptionChange} className="space-y-3">
                     {currentQuestion.options.map((option) => (
                       <Label
