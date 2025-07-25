@@ -180,13 +180,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // Function to flush pending stats to Firestore
   const flushQuizStats = useCallback(async () => {
-    if (!auth.currentUser || (pendingStatsUpdates.current.correct === 0 && pendingStatsUpdates.current.incorrect === 0)) {
+    if (!auth.currentUser) return;
+    
+    // Get a snapshot of current pending updates and reset the counters
+    const updates = {
+      correct: pendingStatsUpdates.current.correct,
+      incorrect: pendingStatsUpdates.current.incorrect
+    };
+    
+    // If no updates, nothing to do
+    if (updates.correct === 0 && updates.incorrect === 0) {
       return;
     }
-
-    const updates = {...pendingStatsUpdates.current};
     
-    // Don't clear the pending updates yet, we'll do that after successful update
+    // Reset pending updates before making the request
+    pendingStatsUpdates.current = { correct: 0, incorrect: 0 };
     lastUpdateTime.current = Date.now();
 
     try {
@@ -200,8 +208,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
       // Calculate new stats
       const updatedStats = {
-        correctAnswers: currentStats.correctAnswers + updates.correct,
-        incorrectAnswers: currentStats.incorrectAnswers + updates.incorrect,
+        correctAnswers: Math.max(0, currentStats.correctAnswers + updates.correct),
+        incorrectAnswers: Math.max(0, currentStats.incorrectAnswers + updates.incorrect),
         lastUpdated: new Date(),
       };
 
@@ -211,13 +219,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         updatedAt: new Date(),
       });
       
-      // Only clear pending updates after successful update
-      pendingStatsUpdates.current = {
-        correct: pendingStatsUpdates.current.correct - updates.correct,
-        incorrect: pendingStatsUpdates.current.incorrect - updates.incorrect,
-      };
-      
-      // Update local state
+      // Update local state with the final values from the server
       setUserData(prev => {
         if (!prev) return null;
         return {
@@ -226,10 +228,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         };
       });
     } catch (error) {
-      // If update fails, add the updates back to the queue
       console.error('Failed to update quiz stats:', error);
-      pendingStatsUpdates.current.correct += updates.correct;
-      pendingStatsUpdates.current.incorrect += updates.incorrect;
+      // If update fails, add the updates back to the queue
+      // But ensure we don't go negative
+      pendingStatsUpdates.current = {
+        correct: Math.max(0, pendingStatsUpdates.current.correct + updates.correct),
+        incorrect: Math.max(0, pendingStatsUpdates.current.incorrect + updates.incorrect)
+      };
     }
   }, [userData]);
 
@@ -253,11 +258,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (!auth.currentUser) return;
 
     // Update local refs immediately for responsive UI
-    if (isCorrect) {
-      pendingStatsUpdates.current.correct++;
-    } else {
-      pendingStatsUpdates.current.incorrect++;
-    }
+    const update = isCorrect ? 'correct' : 'incorrect';
+    
+    // Atomically increment the counter
+    pendingStatsUpdates.current[update] = (pendingStatsUpdates.current[update] || 0) + 1;
 
     // Update local state for immediate UI feedback
     setUserData(prev => {
@@ -270,32 +274,30 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         lastUpdated: new Date() 
       };
       
+      // Calculate new values
+      const newCorrect = Math.max(0, currentStats.correctAnswers + (isCorrect ? 1 : 0));
+      const newIncorrect = Math.max(0, currentStats.incorrectAnswers + (isCorrect ? 0 : 1));
+      
       return {
         ...prev,
         quizStats: {
           ...currentStats,
-          correctAnswers: currentStats.correctAnswers + (isCorrect ? 1 : 0),
-          incorrectAnswers: currentStats.incorrectAnswers + (isCorrect ? 0 : 1),
+          correctAnswers: newCorrect,
+          incorrectAnswers: newIncorrect,
           lastUpdated: new Date(),
         }
       };
     });
 
-    // Schedule a delayed flush if not already scheduled
+    // Clear any existing timeout
     if (updateTimeout.current) {
       clearTimeout(updateTimeout.current);
     }
 
-    // Flush if we've reached a threshold or after 5 seconds of inactivity
-    const shouldFlushNow = 
-      pendingStatsUpdates.current.correct + pendingStatsUpdates.current.incorrect >= 10 ||
-      Date.now() - lastUpdateTime.current > 5000;
-
-    if (shouldFlushNow) {
-      await flushQuizStats();
-    } else {
-      updateTimeout.current = setTimeout(flushQuizStats, 5000);
-    }
+    // Schedule a flush
+    updateTimeout.current = setTimeout(() => {
+      flushQuizStats().catch(console.error);
+    }, 2000); // Flush after 2 seconds of no activity
   }, []);
 
   useEffect(() => {
