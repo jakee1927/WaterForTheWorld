@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { ArrowRight, CheckCircle, XCircle, Book, Globe, Zap, Loader2, Droplets, Award } from "lucide-react";
+import { AITutor } from '@/components/AITutor';
 
 type QuizTopic = 'water' | 'sat' | 'pop' | 'general';
 
@@ -68,6 +69,12 @@ export default function QuizzesPage() {
   const [shouldBounce, setShouldBounce] = useState(false);
   const [showMilestone, setShowMilestone] = useState(false);
   const [localDropletCount, setLocalDropletCount] = useState(0);
+  const [showTutor, setShowTutor] = useState(false);
+  const [lastIncorrectQuestion, setLastIncorrectQuestion] = useState<{
+    question: string;
+    userAnswer: string;
+    correctAnswer: string;
+  } | null>(null);
 
   // Sync local droplet count with user data
   useEffect(() => {
@@ -143,6 +150,32 @@ export default function QuizzesPage() {
     };
   }, [selectedTopic]);
 
+  const goToNextQuestion = useCallback(() => {
+    setQuestionsCompleted(prev => prev + 1);
+    
+    setCurrentQuestionIndex(prevIndex => {
+      const nextIndex = prevIndex + 1;
+      
+      if (nextIndex >= (quizData?.questions.length || 0)) {
+        // Create a new random order for the next round
+        const indices = Array.from({ length: quizData?.questions.length || 0 }, (_, i) => i);
+        for (let i = indices.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [indices[i], indices[j]] = [indices[j], indices[i]];
+        }
+        setQuestionOrder(indices);
+        return 0;
+      }
+      
+      return nextIndex;
+    });
+  }, [quizData]);
+
+  const handleTutorClose = useCallback(() => {
+    setShowTutor(false);
+    // Remove goToNextQuestion() call to prevent auto-advancing
+  }, []);
+
   // Memoized current question is now defined above
 
   const handleOptionChange = useCallback((value: string) => {
@@ -187,6 +220,19 @@ export default function QuizzesPage() {
       setTimeout(() => setShouldBounce(false), 1000);
     } else {
       updateQuizStats(correctAnswer).catch(console.error);
+      
+      // Show tutor for incorrect answers on SAT questions
+      if (selectedTopic === 'sat') {
+        const userAnswerText = currentQuestion.options.find(opt => opt.id === selectedOptionId)?.label || '';
+        const correctAnswerText = currentQuestion.options.find(opt => opt.id === currentQuestion.answer)?.label || '';
+        
+        setLastIncorrectQuestion({
+          question: currentQuestion.question,
+          userAnswer: userAnswerText,
+          correctAnswer: correctAnswerText
+        });
+        setShowTutor(true);
+      }
     }
 
     const nextQuestionTimer = setTimeout(() => {
@@ -194,25 +240,8 @@ export default function QuizzesPage() {
       setSelectedOptionId(null);
       setIsCorrect(null);
       
-      // Batch state updates
-      setQuestionsCompleted(prev => prev + 1);
-      
-      setCurrentQuestionIndex(prevIndex => {
-        const nextIndex = prevIndex + 1;
-        
-        if (nextIndex >= quizData.questions.length) {
-          // Create a new random order for the next round
-          const indices = Array.from({ length: quizData.questions.length }, (_, i) => i);
-          for (let i = indices.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [indices[i], indices[j]] = [indices[j], indices[i]];
-          }
-          setQuestionOrder(indices);
-          return 0;
-        }
-        
-        return nextIndex;
-      });
+      // Always proceed to next question after feedback
+      goToNextQuestion();
     }, 2000); // 2-second delay to show feedback
     
     return () => clearTimeout(nextQuestionTimer);
@@ -423,6 +452,17 @@ export default function QuizzesPage() {
 
         </div>
       </main>
+
+      {/* AI Tutor Modal */}
+      {lastIncorrectQuestion && (
+        <AITutor
+          isOpen={showTutor}
+          onClose={handleTutorClose}
+          question={lastIncorrectQuestion.question}
+          userAnswer={lastIncorrectQuestion.userAnswer}
+          correctAnswer={lastIncorrectQuestion.correctAnswer}
+        />
+      )}
 
       {/* Footer */}
       <footer className="w-full py-8 bg-gray-900 text-white">
