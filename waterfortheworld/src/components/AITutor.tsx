@@ -58,14 +58,14 @@ export function AITutor({ isOpen, onClose, question, userAnswer, correctAnswer }
 
   return (
     <div className="fixed bottom-6 right-6 z-50 max-w-xs sm:max-w-sm md:max-w-md">
-      <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+      <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl shadow-xl overflow-hidden border-2 border-blue-400">
         {/* Header */}
-        <div className="bg-blue-600 px-4 py-3 flex items-center justify-between">
+        <div className="px-4 py-3 flex items-center justify-between bg-gradient-to-r from-blue-700 to-indigo-800">
           <div className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center">
+            <div className="h-8 w-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
               <Bot className="h-4 w-4 text-white" />
             </div>
-            <span className="text-white font-medium">SAT Tutor</span>
+            <span className="text-white font-bold text-sm">SAT Tutor</span>
           </div>
           <button
             onClick={onClose}
@@ -77,21 +77,26 @@ export function AITutor({ isOpen, onClose, question, userAnswer, correctAnswer }
         </div>
         
         {/* Content */}
-        <div className="p-4">
+        <div className="p-4 bg-white/95">
           {isLoading ? (
-            <div className="flex items-center justify-center py-2">
-              <Loader2 className="animate-spin h-5 w-5 text-blue-500 mr-2" />
-              <span className="text-sm text-gray-600">Getting explanation...</span>
+            <div className="flex items-center justify-center py-4">
+              <Loader2 className="animate-spin h-6 w-6 text-blue-500 mr-2" />
+              <span className="text-sm text-blue-800 font-medium">Analyzing your answer...</span>
             </div>
           ) : error ? (
-            <p className="text-sm text-red-500">{error}</p>
+            <p className="text-sm text-red-600">{error}</p>
           ) : (
-            <div className="space-y-2">
-              <p className="text-sm text-gray-700">{explanation}</p>
+            <div className="space-y-3">
+              <div className="flex items-start">
+                <div className="h-4 w-4 rounded-full bg-blue-100 border-2 border-blue-500 mt-0.5 mr-2 flex-shrink-0 flex items-center justify-center">
+                  <div className="h-2 w-2 rounded-full bg-blue-500"></div>
+                </div>
+                <p className="text-sm text-gray-800">{explanation}</p>
+              </div>
               <div className="pt-2">
                 <Button
                   size="sm"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-sm"
+                  className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold text-sm py-1.5"
                   onClick={onClose}
                 >
                   Got it!
@@ -103,7 +108,7 @@ export function AITutor({ isOpen, onClose, question, userAnswer, correctAnswer }
       </div>
       
       {/* Speech bubble pointer */}
-      <div className="absolute -bottom-1 right-4 w-4 h-4 transform rotate-45 bg-white border-r border-b border-gray-200"></div>
+      <div className="absolute -bottom-1 right-4 w-4 h-4 transform rotate-45 bg-white border-r-2 border-b-2 border-blue-400"></div>
     </div>
   );
 }
