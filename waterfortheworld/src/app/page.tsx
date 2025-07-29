@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Droplets, BookOpen, Heart, Instagram, Droplet } from "lucide-react"
+import { Droplets, BookOpen, Heart, Instagram, Droplet, BrainCircuit, Bot } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
@@ -21,10 +21,10 @@ export default function HomePage() {
             <div className="flex flex-col items-center space-y-8 text-center">
               <div className="space-y-4 max-w-3xl">
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 relative z-10">
-                  Learn. Donate. Make a <span className="text-blue-600">Difference</span>
+                  Fight Water Insecurity with Your Free <span className="text-blue-600">AI Tutor</span>
                 </h1>
                 <p className="mx-auto max-w-2xl text-gray-700 md:text-xl lg:text-2xl relative z-10">
-                  Support our mission to provide clean water worldwide. Every quiz completed helps bring clean water to communities in need.
+                  Get personalized SAT prep or become a pop culture expert, all while providing clean drinking water to those in need.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto max-w-md mx-auto relative z-10 px-4 sm:px-0">
@@ -33,8 +33,8 @@ export default function HomePage() {
                     size="lg" 
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 cursor-pointer"
                   >
-                    <Droplet className="mr-2 h-5 w-5 text-white" />
-                    Start Earning Droplets
+                    <BrainCircuit className="mr-2 h-5 w-5 text-white" />
+                    Test Your Skills
                   </Button>
                 </Link>
                 <Link href="/donate" className="w-full sm:w-auto">
@@ -56,9 +56,9 @@ export default function HomePage() {
         <section className="w-full py-16 bg-white">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gray-900 mb-4">How It Works</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gray-900 mb-4">How Your Study Time Creates Impact</h2>
               <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                A simple process that turns learning into impact
+                A simple, powerful process that benefits everyone.
               </p>
             </div>
 
@@ -68,11 +68,11 @@ export default function HomePage() {
                 <Card className="text-center p-6 border-2 border-blue-100 hover:border-blue-200 transition-colors h-full flex flex-col">
                   <CardContent className="pt-6">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <BookOpen className="h-8 w-8 text-blue-600" />
+                      <BrainCircuit className="h-8 w-8 text-blue-600" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">You Learn</h3>
+                    <h3 className="text-lg font-semibold mb-2">Personalized Quizzes & SAT Prep</h3>
                     <p className="text-gray-600">
-                      Take quizzes about water insecurity and learn how you can help make a difference
+                      Train for a top SAT score <em>or</em> flex your trivia skills. Our always-free AI adapts to your goals with endless practice questions and instant feedback.
                     </p>
                   </CardContent>
                 </Card>
@@ -82,24 +82,24 @@ export default function HomePage() {
                 <Card className="text-center p-6 border-2 border-green-100 hover:border-green-200 transition-colors h-full flex flex-col">
                   <CardContent className="pt-6">
                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Droplets className="h-8 w-8 text-green-600" />
+                      <Heart className="h-8 w-8 text-green-600" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">We Generate Revenue</h3>
+                    <h3 className="text-lg font-semibold mb-2">Support Global Causes</h3>
                     <p className="text-gray-600">
-                      Ad revenue and affiliate commissions are generated from your engagement
+                      Our free services are made possible through unobtrusive ads. Your time on our site helps support our mission.
                     </p>
                   </CardContent>
                 </Card>
 
                 {/* Step 3 */}
-                <Card className="text-center p-6 border-2 border-purple-100 hover:border-purple-200 transition-colors h-full flex flex-col">
+                <Card className="text-center p-6 border-2 border-red-100 hover:border-red-200 transition-colors h-full flex flex-col">
                   <CardContent className="pt-6">
-                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Heart className="h-8 w-8 text-purple-600" />
+                    <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Droplets className="h-8 w-8 text-red-600" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">We Donate 100%</h3>
+                    <h3 className="text-lg font-semibold mb-2">Provide Clean Water</h3>
                     <p className="text-gray-600">
-                      All revenue goes directly to organizations fighting water scarcity worldwide
+                      We partner with leading charities to turn your educational efforts into life-saving clean water for communities in need.
                     </p>
                   </CardContent>
                 </Card>
@@ -110,7 +110,7 @@ export default function HomePage() {
 
         {/* Who We Are Section */}
         <section className="w-full py-16 bg-gray-50">
-          <div className="container px-4 md:px-6 mx-auto max-w-4xl text-center">
+          <div className="container px-4 md:px-6 mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gray-900 mb-8">
               Who We Are
             </h2>
@@ -124,11 +124,7 @@ export default function HomePage() {
                   Follow Us on Instagram
                 </Button>
               </a>
-              <Link href="/documents">
-                <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg">
-                  View Our Financals
-                </Button>
-              </Link>
+
             </div>
           </div>
         </section>
@@ -141,7 +137,7 @@ export default function HomePage() {
                 Ready to Make a Difference?
               </h2>
               <p className="mx-auto max-w-2xl text-blue-100 text-lg">
-                You can help provide clean water to those in need. Every quiz completed makes an impact.
+                Test your knowledge, challenge your friends, and help provide clean water to those in need. Every quiz makes an impact.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
                 <Link href="/donate" className="w-full sm:w-auto max-w-xs">
@@ -154,10 +150,10 @@ export default function HomePage() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="w-full text-blue-600 border-blue-600 hover:bg-gray-100 hover:text-blue-600 px-8 py-3 cursor-pointer"
+                    className="w-full bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 cursor-pointer"
                   >
-                    <Droplet className="!h-5 !w-5 mr-2 text-blue-600" />
-                    Start Earning Droplets
+                    <BrainCircuit className="mr-2 h-5 w-5" />
+                    Test Your Skills
                   </Button>
                 </Link>
               </div>
@@ -194,7 +190,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="mt-6 pt-6 border-t border-gray-800 text-center text-gray-400">
-            <p>&copy; 2025 WaterForTheWorld. All revenue donated to fight water scarcity.</p>
+            <p>&copy; 2025 Inspire-EDU. Empowering students, providing clean water.</p>
           </div>
         </div>
       </footer>
