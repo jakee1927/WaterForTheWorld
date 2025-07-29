@@ -8,6 +8,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { ArrowRight, CheckCircle, XCircle, Book, Globe, Zap, Loader2, Droplets, Award } from "lucide-react";
 import { AITutor } from '@/components/AITutor';
+import { GameshowTutor } from '@/components/GameshowTutor';
 
 type QuizTopic = 'water' | 'sat' | 'pop' | 'general';
 
@@ -236,27 +237,19 @@ export default function QuizzesPage() {
     } else {
       updateQuizStats(correctAnswer).catch(console.error);
       
-      // Show tutor for incorrect answers on SAT questions
-      if (selectedTopic === 'sat') {
-        const userAnswerText = currentQuestion.options.find(opt => opt.id === selectedOptionId)?.label || '';
-        const correctAnswerText = currentQuestion.options.find(opt => opt.id === currentQuestion.answer)?.label || '';
-        
-        setLastIncorrectQuestion({
-          question: currentQuestion.question,
-          userAnswer: userAnswerText,
-          correctAnswer: correctAnswerText
-        });
-        setShowTutor(true);
-        // Don't set the timer when showing tutor - question will advance after tutor is closed
-      } else {
-        // For non-SAT questions, still advance after feedback
-        nextQuestionTimer = setTimeout(() => {
-          setShowFeedback(false);
-          setSelectedOptionId(null);
-          setIsCorrect(null);
-          goToNextQuestion();
-        }, 2000);
-      }
+          // Show tutor for incorrect answers on SAT, general, and pop culture questions
+      const userAnswerText = currentQuestion.options.find(opt => opt.id === selectedOptionId)?.label || '';
+      const correctAnswerText = currentQuestion.options.find(opt => opt.id === currentQuestion.answer)?.label || '';
+      
+      setLastIncorrectQuestion({
+        question: currentQuestion.question,
+        userAnswer: userAnswerText,
+        correctAnswer: correctAnswerText
+      });
+      
+      // Show tutor for all quiz types
+      setShowTutor(true);
+      // Don't set the timer when showing tutor - question will advance after tutor is closed
     }
     
     return () => {
@@ -474,13 +467,23 @@ export default function QuizzesPage() {
 
       {/* AI Tutor Modal */}
       {lastIncorrectQuestion && (
-        <AITutor
-          isOpen={showTutor}
-          onClose={handleTutorClose}
-          question={lastIncorrectQuestion.question}
-          userAnswer={lastIncorrectQuestion.userAnswer}
-          correctAnswer={lastIncorrectQuestion.correctAnswer}
-        />
+        selectedTopic === 'sat' ? (
+          <AITutor
+            isOpen={showTutor}
+            onClose={handleTutorClose}
+            question={lastIncorrectQuestion.question}
+            userAnswer={lastIncorrectQuestion.userAnswer}
+            correctAnswer={lastIncorrectQuestion.correctAnswer}
+          />
+        ) : (
+          <GameshowTutor
+            isOpen={showTutor}
+            onClose={handleTutorClose}
+            question={lastIncorrectQuestion.question}
+            userAnswer={lastIncorrectQuestion.userAnswer}
+            correctAnswer={lastIncorrectQuestion.correctAnswer}
+          />
+        )
       )}
 
       {/* Footer */}
