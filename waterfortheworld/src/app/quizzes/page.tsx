@@ -17,6 +17,7 @@ interface Question {
   question: string;
   options: { id: string; label: string }[];
   answer: string;
+  originalAnswer?: string; // Store the original answer for reference
 }
 
 interface QuizData {
@@ -104,6 +105,16 @@ export default function QuizzesPage() {
     return quizData?.questions?.[questionOrder[currentQuestionIndex]];
   }, [quizData, questionOrder, currentQuestionIndex]);
 
+  // Function to shuffle array using Fisher-Yates algorithm
+  const shuffleArray = <T,>(array: T[]): T[] => {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+  };
+
   // Load quiz data when topic is selected
   useEffect(() => {
     let isMounted = true;
@@ -121,10 +132,29 @@ export default function QuizzesPage() {
         
         if (!isMounted) return;
         
-        setQuizData(data);
+        // Process questions to shuffle options and update answers
+        const processedQuestions = data.questions.map((question: Question) => {
+          // Store the original answer
+          const originalAnswer = question.answer;
+          
+          // Create a copy of options to shuffle
+          const shuffledOptions = shuffleArray(question.options);
+          
+          // Find the new position of the correct answer
+          const correctOptionIndex = shuffledOptions.findIndex(opt => opt.id === originalAnswer);
+          
+          return {
+            ...question,
+            options: shuffledOptions,
+            answer: shuffledOptions[correctOptionIndex].id,
+            originalAnswer
+          };
+        });
+        
+        setQuizData({ ...data, questions: processedQuestions });
         
         // Initialize question order as a random permutation of question indices
-        const indices = Array.from({ length: data.questions.length }, (_, i) => i);
+        const indices = Array.from({ length: processedQuestions.length }, (_, i) => i);
         for (let i = indices.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
           [indices[i], indices[j]] = [indices[j], indices[i]];
