@@ -1374,6 +1374,1096 @@
         { "id": "q125o4", "label": "Forensic Scientist" }
       ],
       "answer": "q125o3"
+    },
+    {
+      "id": "q126",
+      "question": "Which Greta Gerwig film became the highest-grossing film of 2023 and the highest-grossing film by a solo female director?",
+      "options": [
+        { "id": "q126o1", "label": "Little Women" },
+        { "id": "q126o2", "label": "Lady Bird" },
+        { "id": "q126o3", "label": "Barbie" },
+        { "id": "q126o4", "label": "Frances Ha" }
+      ],
+      "answer": "q126o3"
+    },
+    {
+      "id": "q127",
+      "question": "In the acclaimed series 'The Bear', what is the name of the Chicago sandwich shop that Carmen 'Carmy' Berzatto inherits from his brother?",
+      "options": [
+        { "id": "q127o1", "label": "The Original Beef of Chicagoland" },
+        { "id": "q127o2", "label": "Carmy's Kitchen" },
+        { "id": "q127o3", "label": "The Berzatto" },
+        { "id": "q127o4", "label": "The Sandy Spoon" }
+      ],
+      "answer": "q127o1"
+    },
+    {
+      "id": "q128",
+      "question": "Taylor Swift's 'The Eras Tour' made history as the first concert tour to gross over what amount?",
+      "options": [
+        { "id": "q128o1", "label": "$500 million" },
+        { "id": "q128o2", "label": "$750 million" },
+        { "id": "q128o3", "label": "$1 billion" },
+        { "id": "q128o4", "label": "$2 billion" }
+      ],
+      "answer": "q128o3"
+    },
+    {
+      "id": "q129",
+      "question": "In 'The Legend of Zelda: Tears of the Kingdom', what is the name of the new core ability that allows Link to fuse objects together?",
+      "options": [
+        { "id": "q129o1", "label": "Recall" },
+        { "id": "q129o2", "label": "Ascend" },
+        { "id": "q129o3", "label": "Ultrahand" },
+        { "id": "q129o4", "label": "Stasis" }
+      ],
+      "answer": "q129o3"
+    },
+    {
+      "id": "q130",
+      "question": "Which actor plays the lead roles of both Paul Atreides in 'Dune' and the titular character in 'Wonka'?",
+      "options": [
+        { "id": "q130o1", "label": "Tom Holland" },
+        { "id": "q130o2", "label": "Timothée Chalamet" },
+        { "id": "q130o3", "label": "Austin Butler" },
+        { "id": "q130o4", "label": "Adam Driver" }
+      ],
+      "answer": "q130o2"
+    },
+    {
+      "id": "q131",
+      "question": "In the Apple TV+ series 'Severance', what is the name of the mysterious corporation that surgically divides its employees' memories?",
+      "options": [
+        { "id": "q131o1", "label": "Eagan Industries" },
+        { "id": "q131o2", "label": "Lumon Industries" },
+        { "id": "q131o3", "label": "Severance Inc." },
+        { "id": "q131o4", "label": "Kier Corp" }
+      ],
+      "answer": "q131o2"
+    },
+    {
+      "id": "q132",
+      "question": "Which musician, the brother of Billie Eilish, is also her primary producer and co-writer?",
+      "options": [
+        { "id": "q132o1", "label": "Jack Antonoff" },
+        { "id": "q132o2", "label": "Mark Ronson" },
+        { "id": "q132o3", "label": "Finneas O'Connell" },
+        { "id": "q132o4", "label": "Calvin Harris" }
+      ],
+      "answer": "q132o3"
+    },
+    {
+      "id": "q133",
+      "question": "The viral catchphrase 'I am Kenough' comes from which 2023 blockbuster film?",
+      "options": [
+        { "id": "q133o1", "label": "Oppenheimer" },
+        { "id": "q133o2", "label": "Guardians of the Galaxy Vol. 3" },
+        { "id": "q133o3", "label": "Barbie" },
+        { "id": "q133o4", "label": "Spider-Man: Across the Spider-Verse" }
+      ],
+      "answer": "q133o3"
+    },
+    {
+      "id": "q134",
+      "question": "In the A24 horror film 'Hereditary', the family is haunted by the cult of which demon king?",
+      "options": [
+        { "id": "q134o1", "label": "Pazuzu" },
+        { "id": "q134o2", "label": "Baphomet" },
+        { "id": "q134o3", "label": "Asmodeus" },
+        { "id": "q134o4", "label": "Paimon" }
+      ],
+      "answer": "q134o4"
+    },
+    {
+      "id": "q135",
+      "question": "What is the first deadly game that contestants are forced to play in the Netflix series 'Squid Game'?",
+      "options": [
+        { "id": "q135o1", "label": "Marbles" },
+        { "id": "q135o2", "label": "Red Light, Green Light" },
+        { "id": "q135o3", "label": "Tug of War" },
+        { "id": "q135o4", "label": "Dalgona Candy" }
+      ],
+      "answer": "q135o2"
+    },
+    {
+      "id": "q136",
+      "question": "Which 2022 album by Harry Styles won the Grammy for Album of the Year?",
+      "options": [
+        { "id": "q136o1", "label": "Fine Line" },
+        { "id": "q136o2", "label": "Harry's House" },
+        { "id": "q136o3", "label": "Sign of the Times" },
+        { "id": "q136o4", "label": "Love on Tour" }
+      ],
+      "answer": "q136o2"
+    },
+    {
+      "id": "q137",
+      "question": "Who is the main playable protagonist in the video game 'Red Dead Redemption 2'?",
+      "options": [
+        { "id": "q137o1", "label": "John Marston" },
+        { "id": "q137o2", "label": "Dutch van der Linde" },
+        { "id": "q137o3", "label": "Arthur Morgan" },
+        { "id": "q137o4", "label": "Micah Bell" }
+      ],
+      "answer": "q137o3"
+    },
+    {
+      "id": "q138",
+      "question": "In the 'Dune' saga, what is the desert home planet of the Fremen and the source of the spice melange?",
+      "options": [
+        { "id": "q138o1", "label": "Caladan" },
+        { "id": "q138o2", "label": "Giedi Prime" },
+        { "id": "q138o3", "label": "Arrakis" },
+        { "id": "q138o4", "label": "Salusa Secundus" }
+      ],
+      "answer": "q138o3"
+    },
+    {
+      "id": "q139",
+      "question": "In the HBO adaptation of 'The Last of Us', who play the lead roles of Joel and Ellie?",
+      "options": [
+        { "id": "q139o1", "label": "Mahershala Ali and Zendaya" },
+        { "id": "q139o2", "label": "Pedro Pascal and Bella Ramsey" },
+        { "id": "q139o3", "label": "Nikolaj Coster-Waldau and Sophie Turner" },
+        { "id": "q139o4", "label": "Oscar Isaac and Kaitlyn Dever" }
+      ],
+      "answer": "q139o2"
+    },
+    {
+      "id": "q140",
+      "question": "Which Olivia Rodrigo debut album features the hit singles 'drivers license' and 'good 4 u'?",
+      "options": [
+        { "id": "q140o1", "label": "GUTS" },
+        { "id": "q140o2", "label": "SOUR" },
+        { "id": "q140o3", "label": "Teenage Dream" },
+        { "id": "q140o4", "label": "Happier Than Ever" }
+      ],
+      "answer": "q140o2"
+    },
+    {
+      "id": "q141",
+      "question": "Travis Kelce, known for his high-profile relationship with Taylor Swift, plays for which NFL team?",
+      "options": [
+        { "id": "q141o1", "label": "Philadelphia Eagles" },
+        { "id": "q141o2", "label": "Kansas City Chiefs" },
+        { "id": "q141o3", "label": "Buffalo Bills" },
+        { "id": "q141o4", "label": "San Francisco 49ers" }
+      ],
+      "answer": "q141o2"
+    },
+    {
+      "id": "q142",
+      "question": "The iconic phrase 'Wakanda Forever!' originates from which Marvel Cinematic Universe film?",
+      "options": [
+        { "id": "q142o1", "label": "Captain America: Civil War" },
+        { "id": "q142o2", "label": "Avengers: Infinity War" },
+        { "id": "q142o3", "label": "Black Panther" },
+        { "id": "q142o4", "label": "Thor: Ragnarok" }
+      ],
+      "answer": "q142o3"
+    },
+    {
+      "id": "q143",
+      "question": "In the series 'Schitt's Creek', what is the name of the low-budget horror film that Moira Rose is best known for starring in?",
+      "options": [
+        { "id": "q143o1", "label": "The Crows Have Eyes III: The Crowening" },
+        { "id": "q143o2", "label": "A Little Bit Alexis" },
+        { "id": "q143o3", "label": "Sunrise Bay" },
+        { "id": "q143o4", "label": "The President is Dead" }
+      ],
+      "answer": "q143o1"
+    },
+    {
+      "id": "q144",
+      "question": "What is the collective name for Lady Gaga's dedicated fan base?",
+      "options": [
+        { "id": "q144o1", "label": "The Beyhive" },
+        { "id": "q144o2", "label": "The Barbz" },
+        { "id": "q144o3", "label": "Swifties" },
+        { "id": "q144o4", "label": "Little Monsters" }
+      ],
+      "answer": "q144o4"
+    },
+    {
+      "id": "q145",
+      "question": "The critically acclaimed 2022 video game 'Elden Ring' was developed by FromSoftware in collaboration with which fantasy novelist?",
+      "options": [
+        { "id": "q145o1", "label": "J.R.R. Tolkien" },
+        { "id": "q145o2", "label": "George R. R. Martin" },
+        { "id": "q145o3", "label": "Brandon Sanderson" },
+        { "id": "q145o4", "label": "Neil Gaiman" }
+      ],
+      "answer": "q145o2"
+    },
+    {
+      "id": "q146",
+      "question": "In the animated film 'Spider-Man: Into the Spider-Verse', what is the name of the main protagonist who takes on the Spider-Man mantle?",
+      "options": [
+        { "id": "q146o1", "label": "Peter Parker" },
+        { "id": "q146o2", "label": "Miles Morales" },
+        { "id": "q146o3", "label": "Gwen Stacy" },
+        { "id": "q146o4", "label": "Peni Parker" }
+      ],
+      "answer": "q146o2"
+    },
+    {
+      "id": "q147",
+      "question": "The popular TV series 'Yellowstone' centers on the conflicts surrounding which powerful ranching family?",
+      "options": [
+        { "id": "q147o1", "label": "The Sopranos" },
+        { "id": "q147o2", "label": "The Shelbys" },
+        { "id": "q147o3", "label": "The Duttons" },
+        { "id": "q147o4", "label": "The Roys" }
+      ],
+      "answer": "q147o3"
+    },
+    {
+      "id": "q148",
+      "question": "Which music producer is frequently credited on albums by Taylor Swift, Lorde, and Lana Del Rey, known for his signature indie-pop sound?",
+      "options": [
+        { "id": "q148o1", "label": "Rick Rubin" },
+        { "id": "q148o2", "label": "Dr. Dre" },
+        { "id": "q148o3", "label": "Max Martin" },
+        { "id": "q148o4", "label": "Jack Antonoff" }
+      ],
+      "answer": "q148o4"
+    },
+    {
+      "id": "q149",
+      "question": "What is the name of the photo-sharing app, popular in 2022, that prompted users to post one unfiltered photo at a random time each day?",
+      "options": [
+        { "id": "q149o1", "label": "VSCO" },
+        { "id": "q149o2", "label": "BeReal" },
+        { "id": "q149o3", "label": "Locket" },
+        { "id": "q149o4", "label": "Dispo" }
+      ],
+      "answer": "q149o2"
+    },
+    {
+      "id": "q150",
+      "question": "Who is the director of the 'Knives Out' mystery film series starring Daniel Craig as Benoit Blanc?",
+      "options": [
+        { "id": "q150o1", "label": "Rian Johnson" },
+        { "id": "q150o2", "label": "J.J. Abrams" },
+        { "id": "q150o3", "label": "Wes Anderson" },
+        { "id": "q150o4", "label": "Christopher Nolan" }
+      ],
+      "answer": "q150o1"
+    },
+    {
+      "id": "q151",
+      "question": "The term for a character speaking their thoughts directly to the audience, a technique famously used in 'Fleabag', is known as what?",
+      "options": [
+        { "id": "q151o1", "label": "Exposition" },
+        { "id": "q151o2", "label": "A soliloquy" },
+        { "id": "q151o3", "label": "An aside" },
+        { "id": "q151o4", "label": "Breaking the fourth wall" }
+      ],
+      "answer": "q151o4"
+    },
+    {
+      "id": "q152",
+      "question": "What is the real name of the rapper and singer known professionally as Post Malone?",
+      "options": [
+        { "id": "q152o1", "label": "Austin Richard Post" },
+        { "id": "q152o2", "label": "Colson Baker" },
+        { "id": "q152o3", "label": "Abel Tesfaye" },
+        { "id": "q152o4", "label": "Marshall Mathers" }
+      ],
+      "answer": "q152o1"
+    },
+    {
+      "id": "q153",
+      "question": "In the 2018 video game 'God of War', what is the name of Kratos's son who accompanies him on his journey?",
+      "options": [
+        { "id": "q153o1", "label": "Deimos" },
+        { "id": "q153o2", "label": "Zeus" },
+        { "id": "q153o3", "label": "Atreus" },
+        { "id": "q153o4", "label": "Baldur" }
+      ],
+      "answer": "q153o3"
+    },
+    {
+      "id": "q154",
+      "question": "Which song, performed by Ryan Gosling in the movie 'Barbie', became a surprise hit and was nominated for an Oscar?",
+      "options": [
+        { "id": "q154o1", "label": "Dance The Night" },
+        { "id": "q154o2", "label": "What Was I Made For?" },
+        { "id": "q154o3", "label": "I'm Just Ken" },
+        { "id": "q154o4", "label": "Push" }
+      ],
+      "answer": "q154o3"
+    },
+    {
+      "id": "q155",
+      "question": "What was the original name of the 'Better Call Saul' protagonist, Saul Goodman, before he changed it?",
+      "options": [
+        { "id": "q155o1", "label": "Howard Hamlin" },
+        { "id": "q155o2", "label": "Chuck McGill" },
+        { "id": "q155o3", "label": "Kevin Wachtell" },
+        { "id": "q155o4", "label": "Jimmy McGill" }
+      ],
+      "answer": "q155o4"
+    },
+    {
+      "id": "q156",
+      "question": "Doja Cat's viral 2018 hit, which launched her to mainstream fame, was an absurd song titled 'Mooo!' about being what kind of animal?",
+      "options": [
+        { "id": "q156o1", "label": "A cat" },
+        { "id": "q156o2", "label": "A dog" },
+        { "id": "q156o3", "label": "A cow" },
+        { "id": "q156o4", "label": "A bird" }
+      ],
+      "answer": "q156o3"
+    },
+    {
+      "id": "q157",
+      "question": "Which actress, known for her roles in 'Little Women' and 'Black Widow', played the lead in the unsettling A24 horror film 'Midsommar'?",
+      "options": [
+        { "id": "q157o1", "label": "Saoirse Ronan" },
+        { "id": "q157o2", "label": "Florence Pugh" },
+        { "id": "q157o3", "label": "Anya Taylor-Joy" },
+        { "id": "q157o4", "label": "Toni Collette" }
+      ],
+      "answer": "q157o2"
+    },
+    {
+      "id": "q158",
+      "question": "The small, bird-like creatures that live on Ahch-To with Luke Skywalker in 'The Last Jedi' are called what?",
+      "options": [
+        { "id": "q158o1", "label": "Ewoks" },
+        { "id": "q158o2", "label": "Womp Rats" },
+        { "id": "q158o3", "label": "Porgs" },
+        { "id": "q158o4", "label": "Jawas" }
+      ],
+      "answer": "q158o3"
+    },
+    {
+      "id": "q159",
+      "question": "In the philosophical sitcom 'The Good Place', what is the name of the all-knowing, non-binary, Siri-like entity that holds all the knowledge in the universe?",
+      "options": [
+        { "id": "q159o1", "label": "Michael" },
+        { "id": "q159o2", "label": "Janet" },
+        { "id": "q159o3", "label": "Eleanor" },
+        { "id": "q159o4", "label": "The Judge" }
+      ],
+      "answer": "q159o2"
+    },
+    {
+      "id": "q160",
+      "question": "Which Houston-born rapper released the critically acclaimed 2018 album 'ASTROWORLD'?",
+      "options": [
+        { "id": "q160o1", "label": "Drake" },
+        { "id": "q160o2", "label": "Kanye West" },
+        { "id": "q160o3", "label": "Kendrick Lamar" },
+        { "id": "q160o4", "label": "Travis Scott" }
+      ],
+      "answer": "q160o4"
+    },
+    {
+      "id": "q161",
+      "question": "In the video game 'Cyberpunk 2077', what is the name of the rockstar revolutionary played by Keanu Reeves?",
+      "options": [
+        { "id": "q161o1", "label": "V" },
+        { "id": "q161o2", "label": "Johnny Silverhand" },
+        { "id": "q161o3", "label": "Jackie Welles" },
+        { "id": "q161o4", "label": "Adam Smasher" }
+      ],
+      "answer": "q161o2"
+    },
+    {
+      "id": "q162",
+      "question": "Daniel Kaluuya won a Best Supporting Actor Oscar for his powerful portrayal of which real-life Black Panther Party chairman?",
+      "options": [
+        { "id": "q162o1", "label": "Fred Hampton in 'Judas and the Black Messiah'" },
+        { "id": "q162o2", "label": "Huey P. Newton in 'The People v. O. J. Simpson'" },
+        { "id": "q162o3", "label": "Bobby Seale in 'The Trial of the Chicago 7'" },
+        { "id": "q162o4", "label": "Malcolm X in 'One Night in Miami...'" }
+      ],
+      "answer": "q162o1"
+    },
+    {
+      "id": "q163",
+      "question": "'Winter Is Coming' is the well-known motto of which great house in 'Game of Thrones'?",
+      "options": [
+        { "id": "q163o1", "label": "House Lannister" },
+        { "id": "q163o2", "label": "House Targaryen" },
+        { "id": "q163o3", "label": "House Stark" },
+        { "id": "q163o4", "label": "House Baratheon" }
+      ],
+      "answer": "q163o3"
+    },
+    {
+      "id": "q164",
+      "question": "Which artist is often called the 'Queen of Christmas' thanks to her enduring 1994 hit 'All I Want for Christmas Is You'?",
+      "options": [
+        { "id": "q164o1", "label": "Whitney Houston" },
+        { "id": "q164o2", "label": "Mariah Carey" },
+        { "id": "q164o3", "label": "Celine Dion" },
+        { "id": "q164o4", "label": "Brenda Lee" }
+      ],
+      "answer": "q164o2"
+    },
+    {
+      "id": "q165",
+      "question": "The 'Distracted Boyfriend' meme, which shows a man turning to look at another woman while his girlfriend looks on disapprovingly, is an example of what kind of meme format?",
+      "options": [
+        { "id": "q165o1", "label": "Image Macro" },
+        { "id": "q165o2", "label": "Stock Photo Meme" },
+        { "id": "q165o3", "label": "Reaction Face" },
+        { "id": "q165o4", "label": "Exploitable" }
+      ],
+      "answer": "q165o2"
+    },
+    {
+      "id": "q166",
+      "question": "What is the name of the powerful purple-skinned alien warlord who serves as the main antagonist in 'Avengers: Infinity War' and 'Endgame'?",
+      "options": [
+        { "id": "q166o1", "label": "Ronan the Accuser" },
+        { "id": "q166o2", "label": "Ultron" },
+        { "id": "q166o3", "label": "Thanos" },
+        { "id": "q166o4", "label": "Loki" }
+      ],
+      "answer": "q166o3"
+    },
+    {
+      "id": "q167",
+      "question": "In the Netflix series 'Stranger Things', what is the name of the young girl with psychokinetic abilities, played by Millie Bobby Brown?",
+      "options": [
+        { "id": "q167o1", "label": "Max" },
+        { "id": "q167o2", "label": "Nancy" },
+        { "id": "q167o3", "label": "Eleven" },
+        { "id": "q167o4", "label": "Erica" }
+      ],
+      "answer": "q167o3"
+    },
+    {
+      "id": "q168",
+      "question": "The massive 2020 hit song 'Blinding Lights,' known for its 80s synth-pop feel, is by which Canadian artist?",
+      "options": [
+        { "id": "q168o1", "label": "Drake" },
+        { "id": "q168o2", "label": "Justin Bieber" },
+        { "id": "q168o3", "label": "Shawn Mendes" },
+        { "id": "q168o4", "label": "The Weeknd" }
+      ],
+      "answer": "q168o4"
+    },
+    {
+      "id": "q169",
+      "question": "'Heroes never die!' is the ultimate ability voice line for which support character in the video game 'Overwatch'?",
+      "options": [
+        { "id": "q169o1", "label": "Lúcio" },
+        { "id": "q169o2", "label": "Mercy" },
+        { "id": "q169o3", "label": "Zenyatta" },
+        { "id": "q169o4", "label": "Ana" }
+      ],
+      "answer": "q169o2"
+    },
+    {
+      "id": "q170",
+      "question": "The 2019 film 'Parasite', which won the Academy Award for Best Picture, originates from which country?",
+      "options": [
+        { "id": "q170o1", "label": "Japan" },
+        { "id": "q170o2", "label": "China" },
+        { "id": "q170o3", "label": "South Korea" },
+        { "id": "q170o4", "label": "Taiwan" }
+      ],
+      "answer": "q170o3"
+    },
+    {
+      "id": "q171",
+      "question": "What is the name of the fictional paper company that serves as the primary setting for 'The Office' (US)?",
+      "options": [
+        { "id": "q171o1", "label": "Wernham Hogg" },
+        { "id": "q171o2", "label": "Dunder Mifflin" },
+        { "id": "q171o3", "label": "Sterling Cooper" },
+        { "id": "q171o4", "label": "Prestige Worldwide" }
+      ],
+      "answer": "q171o2"
+    },
+    {
+      "id": "q172",
+      "question": "The massive Coachella Valley Music and Arts Festival takes place annually in which U.S. state?",
+      "options": [
+        { "id": "q172o1", "label": "Nevada" },
+        { "id": "q172o2", "label": "Arizona" },
+        { "id": "q172o3", "label": "California" },
+        { "id": "q172o4", "label": "Florida" }
+      ],
+      "answer": "q172o3"
+    },
+    {
+      "id": "q173",
+      "question": "Dave Grohl, the frontman of Foo Fighters, first achieved fame as the drummer for which iconic 90s band?",
+      "options": [
+        { "id": "q173o1", "label": "Pearl Jam" },
+        { "id": "q173o2", "label": "Nirvana" },
+        { "id": "q173o3", "label": "Soundgarden" },
+        { "id": "q173o4", "label": "Red Hot Chili Peppers" }
+      ],
+      "answer": "q173o2"
+    },
+    {
+      "id": "q174",
+      "question": "In the film 'The Matrix', what is the real name of the protagonist known as Neo?",
+      "options": [
+        { "id": "q174o1", "label": "John Wick" },
+        { "id": "q174o2", "label": "Thomas Anderson" },
+        { "id": "q174o3", "label": "Kevin Flynn" },
+        { "id": "q174o4", "label": "David Bowman" }
+      ],
+      "answer": "q174o2"
+    },
+    {
+      "id": "q175",
+      "question": "Which RuPaul catchphrase is used to dismiss a losing queen from the competition in 'RuPaul's Drag Race'?",
+      "options": [
+        { "id": "q175o1", "label": "Good luck, and don't f**k it up." },
+        { "id": "q175o2", "label": "Shantay, you stay." },
+        { "id": "q175o3", "label": "Sashay away." },
+        { "id": "q175o4", "label": "The time has come for you to lip-sync for your life." }
+      ],
+      "answer": "q175o3"
+    },
+    {
+      "id": "q176",
+      "question": "What is the title of Beyoncé's 2022 album, which celebrated dance, house, and ballroom culture?",
+      "options": [
+        { "id": "q176o1", "label": "Lemonade" },
+        { "id": "q176o2", "label": "Beyoncé" },
+        { "id": "q176o3", "label": "Renaissance" },
+        { "id": "q176o4", "label": "The Gift" }
+      ],
+      "answer": "q176o3"
+    },
+    {
+      "id": "q177",
+      "question": "The cozy life simulation game 'Animal Crossing: New Horizons' became a cultural phenomenon in 2020 on which video game console?",
+      "options": [
+        { "id": "q177o1", "label": "PlayStation 4" },
+        { "id": "q177o2", "label": "Xbox One" },
+        { "id": "q177o3", "label": "PC" },
+        { "id": "q177o4", "label": "Nintendo Switch" }
+      ],
+      "answer": "q177o4"
+    },
+    {
+      "id": "q178",
+      "question": "Which Australian actress portrays the popular DC Comics character Harley Quinn in films like 'Suicide Squad' and 'Birds of Prey'?",
+      "options": [
+        { "id": "q178o1", "label": "Cate Blanchett" },
+        { "id": "q178o2", "label": "Nicole Kidman" },
+        { "id": "q178o3", "label": "Margot Robbie" },
+        { "id": "q178o4", "label": "Rose Byrne" }
+      ],
+      "answer": "q178o3"
+    },
+    {
+      "id": "q179",
+      "question": "What is the official name of the character commonly referred to as 'Baby Yoda' in the Disney+ series 'The Mandalorian'?",
+      "options": [
+        { "id": "q179o1", "label": "The Child" },
+        { "id": "q179o2", "label": "Grogu" },
+        { "id": "q179o3", "label": "Yaddle" },
+        { "id": "q179o4", "label": "Din Djarin Jr." }
+      ],
+      "answer": "q179o2"
+    },
+    {
+      "id": "q180",
+      "question": "Which British pop superstar's long-running Las Vegas residency, starting in 2022, is titled 'Weekends with...'?",
+      "options": [
+        { "id": "q180o1", "label": "Elton John" },
+        { "id": "q180o2", "label": "Adele" },
+        { "id": "q180o3", "label": "Ed Sheeran" },
+        { "id": "q180o4", "label": "Harry Styles" }
+      ],
+      "answer": "q180o2"
+    },
+    {
+      "id": "q181",
+      "question": "The 'This is Fine' meme, used to express acceptance of a chaotic situation, features a cartoon dog sitting in a room that is what?",
+      "options": [
+        { "id": "q181o1", "label": "Flooding" },
+        { "id": "q181o2", "label": "On fire" },
+        { "id": "q181o3", "label": "Upside down" },
+        { "id": "q181o4", "label": "Full of snakes" }
+      ],
+      "answer": "q181o2"
+    },
+    {
+      "id": "q182",
+      "question": "In the horror film 'A Quiet Place', what human sense do the predatory alien creatures use to hunt their prey?",
+      "options": [
+        { "id": "q182o1", "label": "Sight" },
+        { "id": "q182o2", "label": "Smell" },
+        { "id": "q182o3", "label": "Touch" },
+        { "id": "q182o4", "label": "Hearing" }
+      ],
+      "answer": "q182o4"
+    },
+    {
+      "id": "q183",
+      "question": "What is the primary illicit substance that Walter White and Jesse Pinkman manufacture and distribute in the series 'Breaking Bad'?",
+      "options": [
+        { "id": "q183o1", "label": "Cocaine" },
+        { "id": "q183o2", "label": "Heroin" },
+        { "id": "q183o3", "label": "Methamphetamine" },
+        { "id": "q183o4", "label": "Ecstasy" }
+      ],
+      "answer": "q183o3"
+    },
+    {
+      "id": "q184",
+      "question": "Rapper Megan Thee Stallion's catchphrase 'Hot Girl Summer' became a viral sensation in what year?",
+      "options": [
+        { "id": "q184o1", "label": "2018" },
+        { "id": "q184o2", "label": "2019" },
+        { "id": "q184o3", "label": "2020" },
+        { "id": "q184o4", "label": "2021" }
+      ],
+      "answer": "q184o2"
+    },
+    {
+      "id": "q185",
+      "question": "Which actor is famous for performing his own high-risk stunts, including hanging from a plane during takeoff, in the 'Mission: Impossible' films?",
+      "options": [
+        { "id": "q185o1", "label": "Dwayne Johnson" },
+        { "id": "q185o2", "label": "Keanu Reeves" },
+        { "id": "q185o3", "label": "Tom Cruise" },
+        { "id": "q185o4", "label": "Jason Statham" }
+      ],
+      "answer": "q185o3"
+    },
+    {
+      "id": "q186",
+      "question": "The famous twist ending, 'I see dead people,' is a line from which M. Night Shyamalan psychological thriller?",
+      "options": [
+        { "id": "q186o1", "label": "Signs" },
+        { "id": "q186o2", "label": "The Village" },
+        { "id": "q186o3", "label": "Unbreakable" },
+        { "id": "q186o4", "label": "The Sixth Sense" }
+      ],
+      "answer": "q186o4"
+    },
+    {
+      "id": "q187",
+      "question": "In the sitcom 'Friends', what is the name of the coffee shop where the main characters frequently hang out?",
+      "options": [
+        { "id": "q187o1", "label": "Monk's Café" },
+        { "id": "q187o2", "label": "The Grind" },
+        { "id": "q187o3", "label": "Central Perk" },
+        { "id": "q187o4", "label": "The Daily Grind" }
+      ],
+      "answer": "q187o3"
+    },
+    {
+      "id": "q188",
+      "question": "The explicit 2020 hit song 'WAP' was a record-breaking collaboration between Cardi B and which other female rapper?",
+      "options": [
+        { "id": "q188o1", "label": "Nicki Minaj" },
+        { "id": "q188o2", "label": "Doja Cat" },
+        { "id": "q188o3", "label": "Megan Thee Stallion" },
+        { "id": "q188o4", "label": "Lizzo" }
+      ],
+      "answer": "q188o3"
+    },
+    {
+      "id": "q189",
+      "question": "In the video game 'The Witcher 3: Wild Hunt', what is the name of Geralt's powerful, ashen-haired adopted daughter?",
+      "options": [
+        { "id": "q189o1", "label": "Triss Merigold" },
+        { "id": "q189o2", "label": "Yennefer of Vengerberg" },
+        { "id": "q189o3", "label": "Ciri" },
+        { "id": "q189o4", "label": "Keira Metz" }
+      ],
+      "answer": "q189o3"
+    },
+    {
+      "id": "q190",
+      "question": "Ron Swanson, a main character in 'Parks and Recreation', has a deep and abiding love for breakfast food and what other item?",
+      "options": [
+        { "id": "q190o1", "label": "Fine leather goods" },
+        { "id": "q190o2", "label": "Woodworking" },
+        { "id": "q190o3", "label": "Vintage cars" },
+        { "id": "q190o4", "label": "Small government" }
+      ],
+      "answer": "q190o2"
+    },
+    {
+      "id": "q191",
+      "question": "Which British singer-songwriter is known for her powerful voice and emotional ballads like 'Rolling in the Deep' and 'Hello'?",
+      "options": [
+        { "id": "q191o1", "label": "Dua Lipa" },
+        { "id": "q191o2", "label": "Adele" },
+        { "id": "q191o3", "label": "Amy Winehouse" },
+        { "id": "q191o4", "label": "Florence Welch" }
+      ],
+      "answer": "q191o2"
+    },
+    {
+      "id": "q192",
+      "question": "The popular true-crime comedy podcast 'My Favorite Murder' is hosted by Karen Kilgariff and which other comedian?",
+      "options": [
+        { "id": "q192o1", "label": "Ashley Flowers" },
+        { "id": "q192o2", "label": "Georgia Hardstark" },
+        { "id": "q192o3", "label": "Phoebe Judge" },
+        { "id": "q192o4", "label": "Alaina Urquhart" }
+      ],
+      "answer": "q192o2"
+    },
+    {
+      "id": "q193",
+      "question": "Which of these is NOT one of the four houses at Hogwarts School of Witchcraft and Wizardry?",
+      "options": [
+        { "id": "q193o1", "label": "Gryffindor" },
+        { "id": "q193o2", "label": "Ilvermorny" },
+        { "id": "q193o3", "label": "Ravenclaw" },
+        { "id": "q193o4", "label": "Hufflepuff" }
+      ],
+      "answer": "q193o2"
+    },
+    {
+      "id": "q194",
+      "question": "What is the name of the streaming service launched by The Walt Disney Company in 2019?",
+      "options": [
+        { "id": "q194o1", "label": "Hulu" },
+        { "id": "q194o2", "label": "Peacock" },
+        { "id": "q194o3", "label": "Disney+" },
+        { "id": "q194o4", "label": "Paramount+" }
+      ],
+      "answer": "q194o3"
+    },
+    {
+      "id": "q195",
+      "question": "Who is the lead singer and frontman of the British rock band Coldplay?",
+      "options": [
+        { "id": "q195o1", "label": "Thom Yorke" },
+        { "id": "q195o2", "label": "Damon Albarn" },
+        { "id": "q195o3", "label": "Chris Martin" },
+        { "id": "q195o4", "label": "Matt Bellamy" }
+      ],
+      "answer": "q195o3"
+    },
+    {
+      "id": "q196",
+      "question": "The video game franchise 'Fallout' is set in a post-apocalyptic world following what kind of catastrophe?",
+      "options": [
+        { "id": "q196o1", "label": "A zombie outbreak" },
+        { "id": "q196o2", "label": "An alien invasion" },
+        { "id": "q196o3", "label": "A global pandemic" },
+        { "id": "q196o4", "label": "A nuclear war" }
+      ],
+      "answer": "q196o4"
+    },
+    {
+      "id": "q197",
+      "question": "In the movie 'Forrest Gump', Forrest famously says that 'life is like...' what?",
+      "options": [
+        { "id": "q197o1", "label": "A box of chocolates" },
+        { "id": "q197o2", "label": "A feather in the wind" },
+        { "id": "q197o3", "label": "A long-distance run" },
+        { "id": "q197o4", "label": "A shrimping boat" }
+      ],
+      "answer": "q197o1"
+    },
+    {
+      "id": "q198",
+      "question": "The Netflix series 'Narcos' chronicles the criminal empire of which infamous Colombian drug lord?",
+      "options": [
+        { "id": "q198o1", "label": "El Chapo" },
+        { "id": "q198o2", "label": "Pablo Escobar" },
+        { "id": "q198o3", "label": "Frank Lucas" },
+        { "id": "q198o4", "label": "Griselda Blanco" }
+      ],
+      "answer": "q198o2"
+    },
+    {
+      "id": "q199",
+      "question": "Which Ed Sheeran song became Spotify's first track to hit 2 billion streams?",
+      "options": [
+        { "id": "q199o1", "label": "Perfect" },
+        { "id": "q199o2", "label": "Thinking Out Loud" },
+        { "id": "q199o3", "label": "Shape of You" },
+        { "id": "q199o4", "label": "Castle on the Hill" }
+      ],
+      "answer": "q199o3"
+    },
+    {
+      "id": "q200",
+      "question": "SKIMS is a popular and successful shapewear and clothing brand founded by which media personality?",
+      "options": [
+        { "id": "q200o1", "label": "Rihanna" },
+        { "id": "q200o2", "label": "Kylie Jenner" },
+        { "id": "q200o3", "label": "Kim Kardashian" },
+        { "id": "q200o4", "label": "Beyoncé" }
+      ],
+      "answer": "q200o3"
+    },
+    {
+      "id": "q201",
+      "question": "The prequel series 'House of the Dragon' focuses on the history of which powerful family from 'Game of Thrones'?",
+      "options": [
+        { "id": "q201o1", "label": "The Starks" },
+        { "id": "q201o2", "label": "The Lannisters" },
+        { "id": "q201o3", "label": "The Targaryens" },
+        { "id": "q201o4", "label": "The Baratheons" }
+      ],
+      "answer": "q201o3"
+    },
+    {
+      "id": "q202",
+      "question": "Which Japanese composer is celebrated for his iconic scores for Studio Ghibli films like 'My Neighbor Totoro' and 'Spirited Away'?",
+      "options": [
+        { "id": "q202o1", "label": "Ryuichi Sakamoto" },
+        { "id": "q202o2", "label": "Yoko Kanno" },
+        { "id": "q202o3", "label": "Joe Hisaishi" },
+        { "id": "q202o4", "label": "Nobuo Uematsu" }
+      ],
+      "answer": "q202o3"
+    },
+    {
+      "id": "q203",
+      "question": "Which actor, who played the titular role in the 2021 film 'Dune', also stars as Willy Wonka in 'Wonka'?",
+      "options": [
+        { "id": "q203o1", "label": "Zendaya" },
+        { "id": "q203o2", "label": "Oscar Isaac" },
+        { "id": "q203o3", "label": "Jason Momoa" },
+        { "id": "q203o4", "label": "Timothée Chalamet" }
+      ],
+      "answer": "q203o4"
+    },
+    {
+      "id": "q204",
+      "question": "The HBO series 'Euphoria' is known for its gritty portrayal of high school life and stars which actress as the protagonist, Rue Bennett?",
+      "options": [
+        { "id": "q204o1", "label": "Sydney Sweeney" },
+        { "id": "q204o2", "label": "Zendaya" },
+        { "id": "q204o3", "label": "Hunter Schafer" },
+        { "id": "q204o4", "label": "Alexa Demie" }
+      ],
+      "answer": "q204o2"
+    },
+    {
+      "id": "q205",
+      "question": "The 2020 remix of Megan Thee Stallion's hit 'Savage', which went viral on TikTok, featured a guest verse from which iconic artist?",
+      "options": [
+        { "id": "q205o1", "label": "Rihanna" },
+        { "id": "q205o2", "label": "Cardi B" },
+        { "id": "q205o3", "label": "Nicki Minaj" },
+        { "id": "q205o4", "label": "Beyoncé" }
+      ],
+      "answer": "q205o4"
+    },
+    {
+      "id": "q206",
+      "question": "What is the name of the treasure-hunting protagonist of the 'Uncharted' video game series?",
+      "options": [
+        { "id": "q206o1", "label": "Nathan Drake" },
+        { "id": "q206o2", "label": "Joel Miller" },
+        { "id": "q206o3", "label": "Kratos" },
+        { "id": "q206o4", "label": "Lara Croft" }
+      ],
+      "answer": "q206o1"
+    },
+    {
+      "id": "q207",
+      "question": "The 'Saw' horror franchise revolves around a central antagonist who forces his victims into deadly 'games', known by what name?",
+      "options": [
+        { "id": "q207o1", "label": "Ghostface" },
+        { "id": "q207o2", "label": "Jigsaw" },
+        { "id": "q207o3", "label": "Pinhead" },
+        { "id": "q207o4", "label": "Leatherface" }
+      ],
+      "answer": "q207o2"
+    },
+    {
+      "id": "q208",
+      "question": "In the TV show 'The Good Place', what is the name of the architect demon, played by Ted Danson, who runs the neighborhood?",
+      "options": [
+        { "id": "q208o1", "label": "Shawn" },
+        { "id": "q208o2", "label": "Michael" },
+        { "id": "q208o3", "label": "Trevor" },
+        { "id": "q208o4", "label": "Derek" }
+      ],
+      "answer": "q208o2"
+    },
+    {
+      "id": "q209",
+      "question": "The French electronic music duo Daft Punk was famous for performing and appearing in public while wearing what?",
+      "options": [
+        { "id": "q209o1", "label": "Animal masks" },
+        { "id": "q209o2", "label": "Elaborate wigs" },
+        { "id": "q209o3", "label": "Robot helmets" },
+        { "id": "q209o4", "label": "Blindfolds" }
+      ],
+      "answer": "q209o3"
+    },
+    {
+      "id": "q210",
+      "question": "The 'Woman Yelling at a Cat' meme features a cat named Smudge and a screencap of which cast member from 'The Real Housewives of Beverly Hills'?",
+      "options": [
+        { "id": "q210o1", "label": "Lisa Vanderpump" },
+        { "id": "q210o2", "label": "Kyle Richards" },
+        { "id": "q210o3", "label": "Taylor Armstrong" },
+        { "id": "q210o4", "label": "Brandi Glanville" }
+      ],
+      "answer": "q210o3"
+    },
+    {
+      "id": "q211",
+      "question": "Which 2018 animated film, praised for its groundbreaking visual style, won the Academy Award for Best Animated Feature?",
+      "options": [
+        { "id": "q211o1", "label": "Incredibles 2" },
+        { "id": "q211o2", "label": "Isle of Dogs" },
+        { "id": "q211o3", "label": "Ralph Breaks the Internet" },
+        { "id": "q211o4", "label": "Spider-Man: Into the Spider-Verse" }
+      ],
+      "answer": "q211o4"
+    },
+    {
+      "id": "q212",
+      "question": "Who is the creator of the acclaimed British science-fiction anthology series 'Black Mirror'?",
+      "options": [
+        { "id": "q212o1", "label": "Ricky Gervais" },
+        { "id": "q212o2", "label": "Charlie Brooker" },
+        { "id": "q212o3", "label": "Armando Iannucci" },
+        { "id": "q212o4", "label": "Phoebe Waller-Bridge" }
+      ],
+      "answer": "q212o2"
+    },
+    {
+      "id": "q213",
+      "question": "The viral TikTok dance trend in 2020 was set to which song by The Weeknd?",
+      "options": [
+        { "id": "q213o1", "label": "Save Your Tears" },
+        { "id": "q213o2", "label": "Starboy" },
+        { "id": "q213o3", "label": "Blinding Lights" },
+        { "id": "q213o4", "label": "Can't Feel My Face" }
+      ],
+      "answer": "q213o3"
+    },
+    {
+      "id": "q214",
+      "question": "In the social deduction game 'Among Us', what are the two possible roles for players?",
+      "options": [
+        { "id": "q214o1", "label": "Detective and Traitor" },
+        { "id": "q214o2", "label": "Crewmate and Impostor" },
+        { "id": "q214o3", "label": "Survivor and Killer" },
+        { "id": "q214o4", "label": "Villager and Werewolf" }
+      ],
+      "answer": "q214o2"
+    },
+    {
+      "id": "q215",
+      "question": "Which film directed by Bong Joon Ho features a family of grifters who infiltrate a wealthy household?",
+      "options": [
+        { "id": "q215o1", "label": "Okja" },
+        { "id": "q215o2", "label": "The Host" },
+        { "id": "q215o3", "label": "Snowpiercer" },
+        { "id": "q215o4", "label": "Parasite" }
+      ],
+      "answer": "q215o4"
+    },
+    {
+      "id": "q216",
+      "question": "What is the name of the fictional, magical land in the animated series 'Adventure Time'?",
+      "options": [
+        { "id": "q216o1", "label": "Westeros" },
+        { "id": "q216o2", "label": "The Land of Ooo" },
+        { "id": "q216o3", "label": "Hyrule" },
+        { "id": "q216o4", "label": "Narnia" }
+      ],
+      "answer": "q216o2"
+    },
+    {
+      "id": "q217",
+      "question": "Who is the lead singer of the Grammy-winning band Florence + The Machine?",
+      "options": [
+        { "id": "q217o1", "label": "Florence Pugh" },
+        { "id": "q217o2", "label": "Florence Welch" },
+        { "id": "q217o3", "label": "Annie Clark" },
+        { "id": "q217o4", "label": "Hayley Williams" }
+      ],
+      "answer": "q217o2"
+    },
+    { "id": "q218", "question": "What is the name of the main character, a high school chemistry teacher turned meth cook, in 'Breaking Bad'?", "options": [ { "id": "q218o1", "label": "Hank Schrader" }, { "id": "q218o2", "label": "Jesse Pinkman" }, { "id": "q218o3", "label": "Walter White" }, { "id": "q218o4", "label": "Saul Goodman" } ], "answer": "q218o3" },
+    {
+      "id": "q219",
+      "question": "In the video game 'Stardew Valley', what is the name of the town the player moves to?",
+      "options": [
+        { "id": "q219o1", "label": "Mineral Town" },
+        { "id": "q219o2", "label": "Forget-Me-Not Valley" },
+        { "id": "q219o3", "label": "Pelican Town" },
+        { "id": "q219o4", "label": "Olive Town" }
+      ],
+      "answer": "q219o3"
+    },
+    {
+      "id": "q220",
+      "question": "Which sitcom is set in the fictional 99th precinct of the New York City Police Department in Brooklyn?",
+      "options": [
+        { "id": "q220o1", "label": "Law & Order: SVU" },
+        { "id": "q220o2", "label": "Brooklyn Nine-Nine" },
+        { "id": "q220o3", "label": "CSI: NY" },
+        { "id": "q220o4", "label": "Blue Bloods" }
+      ],
+      "answer": "q220o2"
+    },
+    {
+      "id": "q221",
+      "question": "The Weeknd performed the halftime show for which Super Bowl?",
+      "options": [
+        { "id": "q221o1", "label": "Super Bowl LIII" },
+        { "id": "q221o2", "label": "Super Bowl LIV" },
+        { "id": "q221o3", "label": "Super Bowl LV" },
+        { "id": "q221o4", "label": "Super Bowl LVI" }
+      ],
+      "answer": "q221o3"
+    },
+    {
+      "id": "q222",
+      "question": "Which actress portrays the complex anti-heroine Cassie in the film 'Promising Young Woman'?",
+      "options": [
+        { "id": "q222o1", "label": "Margot Robbie" },
+        { "id": "q222o2", "label": "Carey Mulligan" },
+        { "id": "q222o3", "label": "Anya Taylor-Joy" },
+        { "id": "q222o4", "label": "Saoirse Ronan" }
+      ],
+      "answer": "q222o2"
+    },
+    {
+      "id": "q223",
+      "question": "Which rapper's real name is Nayvadius DeMun Wilburn?",
+      "options": [
+        { "id": "q223o1", "label": "Future" },
+        { "id": "q223o2", "label": "Lil Wayne" },
+        { "id": "q223o3", "label": "21 Savage" },
+        { "id": "q223o4", "label": "Migos" }
+      ],
+      "answer": "q223o1"
+    },
+    {
+      "id": "q224",
+      "question": "In the TV series 'Avatar: The Last Airbender', what is the name of the main antagonist?",
+      "options": [
+        { "id": "q224o1", "label": "Zuko" },
+        { "id": "q224o2", "label": "Azula" },
+        { "id": "q224o3", "label": "Fire Lord Ozai" },
+        { "id": "q224o4", "label": "Admiral Zhao" }
+      ],
+      "answer": "q224o3"
+    },
+    {
+      "id": "q225",
+      "question": "Which 2022 film from the Daniels follows a woman who must connect with parallel universe versions of herself to save the multiverse?",
+      "options": [
+        { "id": "q225o1", "label": "Doctor Strange in the Multiverse of Madness" },
+        { "id": "q225o2", "label": "Everything Everywhere All at Once" },
+        { "id": "q225o3", "label": "Spider-Man: Across the Spider-Verse" },
+        { "id": "q225o4", "label": "The Adam Project" }
+      ],
+      "answer": "q225o2"
     }
   ]
 }

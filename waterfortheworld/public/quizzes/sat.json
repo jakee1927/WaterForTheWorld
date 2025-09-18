@@ -123,7 +123,7 @@
     },
     {
       "id": "q12",
-      "question": "Which of the following best replaces the underlined portion to eliminate the redundancy?\n\n'Each and every one of the students in the class individually presented their own projects.'",
+      "question": "Which of the following is a better alternative to eliminate redundancy?\n\n'Each and every one of the students in the class individually presented their own projects.'",
       "options": [
         { "id": "q12o1", "label": "Each of the students presented their projects." },
         { "id": "q12o2", "label": "Every student presented their projects." },
@@ -134,7 +134,7 @@
     },
     {
       "id": "q13",
-      "question": "The phrase 'painted themselves into a corner' as used in the passage is best interpreted to mean:",
+      "question": "The phrase 'painted themselves into a corner' is best interpreted to mean:",
       "options": [
         { "id": "q13o1", "label": "Created a difficult situation with no easy escape" },
         { "id": "q13o2", "label": "Succeeded unexpectedly" },
@@ -277,7 +277,7 @@
     },
     {
       "id": "q26",
-      "question": "Which of the following best replaces the underlined portion to correct the error?\n\n'Neither the volunteers nor the coordinator were prepared for the event.'",
+      "question": "Which of the following should replace 'were' to make the sentence gramatically correct?\n\n'Neither the volunteers nor the coordinator were prepared for the event.'",
       "options": [
         { "id": "q26o1", "label": "was" },
         { "id": "q26o2", "label": "were" },
@@ -365,7 +365,7 @@
     },
     {
       "id": "q34",
-      "question": "Which of the following is the best replacement for the underlined phrase to correct the error?\n\n'Most people enjoys going to the new art exhibit.'",
+      "question": "Which of the following is the best replacement for 'enjoys' to correct the error?\n\n'Most people enjoys going to the new art exhibit.'",
       "options": [
         { "id": "q34o1", "label": "enjoy" },
         { "id": "q34o2", "label": "enjoys" },
@@ -508,7 +508,7 @@
     },
     {
       "id": "q47",
-      "question": "Which choice best replaces the underlined portion to eliminate ambiguity?\n\n'Maria gave her friend her notes.'",
+      "question": "Which choice best improves the sentence to eliminate ambiguity?\n\n'Maria gave her friend her notes.'",
       "options": [
         { "id": "q47o1", "label": "Maria gave her notes to her friend." },
         { "id": "q47o2", "label": "Maria’s notes were given to her friend by Maria." },
@@ -618,7 +618,7 @@
     },
     {
       "id": "q57",
-      "question": "Which of the following best replaces the underlined word to clarify the meaning of the sentence?\n\n'Megan put it on the table, but it rolled off.'",
+      "question": "Which of the following best replaces 'it' to clarify the meaning of the sentence?\n\n'Megan put it on the table, but it rolled off.'",
       "options": [
         { "id": "q57o1", "label": "the apple" },
         { "id": "q57o2", "label": "her pencil" },
@@ -882,7 +882,7 @@
     },
     {
       "id": "q81",
-      "question": "Which of the following best replaces the underlined portion to correct the sentence?\n\n'If anyone wants to attend the concert, they should buy tickets soon.'",
+      "question": "Which of the following would best replace 'they should' to correct the sentence?\n\n'If anyone wants to attend the concert, they should buy tickets soon.'",
       "options": [
         { "id": "q81o1", "label": "he or she should" },
         { "id": "q81o2", "label": "he should" },
@@ -1630,7 +1630,7 @@
     },
     {
       "id": "q149",
-      "question": "Which of the following best replaces the underlined portion for conciseness?\n\n'Due to the fact that it rained, the event was postponed.'",
+      "question": "Which of the following best improves the conciseness of the sentence?\n\n'Due to the fact that it rained, the event was postponed.'",
       "options": [
         { "id": "q149o1", "label": "Because it rained, the event was postponed." },
         { "id": "q149o2", "label": "Due to it raining, the event was postponed." },
@@ -1696,7 +1696,7 @@
     },
     {
       "id": "q155",
-      "question": "Which of the following best replaces the underlined portion for conciseness?\n\n'He made a decision that was final in nature.'",
+      "question": "Which of the following best improves the conciseness of the sentence?\n\n'He made a decision that was final in nature.'",
       "options": [
         { "id": "q155o1", "label": "He made a final decision." },
         { "id": "q155o2", "label": "He made a decision that was final." },
@@ -1751,7 +1751,7 @@
     },
     {
       "id": "q160",
-      "question": "Which of the following best replaces the underlined portion for clarity?\n\n'She gave the book to Emily after she finished reading it.'",
+      "question": "Which of the following best improves the clarity of the sentence?\n\n'She gave the book to Emily after she finished reading it.'",
       "options": [
         { "id": "q160o1", "label": "After finishing the book, she gave it to Emily." },
         { "id": "q160o2", "label": "She gave it to Emily after reading." },
@@ -1828,7 +1828,7 @@
     },
     {
       "id": "q167",
-      "question": "Which of the following best replaces the underlined portion for clarity?\n\n'He put the keys on the table, but they fell off.'",
+      "question": "Which of the following best improves the clarity of the sentence?\n\n'He put the keys on the table, but they fell off.'",
       "options": [
         { "id": "q167o1", "label": "He put the keys on the table, but the keys fell off." },
         { "id": "q167o2", "label": "He put the keys on the table, but they slipped off the surface." },
@@ -2026,7 +2026,7 @@
     },
     {
       "id": "q185",
-      "question": "Which of the following best replaces the underlined portion for conciseness?\n\n'Due to the fact that they disagreed, the discussion continued for hours.'",
+      "question": "Which of the following best improves the conciseness of the sentence?\n\n'Due to the fact that they disagreed, the discussion continued for hours.'",
       "options": [
         { "id": "q185o1", "label": "Because they disagreed, the discussion continued for hours." },
         { "id": "q185o2", "label": "Due to disagreement, the discussion continued for hours." },
@@ -2202,6 +2202,3 @@
     }
   ]
 }
-
-
-
