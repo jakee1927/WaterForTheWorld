@@ -104,11 +104,6 @@ export default function DonatePage() {
                       We are committed to transparency and accountability in our operations. 
                       Your contribution helps provide clean water, improve health, and transform communities around the world.
                     </p>
-                    <Link href="/documentation">
-                      <Button variant="outline" size="sm" className="border-blue-600 text-blue-600 hover:bg-blue-50 w-full sm:w-auto">
-                        Read Our Financial Report
-                      </Button>
-                    </Link>
                   </div>
                 </div>
               </div>
